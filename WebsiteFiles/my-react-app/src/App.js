@@ -10,7 +10,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://cubecobra.com/cube/overview/9b5e9c6c-fe9e-488a-8f01-fa1f07120beb"
           target="_blank"
           rel="noopener noreferrer"
         >
