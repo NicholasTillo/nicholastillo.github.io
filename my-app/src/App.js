@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import mugi from './Assets/mugi.png'
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
@@ -9,18 +10,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header/>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={mugi} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is Mugi, We like Mugi
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
         <Footer/>
       </header>
     </div>
