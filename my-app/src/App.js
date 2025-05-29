@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import mugi from './Assets/mugi.png'
 import './App.css';
 import Header from './Header';
