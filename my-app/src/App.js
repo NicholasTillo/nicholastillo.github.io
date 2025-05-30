@@ -1,22 +1,24 @@
-import mugi from './Assets/mugi.png'
-import './App.css';
-import Header from './Header';
-import Footer from './Footer';
 
+
+import './App.css';
+
+import HashRouter from 'react-router-dom'; 
+import Routes from 'react-router-dom'; 
+import Route from 'react-router-dom'; 
+
+
+import homepage from './Pages/homepage';
+import images from './Pages/images';
+import page2 from './Pages/page2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header/>
-        <img src={mugi} className="App-logo" alt="logo" />
-        <p>
-          This is Mugi, We like Mugi
-        </p>
-        
-        <Footer/>
-      </header>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path = "/" element = {homepage} />
+      </Routes>
+    </HashRouter>
+
   );
 }
 

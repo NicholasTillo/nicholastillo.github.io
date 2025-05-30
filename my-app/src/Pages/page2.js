@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../Header";
 
 
-export default class images extends React.Component {
+export default class page2 extends React.Component {
     render(){
         return(
             <>
             <Header/>
             
-            <p> THIS IS IMAGES</p>
+            <p> THIS IS PAGE2 </p>
             <Footer/>
             </>
             )
