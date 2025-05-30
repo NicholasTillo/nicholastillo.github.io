@@ -1,11 +1,15 @@
 import React from "react";
 
-export default class Images extends React.Component {
+
+
+export default class Page3 extends React.Component {
     render(){
         return(
             <>
-            <p> THIS IS IMAGES</p>
             
+            
+            <p> THIS IS PAGE3 </p>
+           
             </>
             )
     }
