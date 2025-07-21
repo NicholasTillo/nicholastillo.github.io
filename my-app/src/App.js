@@ -5,8 +5,8 @@ import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Homepage from './Pages/homepage';
-import Images from './Pages/images';
-import Page2 from './Pages/page2';
+import About from './Pages/about';
+import Projects from './Pages/projects';
 import Page3 from './Pages/page3';
 
 import { Layout } from './Layout';
@@ -21,8 +21,8 @@ function App() {
         <Route element={<Layout/>}>
           {/*Each route with their corresponding page elemnts */} 
           <Route path = "/" element = {<Homepage/>} />
-          <Route path = "/images" element = {<Images/>} />
-          <Route path = "/page2" element = {<Page2/>} />
+          <Route path = "/about" element = {<About/>} />
+          <Route path = "/projects" element = {<Projects/>} />
           <Route path = "/page3" element = {<Page3/>} />
         </Route>
         

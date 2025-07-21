@@ -1,3 +1,20 @@
-.NavBarDiv {
+.AccNavBar div{
+    display: inline-block;
+    width: 33.3333333333%;
     
 }
+
+.AccNavBar button{
+    margin:auto;
+    width:100%;
+}
+
+.AccNavBar{
+    width: 90%;
+    margin:auto;
+}
+#headerLink{text-decoration: none; color:black;}
+#headerLink:visited { text-decoration: none; }
+#headerLink:hover { text-decoration: none; }
+#headerLink:focus { text-decoration: none; }
+#headerLinka:active { text-decoration: none; }

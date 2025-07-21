@@ -1,35 +1,34 @@
 import React from "react";
 import { Link } from "react-router";
+import './NavBar.css';
 
 
 export default class NavBar extends React.Component {
   render() {
     return (
       <div className="NavBarDiv">
-        <h1>
-            Nicholas Tillo
-        </h1>
-        <nav>
+          <Link to="/"  id="headerLink">
+                <h1>
+                Nicholas Tillo
+                </h1>
+            </Link>
+        
+        <nav className="AccNavBar">
           <div className="navLeft">
-            <ul>
-              <Link to="/images">
-                <button> Page 1 </button>
+            
+              <Link to="/about">
+                <button> About </button>
               </Link>
-          </ul>
           </div>
           <div className="navMid">
-            <ul>
-              <Link to="/page2">
-                <button> Page 2 </button>
+              <Link to="/projects">
+                <button> Projects </button>
               </Link>
-          </ul>
           </div>
           <div className="navRight">
-            <ul>
               <Link to="/page3">
-                <button> Page 3 </button>
+                <button> Some Cool Stuff </button>
               </Link>
-          </ul>
           </div>
         </nav>
       </div>
