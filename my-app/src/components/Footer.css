@@ -1,24 +1,50 @@
+/* Whole Container */
 .wholeFooter{
     background-color: rgb(138, 161, 182);
-    display: grid;
     width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Container Im willing to put stuff in  */
+.useableFooter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:80%;
+}
+
+/* each individual section  */
 .leftFooter{
-    float:left;
-    grid-row: 1;
-    grid-column: 1;
+    width:20%;
+    text-align: center;
 }
 
 .centerFooter{
-    margin:auto;
+    width:20%;
     text-align: center;
-    grid-row: 1;
-    grid-column: 2;
-    
 }
 .rightFooter{
-    text-align: right;
-    grid-row: 1;
-    grid-column: 3;
+    width:20%;
+    text-align: center;
+}
+
+/* the lower section that contains the links. */
+.linkListRight{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 7px;
+
+}
+.linkListLeft{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 7px;
+}
+
+p{
+
 }

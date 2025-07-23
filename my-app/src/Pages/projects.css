@@ -1,0 +1,10 @@
+.PhotoGallery{
+    width:100%;
+    margin:auto;
+}
+.seperator{
+    width:95%;
+    height:2px;
+    background-color: brown;
+    margin: 2em auto;
+}

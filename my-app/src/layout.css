@@ -1,0 +1,19 @@
+.fullContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.wholeFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    
+}
+main{
+    margin-bottom:3%;
+    padding: 1%
+}
+
+p , h1,  h2, h3 ,h4, h5, button ,a{
+    font-family: Georgia, serif;
+}

@@ -1,18 +1,56 @@
+.NavBarDiv{
+    display: flex;
+    background: #7822c3;
+background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 1) 100%);
+}
+#headerLink{
+    align-items: center;
+    padding: 0em 1em;
+}
+
+.wholeHeaderContent{
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    margin:auto;
+    
+}
+
 .AccNavBar div{
-    display: inline-block;
-    width: 33.3333333333%;
+    height:100%;
+    margin-left:1%;
     
 }
 
 .AccNavBar button{
-    margin:auto;
-    width:100%;
+    min-width:100%;
+    height:100%;
+    font-size: 1.2em;
+    
 }
 
+
 .AccNavBar{
-    width: 90%;
-    margin:auto;
+    width: 70%;
+    display: flex;
+    height:52px;
+    justify-content: start;
+    align-items: center;
+    
 }
+.verticalBar{
+    background-color: rgb(38, 35, 41);
+    width:3px;
+    height:2.67em;
+
+}
+.navFullRight button{
+    height:52px;
+    font-size: 1.2em;
+}
+
+
 #headerLink{text-decoration: none; color:black;}
 #headerLink:visited { text-decoration: none; }
 #headerLink:hover { text-decoration: none; }
