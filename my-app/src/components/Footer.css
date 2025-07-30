@@ -1,10 +1,12 @@
 /* Whole Container */
 .wholeFooter{
     background-color: rgb(138, 161, 182);
+    height: 6vw;
     width:100vw;
     display:flex;
     align-items: center;
     justify-content: center;
+    padding-bottom:10px;
 }
 
 /* Container Im willing to put stuff in  */
@@ -36,7 +38,6 @@
     display:flex;
     justify-content: space-around;
     margin-bottom: 7px;
-
 }
 .linkListLeft{
     width:100%;

@@ -29,7 +29,8 @@ export default class Footer extends React.Component {
               </div>
           </div>
           <div className="centerFooter">
-            Center Information
+            <p> Contact Info </p>
+            <p> Email: nicholastillo@gmail.com </p>
           </div>
           <div className="rightFooter">
               <p>
