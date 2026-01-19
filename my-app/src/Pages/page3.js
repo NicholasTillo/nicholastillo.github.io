@@ -29,6 +29,8 @@ export default class Page3 extends React.Component {
             <div className="rakshaShowcase">
                 <h2>Art Showcase</h2>
                 <p> My girlfriend makes incredible art, heres a showcase of some of the things </p>
+                <a style={{padding:0,margin:0}} href="https://www.instagram.com/r4ksha/">@tillosfigure/</a>
+
                 <p> test</p>
             </div>
             </div>
