@@ -14,13 +14,30 @@ export default class Projects extends React.Component {
             <div className="seperator"> </div>
             <div id="projectDescriptions"> 
                 <div id="project1">
-                    <h3> project1 </h3>
-                    <p> description 1</p>
+                    <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
+                    <p> A MTG Inspirted Course Project. An exploration of the different AI models and their applicability on the Magic The Gathering domain. We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
+
+                    <a  href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
+
+
+                    <a href="https://openreview.net/pdf?id=bZeQ7DB0T9"> ICAPS 2024 Paper Link </a>
+                    
+
+
                 </div>
                 <div className="seperator"> </div>
                 <div id="project2">
-                    <h3> project2 </h3>
-                    <p> description 2</p>
+                    <h3> Extraterrestrial Entertainment </h3>
+                    <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. </p>
+                    <a href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> Github Link </a>
+
+                    <a href=" https://youtu.be/yV3j3jQtLQs"> Video Of Player Movement and Aliens </a>
+
+                    <a href="https://youtu.be/9dVxzEknoJY"> Demo of Gameplay and FSM Logic </a>
+
+                    <a href="https://www.youtube.com/watch?v=O5wmU3lJKOU"> Video Of Pathfinding and Behaviour Tree </a>
+
+
 
                 </div>
                 <div className="seperator"> </div>

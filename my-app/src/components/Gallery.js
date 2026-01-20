@@ -14,18 +14,30 @@ export default class PhotoGallery extends React.Component {
     var i = 0;
     var j = 0;
     while (photo2copy.length > 1) {
+      
       var index = Math.floor(Math.random() * photo2copy.length)
       var curphoto = photo2copy[index];
       images.push(
-        <Link smooth to={"#"+curphoto.link} 
-        style={
-          {gridRow: (curphoto.width > 1) ? (i + 1) / curphoto.width : i + 1 , 
-            gridColumn:(curphoto.height > 1) ? i + (1 / curphoto.height) : i + 1}}>
-          <img src={curphoto.src} />
+        <Link
+          key={curphoto.src}
+          smooth
+          to={"#" + (curphoto.link || '')}
+          style={{
+            gridColumn: `span ${curphoto.width || 1}`,
+            gridRow: `span ${curphoto.height || 1}`,
+          }}
+        >
+          <img src={curphoto.src} alt={curphoto.link || 'project image'} />
         </Link>
       );
-      i+= 1;
-      j+= 1;
+      if (i > 4){
+        i = 0;
+        j += 1;
+      }
+      else{
+        i = i + 1;
+      }
+    
       photo2copy.splice(index,1)
 
     }
