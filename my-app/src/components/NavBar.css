@@ -2,10 +2,15 @@
     display: flex;
     background: #7822c3;
 background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 1) 100%);
+    padding-top: 1.5em;
 }
 #headerLink{
     align-items: center;
     padding: 0em 1em;
+}
+
+h1 {
+   font-size:calc(3em + 2px);
 }
 
 .wholeHeaderContent{
@@ -26,8 +31,14 @@ background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 
 .AccNavBar button{
     min-width:100%;
     height:100%;
-    font-size: 1.2em;
-    
+    font-size: calc(2em + 2px); /* increase by ~2px */
+    background: transparent; /* remove colored background */
+    border: none;
+    color: black; /* make text black */
+    padding: 0 0.8rem;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Rationale', Georgia, serif;
 }
 
 
@@ -47,7 +58,13 @@ background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 
 }
 .navFullRight button{
     height:52px;
-    font-size: 1.2em;
+    font-size: calc(1.2em + 2px); /* increase by ~2px */
+    background: transparent;
+    border: none;
+    color: black; /* make text black */
+    position: relative;
+    padding: 0 0.6rem;
+    cursor: pointer;
 }
 
 
@@ -56,3 +73,36 @@ background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 
 #headerLink:hover { text-decoration: none; }
 #headerLink:focus { text-decoration: none; }
 #headerLinka:active { text-decoration: none; }
+
+/* Hover underline bar for nav buttons */
+.AccNavBar button::after,
+.navFullRight button::after{
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: 6px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 160ms ease, opacity 160ms ease;
+    opacity: 0;
+}
+.AccNavBar button:hover::after,
+.navFullRight button:hover::after{
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* Small vertical separators between buttons */
+.AccNavBar button:not(:first-child)::before{
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 50%;
+    background: rgba(38,35,41,0.9);
+}

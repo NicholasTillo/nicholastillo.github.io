@@ -1,3 +1,101 @@
 .songDiv{
-    background-color: rgb(83,83,83);
+    background: transparent;
+    padding: 1.125em 0 1.125em 5%; /* vertical padding with 5% left padding */
+    display: flex;
+    justify-content: flex-start; /* left-align the slideshow */
+    align-items: center;
+    min-height: 170px; /* reduced another ~25% from 225px */
+}
+
+.songSlideshow {
+    width: 80%; /* use percentage of container so it lines up with other content */
+    max-width: 1200px;
+}
+
+.songCard {
+    background-color: #282828;
+    border-radius: 15px;
+    padding: 0.75rem; /* reduced padding */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.125em; /* reduced gap */
+    width: 100%;
+}
+
+.albumArt {
+    width: 68px; /* reduced another ~25% */
+    height: 68px; /* reduced another ~25% */
+    background: linear-gradient(135deg, #1db954, #191414);
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.songContent {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.songTitle {
+    font-size: 1.6em; /* larger title */
+    font-weight: 700;
+    margin: 0 0 0.35em;
+    color: #ffffff;
+}
+
+.artistName {
+    font-size: 1.1em; /* larger artist text */
+    color: #bdbdbd;
+    margin: 0 0 0.6em;
+}
+
+.songControls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75em;
+    margin: 0.8em 0;
+}
+
+.songControls button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px; /* smaller */
+    height: 30px; /* smaller */
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.songControls button:hover {
+    background-color: #1ed760;
+}
+
+.progressBar {
+    width: 100%;
+    height: 2px; /* slightly shorter */
+    background-color: #404040;
+    border-radius: 2px;
+    margin: 0.6em 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #1db954;
+    transition: width 0.3s ease;
+}
+
+.songCounter {
+    font-size: 0.9em;
+    color: #b3b3b3;
 }

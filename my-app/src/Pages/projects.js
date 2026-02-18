@@ -42,8 +42,9 @@ export default class Projects extends React.Component {
                 </div>
                 <div className="seperator"> </div>
                 <div id="project3">
-                    <h3> project3</h3>
-                    <p> description 3</p>
+                    <h3> CounterFactual Map-Elite algorithm </h3>
+                    <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. This Python-based project features a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. </p>
+                    <a href="https://github.com/NicholasTillo/CounterFactual"> Repository Link </a>
                 </div>
                 <div className="seperator"> </div>
                 <div id="project4">

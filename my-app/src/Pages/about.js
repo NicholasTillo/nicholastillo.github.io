@@ -2,6 +2,12 @@ import React from "react";
 import Song from "../components/Song.js";
 import './basepages.css'
 
+
+import FUBnyu from '../Assets/FUBnyu.jpg';
+import geomancersEscape from '../Assets/geomancersEscape.png';
+import images from '../Assets/images.jpg';
+import mugi from '../Assets/mugi.png';
+
 export default class About extends React.Component {
     render(){
         return(
@@ -18,46 +24,24 @@ export default class About extends React.Component {
 
             
             <div className="musicSection">
-                <h2> some new music </h2>
+                <h2> Some Favourite Songs </h2>
                 <p> Do you know if there is spotify integration? Maybe i make a song component and have a database of favourtie songs. </p>
             
                 <Song/>
-                <table>
-                    <tr> 
-                        <th> t1</th> 
-                        <th> t1</th>
-                        <th> t1</th> 
-                        <th> t1</th> 
-                        <th> t1</th>  
-                    </tr>
-                    <tr> 
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                    </tr>
-                    <tr> 
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                    </tr>
-                    <tr> 
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                        <td> t1</td>
-                    </tr>
 
-                </table>
             </div>
 
             <div className="gameSection">
                 <h2> Some games, but like fr check out the backloggd if you want more </h2>
-                
+                <div className="gameGrid">
+                    {
+                        [FUBnyu, geomancersEscape, images, mugi, FUBnyu, geomancersEscape, images, mugi].map((img, idx) => (
+                            <div className="gameCard" key={idx}>
+                                <img src={img} alt={`game-${idx}`} />
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
             </div>

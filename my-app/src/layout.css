@@ -11,8 +11,7 @@
 } */
 main{
     padding: 1%;
+    padding-bottom: 0px;
 }
 
-p , h1,  h2, h3 ,h4, h5, button ,a{
-    font-family: Georgia, serif;
-}
+h1, h2, h3, .site-title { font-family: 'Rationale', Georgia, serif; }

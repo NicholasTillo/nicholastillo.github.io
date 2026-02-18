@@ -8,9 +8,9 @@ export default class Footer extends React.Component {
       <div className="wholeFooter">
         <div className="useableFooter">
           <div className="leftFooter">
-            <p>
+            <h2>
               Real Links
-            </p>
+            </h2>
               <div className="linkListLeft">
                 <a  className="App-link"
                     href="https://www.linkedin.com/in/nicholastillo/"
@@ -28,14 +28,21 @@ export default class Footer extends React.Component {
                 </a>
               </div>
           </div>
+
+          <div className="verticalBar"></div> 
+
           <div className="centerFooter">
-            <p> Contact Info </p>
+            <h2> Contact Info </h2>
             <p> Email: nicholastillo@gmail.com </p>
           </div>
+
+          <div className="verticalBar"></div>
+
+          
           <div className="rightFooter">
-              <p>
+              <h2>
                 Stupid Links
-              </p>
+              </h2>
               <div className="linkListRight">
                 <a  className="App-link"
                     href="https://cubecobra.com/cube/overview/QBert"
