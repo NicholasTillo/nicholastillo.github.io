@@ -48,8 +48,12 @@ export default class Projects extends React.Component {
                 </div>
                 <div className="seperator"> </div>
                 <div id="project4">
-                    <h3> project4 </h3>
-                    <p> description 4</p>
+                    <h3> The Geomancer's Escape </h3>
+                    <p> A Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms.</p>
+                    <a href="https://github.com/NicholasTillo/TheGeomancersEscape"> Repository Link </a>
+                    <a href="https://nicholastillo.itch.io/the-geomancers-escape"> Itch Link </a>
+
+
                 </div>
                 <div className="seperator"> </div>
                 <div id="project5">

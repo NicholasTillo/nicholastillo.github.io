@@ -8,4 +8,6 @@
     cursor: pointer;
     flex: 1;
     margin: 0 10px;
+    width: 120%;
+    height: 120%;
 }

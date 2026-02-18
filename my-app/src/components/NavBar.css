@@ -1,7 +1,7 @@
 .NavBarDiv{
     display: flex;
     background: #7822c3;
-background: linear-gradient(0deg, rgba(120, 34, 195, 0) 0%, rgba(181, 155, 201, 1) 100%);
+background: linear-gradient(0deg, rgba(120, 34, 195, 0) 80%, rgba(107, 69, 17) 100%);
     padding-top: 1.5em;
 }
 #headerLink{

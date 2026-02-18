@@ -17,6 +17,8 @@ import MercySelected from '../Assets/Mercy_Selected.png'
 import ActSelected from '../Assets/Act_Selected.png'
 import ItemSelected from '../Assets/Item_Selected.png'
 
+import Slash from '../Assets/Slash.gif'
+
 import "./homepage.css"
 
 
@@ -31,11 +33,24 @@ export default class Homepage extends React.Component {
 
     clearHovered = () => this.setState({ hovered: null });
 
+    fight = () => {
+        console.log("Fight button clicked");
+    };
+    act = () =>{
+        console.log("Act button clicked");  
+    };
+    item = () =>{
+        console.log("Item button clicked");
+    };
+    mercy = () =>{
+        console.log("Mercy button clicked");
+    };
+
+
     render() {
         return (
         <div className="App">
             <header className="App-header">
-               
                 <img src={mugi} className="App-logo" alt="logo" />
                 <p>
                 This is Mugi, We like Mugi
@@ -49,6 +64,7 @@ export default class Homepage extends React.Component {
                         tabIndex={0}
                         onMouseEnter={() => this.setHovered('Fight')}
                         onMouseLeave={this.clearHovered}
+                        onClick={this.fight}
                     />
                     <img
                         src={this.state.hovered === 'Act' ? Act_Selected : Act}
@@ -57,6 +73,8 @@ export default class Homepage extends React.Component {
                         tabIndex={0}
                         onMouseEnter={() => this.setHovered('Act')}
                         onMouseLeave={this.clearHovered}
+                        onClick={this.act}
+
                     />
                     <img
                         src={this.state.hovered === 'Item' ? Item_Selected : Item}
@@ -65,6 +83,8 @@ export default class Homepage extends React.Component {
                         tabIndex={0}
                         onMouseEnter={() => this.setHovered('Item')}
                         onMouseLeave={this.clearHovered}
+                        onClick={this.item}
+
                     />
                     <img
                         src={this.state.hovered === 'Mercy' ? Mercy_Selected : Mercy}
@@ -73,6 +93,8 @@ export default class Homepage extends React.Component {
                         tabIndex={0}
                         onMouseEnter={() => this.setHovered('Mercy')}
                         onMouseLeave={this.clearHovered}
+                        onClick={this.mercy}
+
                     />
 
                 </div>

@@ -15,8 +15,11 @@ main{
 }
 
 h1, h2, h3, p, a, .site-title { font-family: 'Rationale', Georgia, serif; }
-p, a, button{
+p,  button{
     font-size: 1.4em;
+}
+a { 
+    font-size: 1em;
 }
 h3{ 
     font-size: 1.8em;

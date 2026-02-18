@@ -1,10 +1,11 @@
 import React from "react";
 import './Song.css';
 import OneBeer from '../Assets/OneBeer.jpg';
-// import Song2Image from '../Assets/Song2.png';
-// import Song3Image from '../Assets/Song3.png';
-// import Song4Image from '../Assets/Song4.png';
-// import Song5Image from '../Assets/Song5.png';
+import Community from '../Assets/Community.jpg';
+
+import Locket from '../Assets/Locket.jpg';
+import Verdigris from '../Assets/Verdigris.jpg';
+import Explorer from '../Assets/Explorer.jpg';
 
 
 export default class Song extends React.Component {
@@ -14,10 +15,10 @@ export default class Song extends React.Component {
       currentSongIndex: 0,
       songs: [
         { title: "One Beer", artist: "MF DOOM - MM..FOOD", image: OneBeer },
-        { title: "Song 2", artist: "Artist 2", image: null },
-        { title: "Song 3", artist: "Artist 3", image: null },
-        { title: "Song 4", artist: "Artist 4", image: null },
-        { title: "Song 5", artist: "Artist 5", image: null }
+        { title: "Profaned Community", artist: "Marzuku, Yem, Saxophonist Perrell - Fradulence", image: Community },
+        { title: "Locket", artist: "Crumb - Locket EP", image: Locket },
+        { title: "Verdigris", artist: "SERAPHINE NOIR & Mauricesax - Avalon", image: Verdigris },
+        { title: "92 Explorer", artist: "Post Malone - beerbongs & bentleys", image: Explorer }
       ]
     };
   }

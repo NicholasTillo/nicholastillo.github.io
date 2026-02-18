@@ -43,6 +43,7 @@
     display: inline-block;
     cursor: pointer;
     font-family: 'Rationale', Georgia, serif;
+    font-size: 1.4em;
 }
 
 /* underline bar on hover */

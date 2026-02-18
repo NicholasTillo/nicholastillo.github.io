@@ -22,7 +22,7 @@ export default class About extends React.Component {
 
             
             <div className="musicSection">
-                <h2> Some Favourite Songs </h2>            
+                <h2> Favourite Songs Right Now </h2>            
                 <Song/>
 
             </div>
