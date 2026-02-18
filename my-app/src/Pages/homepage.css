@@ -1,0 +1,11 @@
+.ActionBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.ActionBar img {
+    cursor: pointer;
+    flex: 1;
+    margin: 0 10px;
+}

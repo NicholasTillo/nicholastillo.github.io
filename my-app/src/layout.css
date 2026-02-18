@@ -14,4 +14,13 @@ main{
     padding-bottom: 0px;
 }
 
-h1, h2, h3, .site-title { font-family: 'Rationale', Georgia, serif; }
+h1, h2, h3, p, a, .site-title { font-family: 'Rationale', Georgia, serif; }
+p, a, button{
+    font-size: 1.4em;
+}
+h3{ 
+    font-size: 1.8em;
+}
+h2{
+    font-size: 2em;
+}

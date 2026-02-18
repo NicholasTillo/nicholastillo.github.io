@@ -1,5 +1,10 @@
 import React from "react";
 import './Song.css';
+import OneBeer from '../Assets/OneBeer.jpg';
+// import Song2Image from '../Assets/Song2.png';
+// import Song3Image from '../Assets/Song3.png';
+// import Song4Image from '../Assets/Song4.png';
+// import Song5Image from '../Assets/Song5.png';
 
 
 export default class Song extends React.Component {
@@ -8,11 +13,11 @@ export default class Song extends React.Component {
     this.state = {
       currentSongIndex: 0,
       songs: [
-        { title: "Song 1", artist: "Artist 1" },
-        { title: "Song 2", artist: "Artist 2" },
-        { title: "Song 3", artist: "Artist 3" },
-        { title: "Song 4", artist: "Artist 4" },
-        { title: "Song 5", artist: "Artist 5" }
+        { title: "One Beer", artist: "MF DOOM - MM..FOOD", image: OneBeer },
+        { title: "Song 2", artist: "Artist 2", image: null },
+        { title: "Song 3", artist: "Artist 3", image: null },
+        { title: "Song 4", artist: "Artist 4", image: null },
+        { title: "Song 5", artist: "Artist 5", image: null }
       ]
     };
   }
@@ -49,7 +54,9 @@ export default class Song extends React.Component {
       <div className="songDiv">
         <div className="songSlideshow">
           <div className="songCard">
-            <div className="albumArt"></div>
+            <div className="albumArt">
+              {currentSong.image && <img src={currentSong.image} alt={currentSong.title} />}
+            </div>
             <div className="songContent">
               <h3 className="songTitle">{currentSong.title}</h3>
               <p className="artistName">{currentSong.artist}</p>

@@ -16,14 +16,14 @@ export default class Footer extends React.Component {
                     href="https://www.linkedin.com/in/nicholastillo/"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Lnk
-
+                    LinkedIn
                 </a>
+                
                 <a  className="App-link"
                     href="https://nicholastillo.itch.io"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Link2
+                    Itch.io
 
                 </a>
               </div>
@@ -38,7 +38,7 @@ export default class Footer extends React.Component {
 
           <div className="verticalBar"></div>
 
-          
+
           <div className="rightFooter">
               <h2>
                 Stupid Links
