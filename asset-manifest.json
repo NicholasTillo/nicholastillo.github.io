@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb294096.css",
-    "main.js": "/static/js/main.8898fd02.js",
+    "main.css": "/static/css/main.6b501d2c.css",
+    "main.js": "/static/js/main.0f78b6c4.js",
     "static/js/488.ec936092.chunk.js": "/static/js/488.ec936092.chunk.js",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
+    "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
+    "static/media/Explorer.jpg": "/static/media/Explorer.10af6221928f82f206dc.jpg",
     "static/media/FUBnyu.jpg": "/static/media/FUBnyu.56db2efc2e2e1ec86ddf.jpg",
+    "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
+    "static/media/Slash.gif": "/static/media/Slash.6cbf1ece92c6a04ac4aa.gif",
     "index.html": "/index.html",
-    "main.cb294096.css.map": "/static/css/main.cb294096.css.map",
-    "main.8898fd02.js.map": "/static/js/main.8898fd02.js.map",
+    "main.6b501d2c.css.map": "/static/css/main.6b501d2c.css.map",
+    "main.0f78b6c4.js.map": "/static/js/main.0f78b6c4.js.map",
     "488.ec936092.chunk.js.map": "/static/js/488.ec936092.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb294096.css",
-    "static/js/main.8898fd02.js"
+    "static/css/main.6b501d2c.css",
+    "static/js/main.0f78b6c4.js"
   ]
 }
