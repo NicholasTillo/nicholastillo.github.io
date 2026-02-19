@@ -12,11 +12,6 @@ import Mercy_Selected from '../Assets/Mercy_Selected.png'
 import Act_Selected from '../Assets/Act_Selected.png'
 import Item_Selected from '../Assets/Item_Selected.png'
 
-import FightSelected from '../Assets/Fight_Selected.png'
-import MercySelected from '../Assets/Mercy_Selected.png'
-import ActSelected from '../Assets/Act_Selected.png'
-import ItemSelected from '../Assets/Item_Selected.png'
-
 import Slash from '../Assets/Slash.gif'
 
 import "./homepage.css"
@@ -26,7 +21,7 @@ import "./homepage.css"
 export default class Homepage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hovered: null };
+        this.state = { hovered: null, showSlash: false };
     }
 
     setHovered = (name) => this.setState({ hovered: name });
@@ -34,7 +29,8 @@ export default class Homepage extends React.Component {
     clearHovered = () => this.setState({ hovered: null });
 
     fight = () => {
-        console.log("Fight button clicked");
+        this.setState({ showSlash: true });
+        setTimeout(() => this.setState({ showSlash: false }), 1000);
     };
     act = () =>{
         console.log("Act button clicked");  
@@ -51,7 +47,17 @@ export default class Homepage extends React.Component {
         return (
         <div className="App">
             <header className="App-header">
-                <img src={mugi} className="App-logo" alt="logo" />
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                    <img src={mugi} className="App-logo" alt="logo" />
+                    {this.state.showSlash && (
+                        <img
+                            src={Slash}
+                            alt="slash"
+                            className="slash-overlay"
+                        />
+                    )}
+                </div>
+            
                 <p>
                 This is Mugi, We like Mugi
                 </p>

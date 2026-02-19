@@ -1,6 +1,6 @@
 /* Whole Container */
 .wholeFooter{
-    background-color: rgb(138, 161, 182);
+    background-image: url('../Assets/Texture.png');
     height: 6vw;
     width:100vw;
     display:flex;
