@@ -1,5 +1,6 @@
 import React from "react";
 import './basepages.css'
+import './page3.css'
 import FUBnyu from "../Assets/FUBnyu.jpg"
 import { Link } from "react-router";
 
@@ -29,7 +30,16 @@ export default class Page3 extends React.Component {
             </div>
             <div className="HKMTGShowcase">
                 <h2> Hollow Knight MTG Set</h2>
-                <p> Implementing a custom Hollow Knight MTG set for use in cockatrice and draftmancer.  https://github.com/NicholasTillo/HK-MTG-Set </p>
+                <p> Implementing a custom Hollow Knight MTG set for use in cockatrice and draftmancer.  <a href="https://github.com/NicholasTillo/HK-MTG-Set">GitHub Link</a> </p>
+                
+                <div className="hkmtgGallery">
+                    {[1,2,3,4].map((i) => (
+                        <div key={i} className="hkmtg-slot">
+                            <img src={require(`../Assets/HKMTG${i}.jpg`)} alt={`HKMTG ${i}`} />
+                        </div>
+                    ))}
+                </div>
+
             </div>
             <div className="figureShowcase">
                 <h2> Painted Minifigures </h2>

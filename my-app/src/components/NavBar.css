@@ -1,7 +1,10 @@
 .NavBarDiv{
     display: flex;
-    background: #7822c3;
-background: linear-gradient(0deg, rgba(120, 34, 195, 0) 80%, rgba(107, 69, 17) 100%);
+    /* Top purple overlay fading to transparent so the texture shows through at the bottom */
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(120,34,195,0) 85%), url('../Assets/Texture.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 1.5em;
 }
 #headerLink{

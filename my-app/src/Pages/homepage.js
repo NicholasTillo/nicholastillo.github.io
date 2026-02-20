@@ -13,6 +13,7 @@ import Act_Selected from '../Assets/Act_Selected.png'
 import Item_Selected from '../Assets/Item_Selected.png'
 
 import Slash from '../Assets/Slash.gif'
+import Carrot from '../Assets/carrot.gif'
 
 import "./homepage.css"
 
@@ -21,7 +22,7 @@ import "./homepage.css"
 export default class Homepage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hovered: null, showSlash: false };
+        this.state = { hovered: null, showSlash: false, showItem: false };
     }
 
     setHovered = (name) => this.setState({ hovered: name });
@@ -36,7 +37,8 @@ export default class Homepage extends React.Component {
         console.log("Act button clicked");  
     };
     item = () =>{
-        console.log("Item button clicked");
+        this.setState({ showItem: true });
+        setTimeout(() => this.setState({ showItem: false }), 1000);
     };
     mercy = () =>{
         console.log("Mercy button clicked");
@@ -52,8 +54,15 @@ export default class Homepage extends React.Component {
                     {this.state.showSlash && (
                         <img
                             src={Slash}
-                            alt="slash"
+                            alt=""
                             className="slash-overlay"
+                        />
+                    )}
+                    {this.state.showItem && (
+                        <img
+                            src={Carrot}
+                            alt=""
+                            className="item-overlay"
                         />
                     )}
                 </div>

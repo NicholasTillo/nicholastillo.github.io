@@ -1,7 +1,10 @@
 import React from "react";
 import ProjectGallery from "../components/Gallery";
+
 import './basepages.css'
 import "./projects.css"
+
+
 
 
 export default class Projects extends React.Component {
@@ -57,7 +60,7 @@ export default class Projects extends React.Component {
                 </div>
                 <div className="seperator"> </div>
                 <div id="project5">
-                    <h3> project5 </h3>
+                    <h3> Capstone Project - MuLab Artwork </h3>
                     <p> description 5</p>
                 </div>
                 <div className="seperator"> </div>
@@ -67,8 +70,12 @@ export default class Projects extends React.Component {
                 </div>
                 <div className="seperator"> </div>
                 <div id="project7">
-                    <h3> project7 </h3>
-                    <p> description 7</p>
+                    <h3> Conway's Game Of Life Solver </h3>
+                    <p> A course project using python to model the zero player game The Game Of Life. 
+                        Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
+                        Using python and the SAT solver - kissat to solve the state space that is set up in the file.  </p>
+                    <a href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
+                    <a href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
                 </div>
                 <div className="seperator"> </div>
             </div>

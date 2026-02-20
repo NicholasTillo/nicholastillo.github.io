@@ -3,10 +3,18 @@ import Song from "../components/Song.js";
 import './basepages.css'
 
 
-import FUBnyu from '../Assets/FUBnyu.jpg';
-import geomancersEscape from '../Assets/geomancersEscape.png';
-import images from '../Assets/images.jpg';
-import mugi from '../Assets/mugi.png';
+import Minecraft from '../Assets/Minecraft.jpg';
+import Undertale from '../Assets/Undertale.jpg';
+import Wilds from '../Assets/Wilds.jpg';
+import Ultrakill from '../Assets/Ultrakill.jpg';
+import Issac from '../Assets/Issac.jpg';
+import White from '../Assets/White.jpg';
+import Inscryption from '../Assets/Inscryption.jpg';
+import Knight from '../Assets/Knight.jpg';
+
+
+
+
 
 export default class About extends React.Component {
     render(){
@@ -31,7 +39,7 @@ export default class About extends React.Component {
                 <h2> Some games, but like fr check out the backloggd if you want more </h2>
                 <div className="gameGrid">
                     {
-                        [FUBnyu, geomancersEscape, images, mugi, FUBnyu, geomancersEscape, images, mugi].map((img, idx) => (
+                        [Minecraft, Undertale, Wilds, Ultrakill, Issac, White, Inscryption, Knight].map((img, idx) => (
                             <div className="gameCard" key={idx}>
                                 <img src={img} alt={`game-${idx}`} />
                             </div>

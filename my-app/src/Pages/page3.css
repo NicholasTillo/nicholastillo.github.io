@@ -1,0 +1,25 @@
+/* Styles for the Hollow Knight MTG gallery on page3 */
+.hkmtgGallery {
+  width: 75%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hkmtg-slot {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #f7f7f7;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hkmtg-slot img {
+    max-width: 100%;
+    object-fit: contain;
+}
