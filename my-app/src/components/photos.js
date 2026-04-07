@@ -6,6 +6,8 @@ import CounterFactual from '../Assets/CounterFactual.png';
 import GitProbe1 from '../Assets/GitProbe1.png';
 import EEBehaviourTree from '../Assets/EEBehaviourTree.png';
 import GameOfLife from '../Assets/GameOfLife.png';
+import ComputationalArtwork from '../Assets/FinishedComputationalArtworks.png';
+
 
 
 
@@ -59,5 +61,11 @@ export const photos2 = [
     width: 1,
     height: 1
   },
+  {
+    src: ComputationalArtwork,
+    width: 1,
+    height: 1
+  },
+
 
 ]

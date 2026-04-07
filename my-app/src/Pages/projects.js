@@ -18,7 +18,8 @@ export default class Projects extends React.Component {
             <div id="projectDescriptions"> 
                 <div id="project1">
                     <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
-                    <p> A MTG Inspirted Course Project. An exploration of the different AI models and their applicability on the Magic The Gathering domain. We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
+                    <p> A MTG Inspirted Course Project. An exploration of the different AI models and their applicability on the Magic The Gathering domain. 
+                        We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
 
                     <a  href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
 
@@ -60,13 +61,19 @@ export default class Projects extends React.Component {
                 </div>
                 <div className="seperator"> </div>
                 <div id="project5">
-                    <h3> Capstone Project - MuLab Artwork </h3>
-                    <p> description 5</p>
+                    <h3> Capstone Project - Computational Artwork for the MuLab </h3>
+                    <p> This project was a set of 3 full sized canvases meant to spread the research of the graduate students within the MuLab and present the key concepts in a novel way. 
+                        The 3 art pieces contain a mix of acrylic paintings, spray coloured mediums and mixed media elements. The concepts covered by the artworks were RP-BDI planning, a multi-agent epistemic planning model aimed to make planning more human. 
+                        Next was a novel neural net approach to the classic cops and robbers graph theory problem. Finally, the last piece was regarding using AI automated planning for safety features on spacecrafts.  
+                    </p>
+                    <a href="https://drive.google.com/file/d/110QHDawwi864MMwkK79G3pvBGZB0s9WW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Final Report For The Project
+                    </a>
                 </div>
                 <div className="seperator"> </div>
                 <div id="project6">
-                    <h3> project6 </h3>
-                    <p> description 6</p>
+                    <h3> Upcoming </h3>
+                    <p> Upcoming</p>
                 </div>
                 <div className="seperator"> </div>
                 <div id="project7">

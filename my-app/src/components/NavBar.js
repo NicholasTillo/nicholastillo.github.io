@@ -31,6 +31,11 @@ export default class NavBar extends React.Component {
                   <button> Some Cool Stuff </button>
                 </Link>
             </div>
+            <div className="navExtra">
+                <Link reloadDocument to="/lightingdemos">
+                  <button> Lighting Demos </button>
+                </Link>
+            </div>
           </nav>
           
         </div>
