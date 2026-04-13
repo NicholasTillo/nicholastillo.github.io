@@ -1,4 +1,6 @@
 import React from "react";
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef } from 'react';
 
 import mugi from '../Assets/mugi.png'
 
@@ -17,106 +19,31 @@ import Carrot from '../Assets/carrot.gif'
 
 import "./homepage.css"
 
-
+function RotatingWebGLMesh() {
+  const ref = useRef()
+  useFrame((_, delta) => {
+    ref.current.rotation.y += delta * 0.6
+  })
+  return (
+    <mesh ref={ref}>
+      <sphereGeometry args={[0.55, 28, 28]} />
+      <meshStandardMaterial color="#ff6666" />
+    </mesh>
+  )
+}
 
 export default class Homepage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hovered: null, showSlash: false, showItem: false };
     }
-
-    setHovered = (name) => this.setState({ hovered: name });
-
-    clearHovered = () => this.setState({ hovered: null });
-
-    fight = () => {
-        this.setState({ showSlash: true });
-        setTimeout(() => this.setState({ showSlash: false }), 1000);
-    };
-    act = () =>{
-        console.log("Act button clicked");  
-    };
-    item = () =>{
-        this.setState({ showItem: true });
-        setTimeout(() => this.setState({ showItem: false }), 1000);
-    };
-    mercy = () =>{
-        console.log("Mercy button clicked");
-    };
-
 
     render() {
         return (
-        <div className="App">
-            <header className="App-header">
-                <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <img src={mugi} className="App-logo" alt="logo" />
-                    {this.state.showSlash && (
-                        <img
-                            src={Slash}
-                            alt=""
-                            className="slash-overlay"
-                        />
-                    )}
-                    {this.state.showItem && (
-                        <img
-                            src={Carrot}
-                            alt=""
-                            className="item-overlay"
-                        />
-                    )}
-                </div>
-            
-                <p>
-                This is Mugi, We like Mugi
-                </p>
-
-                <div className="ActionBar">
-                    <img
-                        src={this.state.hovered === 'Fight' ? Fight_Selected : Fight}
-                        alt="Fight"
-                        role="button"
-                        tabIndex={0}
-                        onMouseEnter={() => this.setHovered('Fight')}
-                        onMouseLeave={this.clearHovered}
-                        onClick={this.fight}
-                    />
-                    <img
-                        src={this.state.hovered === 'Act' ? Act_Selected : Act}
-                        alt="Act"
-                        role="button"
-                        tabIndex={0}
-                        onMouseEnter={() => this.setHovered('Act')}
-                        onMouseLeave={this.clearHovered}
-                        onClick={this.act}
-
-                    />
-                    <img
-                        src={this.state.hovered === 'Item' ? Item_Selected : Item}
-                        alt="Item"
-                        role="button"
-                        tabIndex={0}
-                        onMouseEnter={() => this.setHovered('Item')}
-                        onMouseLeave={this.clearHovered}
-                        onClick={this.item}
-
-                    />
-                    <img
-                        src={this.state.hovered === 'Mercy' ? Mercy_Selected : Mercy}
-                        alt="Mercy"
-                        role="button"
-                        tabIndex={0}
-                        onMouseEnter={() => this.setHovered('Mercy')}
-                        onMouseLeave={this.clearHovered}
-                        onClick={this.mercy}
-
-                    />
-
-                </div>
-                
-
-                
-            </header>
+            <div className="mainBody">
+                <h1>Welcome to my website!</h1>
+                <p>This is a place where I share my projects and some cool stuff. Feel free to explore and check out the different sections using the navigation bar above.</p>
+                <h2> Professional Stuff </h2>
+                <p> </p>
             </div>
     );
 

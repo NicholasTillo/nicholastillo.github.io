@@ -36,6 +36,11 @@ export default class NavBar extends React.Component {
                   <button> Lighting Demos </button>
                 </Link>
             </div>
+            <div className="navExtra">
+                <Link reloadDocument to="/mugi">
+                  <button> Mugi </button>
+                </Link>
+            </div>
           </nav>
           
         </div>
