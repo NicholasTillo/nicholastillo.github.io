@@ -17,6 +17,7 @@ import Item_Selected from '../Assets/Item_Selected.png'
 import Slash from '../Assets/Slash.gif'
 import Carrot from '../Assets/carrot.gif'
 
+import Minesweeper from '../components/Minesweeper'
 import "./homepage.css"
 
 function RotatingWebGLMesh() {
@@ -43,7 +44,13 @@ export default class Homepage extends React.Component {
                 <h1>Welcome to my website!</h1>
                 <p>This is a place where I share my projects and some cool stuff. Feel free to explore and check out the different sections using the navigation bar above.</p>
                 <h2> Professional Stuff </h2>
-                <p> </p>
+                <p> Here is all the information that professional people would want. If you want to get it, you're gonna have to work for it though. 
+                    Im a game designer, and you're gonna have to play some games to get it :p.  </p>
+                
+                <div className="homeCanvas">
+                    <Minesweeper gridSize={8} mineCount={10} />
+                </div>
+                    
             </div>
     );
 

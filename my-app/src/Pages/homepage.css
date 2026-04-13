@@ -60,3 +60,12 @@
     top: 0;
     left: 0;
 }
+
+.homeCanvas {
+    background-color: lightblue;
+    max-width: 33%;
+
+    margin: auto;
+    display: flex;
+    aspect-ratio: 1 / 1;
+}
