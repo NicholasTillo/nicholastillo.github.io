@@ -47,10 +47,11 @@ export default class Homepage extends React.Component {
                 <p> Here is all the information that professional people would want. If you want to get it, you're gonna have to work for it though. 
                     Im a game designer, and you're gonna have to play some games to get it :p.  </p>
                 
+                <h2> Skillsweeper! </h2>
                 <div className="homeCanvas">
                     <Minesweeper gridSize={8} mineCount={10} />
                 </div>
-                    
+                <h2> Test </h2>
             </div>
     );
 
