@@ -46,6 +46,34 @@ export default class Page3 extends React.Component {
                 <p> I also paint some minifigures, I actually got a 3d printer just to have things to paint for cheap. I have an instagram <a style={{padding:0,margin:0}} href="https://www.instagram.com/tillosfigures/">@tillosfigure/</a> to help showcase the figures ive printed, and painted! Here are some favourites: </p>
             </div>
             
+            <div className="dndShowcase">
+                <h2>Dungeons And Dragons, Custom Campaigns</h2>
+
+                <div className="campaignSection">
+                    <h3>Prolea</h3>
+                    <p>Custom campaign world-building and adventure design centered around the kingdom of Prolea. Add your campaign art or map images here to show off the story and setting.</p>
+                    <div className="campaignGallery">
+                        {[1,2,3].map((i) => (
+                            <div key={i} className="campaign-slot">
+                                <div className="campaign-image-placeholder">Photo {i}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="campaignSection">
+                    <h3>Spirex Flora</h3>
+                    <p>Custom campaign focusing on the mysterious world of Spirex Flora, its creatures, locations, and story beats. Leave space here for the main campaign visuals and notes.</p>
+                    <div className="campaignGallery">
+                        {[1,2,3].map((i) => (
+                            <div key={i} className="campaign-slot">
+                                <div className="campaign-image-placeholder">Photo {i}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            
             <div className="rakshaShowcase">
                 <h2>Art Showcase</h2>
                 <p> My girlfriend makes incredible art, heres a showcase of some of the things that she does <a style={{padding:0,margin:0}} href="https://www.instagram.com/r4ksha/">@r4ksha/</a>. </p>
