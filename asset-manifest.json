@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b916ead2.css",
-    "main.js": "/static/js/main.abeb1c6c.js",
-    "static/js/488.06938120.chunk.js": "/static/js/488.06938120.chunk.js",
+    "main.css": "/static/css/main.c6e27475.css",
+    "main.js": "/static/js/main.c61f2aaf.js",
+    "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
+    "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
+    "static/media/Spirex2.jpg": "/static/media/Spirex2.920f5db810395b7cf44c.jpg",
+    "static/media/Prolea1.jpg": "/static/media/Prolea1.e409542a503e029b42c0.jpg",
     "static/media/FinishedComputationalArtworks.png": "/static/media/FinishedComputationalArtworks.752bd913ab70bb201e77.png",
-    "static/media/Texture.png": "/static/media/Texture.ef6b8648ff24d6cdd14f.png",
+    "static/media/Spirex3.jpg": "/static/media/Spirex3.a8142f7fa44a4fe03f3e.jpg",
+    "static/media/Prolea2.jpg": "/static/media/Prolea2.3a0e84194ac6d17b9cf9.jpg",
+    "static/media/Prolea3.jpg": "/static/media/Prolea3.789a647c25cbb66e01f3.jpg",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
@@ -29,12 +34,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.b916ead2.css.map": "/static/css/main.b916ead2.css.map",
-    "main.abeb1c6c.js.map": "/static/js/main.abeb1c6c.js.map",
-    "488.06938120.chunk.js.map": "/static/js/488.06938120.chunk.js.map"
+    "main.c6e27475.css.map": "/static/css/main.c6e27475.css.map",
+    "main.c61f2aaf.js.map": "/static/js/main.c61f2aaf.js.map",
+    "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b916ead2.css",
-    "static/js/main.abeb1c6c.js"
+    "static/css/main.c6e27475.css",
+    "static/js/main.c61f2aaf.js"
   ]
 }
