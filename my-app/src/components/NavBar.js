@@ -13,10 +13,21 @@ export default class NavBar extends React.Component {
                 Nicholas Tillo
                 </h1>
             </Link>
+          <div className="phoneMenu">
+            <details>
+              <summary>Navigation</summary>
+              <div className="phoneLinks">
+                <Link reloadDocument to="/about">About</Link>
+                <Link reloadDocument to="/projects">Projects</Link>
+                <Link reloadDocument to="/page3">Some Cool Stuff</Link>
+                <Link reloadDocument to="/lightingdemos">Lighting Demos</Link>
+                <Link reloadDocument to="/mugi">Mugi</Link>
+              </div>
+            </details>
+          </div>
           <div className="verticalBar"></div>
           <nav className="AccNavBar">
             <div className="navLeft">
-              
                 <Link reloadDocument  to="/about">
                   <button> About </button>
                 </Link>
@@ -42,11 +53,8 @@ export default class NavBar extends React.Component {
                 </Link>
             </div>
           </nav>
-          
         </div>
-        
       </div>
-      
     );
   }
 }

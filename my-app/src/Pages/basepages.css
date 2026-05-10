@@ -17,6 +17,29 @@ body {
   background: transparent;
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .mainBody {
+        max-width: 85vw;
+        padding-bottom: 2vw;
+    }
+    .mainBody p, h1, h2, h3, a {
+        max-width: 85vw;
+    }
+}
+
+/* Phone styles */
+@media (max-width: 768px) {
+    .mainBody {
+        max-width: 95vw;
+        padding: 1em;
+        padding-bottom: 2em;
+    }
+    .mainBody p, h1, h2, h3, a {
+        max-width: 95vw;
+    }
+}
+
 
 
 

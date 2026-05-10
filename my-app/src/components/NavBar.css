@@ -1,12 +1,13 @@
 .NavBarDiv{
     display: flex;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 1.5em;
     width: 70vw;
+    max-width: 100%;
     margin: auto;
+    margin-bottom: 1rem;
     border: 3px solid #6B4A7F;
     border-bottom: 0px;
     background-color: #668DD8;
@@ -29,6 +30,10 @@ h1 {
     
 }
 
+.phoneMenu {
+    display: none;
+}
+
 .AccNavBar div{
     margin-left:1%;
     
@@ -45,6 +50,106 @@ h1 {
     position: relative;
     cursor: pointer;
     font-family: 'Rationale', Georgia, serif;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .NavBarDiv {
+        width: 90vw;
+        padding-top: 1em;
+    }
+    
+    h1 {
+        font-size: calc(2.5em + 2px);
+    }
+    
+    .AccNavBar button {
+        font-size: calc(1.5em + 2px);
+    }
+}
+
+/* Phone styles */
+@media (max-width: 768px) {
+    .NavBarDiv {
+        width: 95vw;
+        padding-top: 0.5em;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .wholeHeaderContent {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: calc(2em + 2px);
+        margin-bottom: 0;
+    }
+
+    .phoneMenu {
+        display: block;
+        width: auto;
+    }
+
+    .phoneMenu summary {
+        list-style: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: 'Rationale', Georgia, serif;
+        border: none;
+        background: transparent;
+        padding: 0.25rem 0.5rem;
+        color: black;
+    }
+
+    .phoneMenu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .phoneLinks {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .phoneLinks a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.75rem;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .AccNavBar {
+        display: none;
+    }
+
+    .verticalBar {
+        display: none;
+    }
+    
+    .AccNavBar button {
+        font-size: calc(1.2em + 2px);
+        padding: 0.75rem 1rem;
+        min-width: auto;
+        text-align: left;
+        width: 100%;
+        height: auto;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    .AccNavBar {
+        display: none !important;
+    }
+}
+
+.menuToggle {
+    display: none;
 }
 
 

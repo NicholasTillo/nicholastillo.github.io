@@ -41,3 +41,30 @@
 .OuterLink{
     display: block;
 }
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .projectImageSlot img {
+        max-width: 200px;
+    }
+    .projectImageGrid {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Phone styles */
+@media (max-width: 768px) {
+    .projectImageSlot img {
+        max-width: 150px;
+    }
+    .projectImageGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .projectImageSlot {
+        width: 150px;
+        height: 150px;
+    }
+}
