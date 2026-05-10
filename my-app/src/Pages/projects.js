@@ -43,11 +43,11 @@ export default class Projects extends React.Component {
         const projectImages = {
             project1: [
                 require("../Assets/GitProbe1.png"),
-                require("../Assets/GitProbe1.png")
+                require("../Assets/GitProbePresentation.jpg"),
             ],
             project2: [
                 require("../Assets/EEBehaviourTree.png"),
-                require("../Assets/EEBehaviourTree.png")
+                require("../Assets/ExtraterrestrialEntertainment.png")
             ],
             project3: [
                 require("../Assets/CounterFactual.png"),
@@ -55,19 +55,18 @@ export default class Projects extends React.Component {
             ],
             project4: [
                 require("../Assets/geomancersEscape.png"),
-                require("../Assets/geomancersEscape.png")
+                require("../Assets/GeomancerEscape.png")
             ],
             project5: [
+                require("../Assets/IMG_0478.PNG"),
                 require("../Assets/FinishedComputationalArtworks.png"),
-                require("../Assets/FinishedComputationalArtworks.png"),
-                require("../Assets/FinishedComputationalArtworks.png")
+                require("../Assets/IMG_0462.PNG")
             ],
             project6: [
-                
-                
+                require("../Assets/GameOfLife.png"),
             ],
             project7: [
-                require("../Assets/GameOfLife.png"),
+                
             ]
         };
 
@@ -103,6 +102,8 @@ export default class Projects extends React.Component {
 
                     <a className="OuterLink" href="https://www.youtube.com/watch?v=O5wmU3lJKOU"> Video Of Pathfinding and Behaviour Tree </a>
 
+                    <a className="OuterLink" href={require("../Assets/CISC 486 - Group 6 Presentation.pptx")} target="_blank" rel="noopener noreferrer"> Final Powerpoint Presentation </a>
+
                     {this.renderImageGrid(projectImages.project2)}
 
                 </div>
@@ -137,13 +138,8 @@ export default class Projects extends React.Component {
                     {this.renderImageGrid(projectImages.project5)}
                 </div>
                 <div className="seperator"> </div>
+                
                 <div id="project6">
-                    <h3> Upcoming </h3>
-                    <p> Upcoming</p>
-                    {this.renderImageGrid(projectImages.project6)}
-                </div>
-                <div className="seperator"> </div>
-                <div id="project7">
                     <h3> Conway's Game Of Life Solver </h3>
                     <p> A course project using python to model the zero player game The Game Of Life. 
                         Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
@@ -151,9 +147,17 @@ export default class Projects extends React.Component {
                     <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
                     <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
 
+                    {this.renderImageGrid(projectImages.project6)}
+                </div>
+                <div className="seperator"> </div>
+
+                <div id="project7">
+                    <h3> Upcoming </h3>
+                    <p> Upcoming</p>
                     {this.renderImageGrid(projectImages.project7)}
                 </div>
                 <div className="seperator"> </div>
+
             </div>
 
             {this.state.activeSrc && (
