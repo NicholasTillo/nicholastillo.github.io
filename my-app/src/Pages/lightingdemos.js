@@ -51,7 +51,7 @@ export default class LightingDemos extends React.Component {
     render(){
         return(
             <div className="mainBody">
-                <h1>Lighting Demos</h1>
+                <h1 className="PageTitle">Lighting Demos</h1>
                 <p>This page will contain WebGL lighting demonstrations in the future.</p>
 
                 <div className="lightingContainer">

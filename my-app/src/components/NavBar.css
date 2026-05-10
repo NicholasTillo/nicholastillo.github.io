@@ -1,11 +1,15 @@
 .NavBarDiv{
     display: flex;
-    /* Top purple overlay fading to transparent so the texture shows through at the bottom */
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(120,34,195,0) 85%), url('../Assets/Texture.png');
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 1.5em;
+    width: 70vw;
+    margin: auto;
+    border: 3px solid #6B4A7F;
+    border-bottom: 0px;
+    background-color: #668DD8;
 }
 #headerLink{
     align-items: center;
@@ -17,7 +21,7 @@ h1 {
 }
 
 .wholeHeaderContent{
-    width: 75%;
+    width: 90%;
     display: flex;
     justify-content: start;
     align-items:center;
@@ -26,7 +30,6 @@ h1 {
 }
 
 .AccNavBar div{
-    height:100%;
     margin-left:1%;
     
 }
@@ -38,7 +41,7 @@ h1 {
     background: transparent; /* remove colored background */
     border: none;
     color: black; /* make text black */
-    padding: 0 0.8rem;
+    padding: 0 0.5rem;
     position: relative;
     cursor: pointer;
     font-family: 'Rationale', Georgia, serif;
@@ -59,27 +62,16 @@ h1 {
     height:2.67em;
 
 }
-.navFullRight button{
-    height:52px;
-    font-size: calc(1.2em + 2px); /* increase by ~2px */
-    background: transparent;
-    border: none;
-    color: black; /* make text black */
-    position: relative;
-    padding: 0 0.6rem;
-    cursor: pointer;
-}
+
 
 
 #headerLink{text-decoration: none; color:black;}
 #headerLink:visited { text-decoration: none; }
 #headerLink:hover { text-decoration: none; }
 #headerLink:focus { text-decoration: none; }
-#headerLinka:active { text-decoration: none; }
 
 /* Hover underline bar for nav buttons */
-.AccNavBar button::after,
-.navFullRight button::after{
+.AccNavBar button::after{
     content: "";
     position: absolute;
     left: 12%;
@@ -92,8 +84,7 @@ h1 {
     transition: transform 160ms ease, opacity 160ms ease;
     opacity: 0;
 }
-.AccNavBar button:hover::after,
-.navFullRight button:hover::after{
+.AccNavBar button:hover::after{
     transform: scaleX(1);
     opacity: 1;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Song from "../components/Song.js";
 import './basepages.css'
+import "./about.css"
 
 
 import Minecraft from '../Assets/Minecraft.jpg';
@@ -11,7 +12,7 @@ import Issac from '../Assets/Issac.jpg';
 import White from '../Assets/White.jpg';
 import Inscryption from '../Assets/Inscryption.jpg';
 import Knight from '../Assets/Knight.jpg';
-
+import Minesweeper from '../components/Minesweeper'
 
 
 
@@ -21,13 +22,25 @@ export default class About extends React.Component {
         return(
             <div className="mainBody">
 
-            <h2> Biography </h2>
+            <h2 className="PageTitle"> Biography </h2>
             
             <p> 
                 Hey There! Im Nicholas Tillo, I'm an aspiring game designer and programmer. I want my future to be filled with creative endeavors and my ultimate dream is to fully produce a video game from start to finish that gets published onto steam. 
                 I was born to cultivate experiences for people, I've been drawn to creating moments that change and effect peoples lives, originally through Dungeons and Dragons, but now through game design. I am based in Toronto Canada so if you are around, get in touch!  
             </p>
 
+
+            <h2> Professional Stuff </h2>
+                <p> Here is all the information that professional people would want. If you want to get it, you're gonna have to work for it though. 
+                    Im a game designer, and you're gonna have to play some games to get it :p.  </p>
+                
+                <h2> Game 1: Skillsweeper! </h2>
+                <div className="homeCanvas">
+                    <Minesweeper gridSize={8} mineCount={10} />
+                </div>
+
+                
+                <h2> Game 2:  </h2>
             
             <div className="musicSection">
                 <h2> Favourite Songs Right Now </h2>            
@@ -47,6 +60,9 @@ export default class About extends React.Component {
                     }
                 </div>
             </div>
+
+            
+
 
             </div>
             )

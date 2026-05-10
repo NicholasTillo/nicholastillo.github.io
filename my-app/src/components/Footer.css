@@ -1,12 +1,18 @@
 /* Whole Container */
 .wholeFooter{
-    background-image: url('../Assets/Texture.png');
+    background-color: #668DD8;
+    background-size: cover;
     height: 6vw;
     width:100vw;
     display:flex;
     align-items: center;
     justify-content: center;
     padding-bottom:10px;
+    margin: auto;
+    border: 3px solid #6B4A7F;
+    border-top: 0px;
+    width: 70vw;
+
 }
 .wholeFooter h2{
     text-align: center;
