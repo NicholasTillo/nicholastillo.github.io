@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca044d3d.css",
+    "main.css": "/static/css/main.6d4cc898.css",
     "main.js": "/static/js/main.f32051e3.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
@@ -41,12 +41,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.ca044d3d.css.map": "/static/css/main.ca044d3d.css.map",
+    "main.6d4cc898.css.map": "/static/css/main.6d4cc898.css.map",
     "main.f32051e3.js.map": "/static/js/main.f32051e3.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca044d3d.css",
+    "static/css/main.6d4cc898.css",
     "static/js/main.f32051e3.js"
   ]
 }
