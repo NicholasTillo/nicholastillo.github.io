@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6e27475.css",
-    "main.js": "/static/js/main.c61f2aaf.js",
+    "main.css": "/static/css/main.ca044d3d.css",
+    "main.js": "/static/js/main.f32051e3.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
+    "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
     "static/media/Spirex2.jpg": "/static/media/Spirex2.920f5db810395b7cf44c.jpg",
+    "static/media/GeomancerEscape.png": "/static/media/GeomancerEscape.9aaea986500100b507fd.png",
     "static/media/Prolea1.jpg": "/static/media/Prolea1.e409542a503e029b42c0.jpg",
+    "static/media/ExtraterrestrialEntertainment.png": "/static/media/ExtraterrestrialEntertainment.16f6a57e3bafa2b040ce.png",
     "static/media/FinishedComputationalArtworks.png": "/static/media/FinishedComputationalArtworks.752bd913ab70bb201e77.png",
+    "static/media/IMG_0462.PNG": "/static/media/IMG_0462.4258c85db01d11d091be.PNG",
+    "static/media/GitProbePresentation.jpg": "/static/media/GitProbePresentation.c8f9e5934c359fecc26b.jpg",
     "static/media/Spirex3.jpg": "/static/media/Spirex3.a8142f7fa44a4fe03f3e.jpg",
     "static/media/Prolea2.jpg": "/static/media/Prolea2.3a0e84194ac6d17b9cf9.jpg",
     "static/media/Prolea3.jpg": "/static/media/Prolea3.789a647c25cbb66e01f3.jpg",
+    "static/media/Texture.png": "/static/media/Texture.ef6b8648ff24d6cdd14f.png",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
+    "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
     "static/media/EEBehaviourTree.png": "/static/media/EEBehaviourTree.8e7a05bf4f4700a5ac1e.png",
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
     "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
@@ -34,12 +41,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.c6e27475.css.map": "/static/css/main.c6e27475.css.map",
-    "main.c61f2aaf.js.map": "/static/js/main.c61f2aaf.js.map",
+    "main.ca044d3d.css.map": "/static/css/main.ca044d3d.css.map",
+    "main.f32051e3.js.map": "/static/js/main.f32051e3.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6e27475.css",
-    "static/js/main.c61f2aaf.js"
+    "static/css/main.ca044d3d.css",
+    "static/js/main.f32051e3.js"
   ]
 }
