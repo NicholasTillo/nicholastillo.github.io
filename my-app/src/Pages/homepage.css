@@ -1,71 +1,34 @@
-.ActionBar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
 
-.ActionBar img {
-    cursor: pointer;
+
+.homePage {
     flex: 1;
-    margin: 0 10px;
-    width: 120%;
-    height: 120%;
-}
-.slash-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-.item-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-@keyframes fadeBlackToWhite {
-    0% {
-        background-color: #000000;
-    }
-    100% {
-        background-color: #ffffff;
-    }
-}
-
-.fade-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    z-index: 9999;
-    animation: fadeBlackToWhite 4s ease-in-out forwards;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem 1rem 6rem;
 }
 
-.fade-canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.homePage .PageTitle {
+    text-align: center;
 }
 
-.homeCanvas {
-    background-color: lightblue;
-    max-width: 33%;
-
+.homeIntro {
+    --home-intro-border-texture: url("../Assets/Texture.png");
+    width: min(100%, 50vw);
     margin: auto;
-    display: flex;
-    aspect-ratio: 1 / 1;
+    padding: 3rem;
+    border: 80px solid transparent;
+    border-image: var(--home-intro-border-texture) 24 round;
 }
+
+.homeIntro p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .homeIntro {
+        width: 100%;
+    }
+}
+
+

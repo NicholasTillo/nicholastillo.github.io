@@ -60,3 +60,29 @@
     top: 0;
     left: 0;
 }
+
+
+.homePage {
+    flex: 1;
+    padding-bottom: 6rem;
+}
+
+.homePage .PageTitle {
+    text-align: center;
+}
+
+.homeCanvas {
+    background-color: lightblue;
+    width: 33%;
+    max-width: 320px;
+    margin: auto;
+    display: flex;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) {
+    .homeCanvas {
+        width: 100%;
+        max-width: 320px;
+    }
+}

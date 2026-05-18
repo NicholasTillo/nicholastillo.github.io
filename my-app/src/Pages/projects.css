@@ -9,11 +9,13 @@
 }
 .projectImageGrid{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 .projectImageSlot{
-
+    width: min(30%, 300px);
     aspect-ratio: 1 / 1;
     border: none;
     padding: 0;
@@ -48,7 +50,6 @@
         max-width: 200px;
     }
     .projectImageGrid {
-        flex-wrap: wrap;
         gap: 10px;
     }
 }

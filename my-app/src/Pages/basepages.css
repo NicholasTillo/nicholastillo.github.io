@@ -2,15 +2,20 @@
 
 .mainBody{
     background-color: #6d97e6ea ;
-    max-width:70vw;
+    width: 70vw;
+    max-width: 100%;
     margin:auto;
     padding-bottom: 1vw;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.mainBody p, h1, h2, h3, a{
+.mainBody p,
+.mainBody h1,
+.mainBody h2,
+.mainBody h3,
+.mainBody a{
     margin: auto;   
-    max-width:50vw;
+    max-width: 50vw;
 }
 
 body {
@@ -20,22 +25,30 @@ body {
 /* Tablet styles */
 @media (max-width: 1024px) {
     .mainBody {
-        max-width: 85vw;
+        width: 90vw;
         padding-bottom: 2vw;
     }
-    .mainBody p, h1, h2, h3, a {
-        max-width: 85vw;
+    .mainBody p,
+    .mainBody h1,
+    .mainBody h2,
+    .mainBody h3,
+    .mainBody a {
+        max-width: 90vw;
     }
 }
 
 /* Phone styles */
 @media (max-width: 768px) {
     .mainBody {
-        max-width: 95vw;
+        width: 95vw;
         padding: 1em;
         padding-bottom: 2em;
     }
-    .mainBody p, h1, h2, h3, a {
+    .mainBody p,
+    .mainBody h1,
+    .mainBody h2,
+    .mainBody h3,
+    .mainBody a {
         max-width: 95vw;
     }
 }

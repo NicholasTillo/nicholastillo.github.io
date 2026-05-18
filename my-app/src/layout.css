@@ -1,21 +1,22 @@
 .fullContainer{
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-/* .wholeFooter {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    
-} */
 main{
-    padding-bottom: 0px;
+    padding-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-h1, h2, h3, p, a, .site-title {font-family: Tahoma, Verdana, Segoe UI, sans-serif;}
-p,  button{
-    font-size: 1.2m;
+h1, h2, h3, p, a {
+    font-family: Tahoma, Verdana, Segoe UI, sans-serif;
+}
+p, button{
+    font-size: 1.2em;
+    line-height: 1.45;
 }
 a { 
     font-size: 1em;
@@ -31,7 +32,7 @@ h1{
 }
 
 .PageTitle{
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 10px;
 }
 
@@ -86,7 +87,7 @@ h1{
         width: 90%;
     }
     main {
-        padding: 0 1em;
+        padding: 0;
     }
 }
 

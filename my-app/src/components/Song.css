@@ -104,3 +104,26 @@
     font-size: 0.9em;
     color: #b3b3b3;
 }
+
+@media (max-width: 768px) {
+    .songDiv {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .songSlideshow {
+        width: 100%;
+    }
+
+    .songCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .songContent {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}

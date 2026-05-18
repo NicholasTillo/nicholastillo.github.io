@@ -18,6 +18,7 @@ import Slash from '../Assets/Slash.gif'
 import Carrot from '../Assets/carrot.gif'
 
 import "./homepage.css"
+import "./mugi.css"
 
 function RotatingWebGLMesh() {
   const ref = useRef()

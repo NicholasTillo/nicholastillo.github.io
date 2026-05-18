@@ -29,6 +29,12 @@
 #BunnyImage {margin: 10px auto;
    display: block;
    width: fit-content}
+
+#BunnyImage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 /* Styles for the campaign gallery */
 
 .campaignGallery {
@@ -76,4 +82,45 @@
     max-height: 90%;
     box-shadow: 0 8px 30px rgba(0,0,0,0.6);
     border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+    .hkmtgGallery {
+        width: 90%;
+        flex-wrap: nowrap;
+    }
+
+    .campaignGallery {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .hkmtg-slot {
+        flex: 1 1 0;
+    }
+
+    .campaign-slot {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hkmtgGallery,
+    .campaignGallery {
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .hkmtgGallery {
+        flex-wrap: wrap;
+    }
+
+    .campaign-slot {
+        flex-basis: 100%;
+    }
+
+    .hkmtg-slot {
+        flex: 1 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.375rem);
+    }
 }
