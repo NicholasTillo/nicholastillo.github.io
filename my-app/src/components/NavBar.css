@@ -9,7 +9,7 @@
     margin: 0 auto;
     border: 3px solid #6B4A7F;
     border-bottom: 0px;
-    background-color: #668DD8;
+    background-color: #ffffffea;
     position: relative;
     z-index: 20;
 }
@@ -134,7 +134,7 @@
         min-width: 180px;
         padding: 0.5rem;
         gap: 0.5rem;
-        background: #668DD8;
+        background: #ffffffea;
         border: 3px solid #6B4A7F;
         box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }

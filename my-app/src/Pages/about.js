@@ -49,7 +49,7 @@ export default class About extends React.Component {
             </div>
 
             <div className="gameSection">
-                <h2> Some games, but like fr check out the backloggd if you want more </h2>
+                <h2> My Favourite Games Of All Time </h2>
                 <div className="gameGrid">
                     {
                         [Minecraft, Undertale, Wilds, Ultrakill, Issac, White, Inscryption, Knight].map((img, idx) => (

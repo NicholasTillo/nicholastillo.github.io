@@ -52,11 +52,13 @@ export default class LightingDemos extends React.Component {
         return(
             <div className="mainBody">
                 <h1 className="PageTitle">Lighting Demos</h1>
-                <p>This page will contain WebGL lighting demonstrations in the future.</p>
+                <p>This page will contain WebGL lighting demonstrations in the future as I learn more lighting techniques that I want to implement.</p>
 
                 <div className="lightingContainer">
                     <div className="lightingPanel red">
                         <div className="lightingCanvasWrapper">
+                          <p>Standard Shading Example</p>
+
                             <Canvas className="lightingCanvas" camera={{ position: [0, 0, 2.2], fov: 60 }} frameloop="demand">
                                 <ambientLight intensity={0.4} />
                                 <directionalLight position={[1, 1.5, 0.8]} intensity={1} />
@@ -67,6 +69,8 @@ export default class LightingDemos extends React.Component {
                     </div>
                     <div className="lightingPanel green">
                         <div className="lightingCanvasWrapper">
+                          <p>Phong Shading Example</p>
+
                             <Canvas className="lightingCanvas" camera={{ position: [0, 0, 2.2], fov: 60 }} frameloop="demand">
                                 <ambientLight intensity={0.4} />
                                 <directionalLight position={[1, 1.5, 0.8]} intensity={1} />
@@ -77,6 +81,7 @@ export default class LightingDemos extends React.Component {
                     </div>
                     <div className="lightingPanel blue">
                         <div className="lightingCanvasWrapper">
+                          <p>Toon Shading Example</p>
                             <Canvas className="lightingCanvas" camera={{ position: [0, 0, 2.2], fov: 60 }} frameloop="demand">
                                 <ambientLight intensity={0.4} />
                                 <directionalLight position={[1, 1.5, 0.8]} intensity={1} />

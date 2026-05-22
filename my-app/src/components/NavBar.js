@@ -4,6 +4,31 @@ import './NavBar.css';
 
 
 export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.detailsRef = React.createRef();
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  handleClickOutside = (event) => {
+    if (this.detailsRef.current && !this.detailsRef.current.contains(event.target)) {
+      this.detailsRef.current.removeAttribute('open');
+    }
+  }
+
+  closeMenu = () => {
+    if (this.detailsRef.current) {
+      this.detailsRef.current.removeAttribute('open');
+    }
+  }
+
   render() {
     return (
       <div className="NavBarDiv">
@@ -14,14 +39,14 @@ export default class NavBar extends React.Component {
                 </h1>
             </Link>
           <div className="phoneMenu">
-            <details>
+            <details ref={this.detailsRef}>
               <summary>Navigation</summary>
               <div className="phoneLinks">
-                <Link reloadDocument to="/about">About</Link>
-                <Link reloadDocument to="/projects">Projects</Link>
-                <Link reloadDocument to="/page3">Some Cool Stuff</Link>
-                <Link reloadDocument to="/lightingdemos">Lighting Demos</Link>
-                <Link reloadDocument to="/mugi">Mugi</Link>
+                <Link reloadDocument to="/about" onClick={this.closeMenu}>About</Link>
+                <Link reloadDocument to="/projects" onClick={this.closeMenu}>Projects</Link>
+                <Link reloadDocument to="/page3" onClick={this.closeMenu}>Some Cool Stuff</Link>
+                <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
+                <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
               </div>
             </details>
           </div>
