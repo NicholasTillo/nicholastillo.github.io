@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from "react";
-import { Canvas , useFrame, useThree } from '@react-three/fiber'
-import { OrbitControls, Text } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Text } from '@react-three/drei'
 import { useRef } from 'react'
-import * as THREE from 'three'
 import './Minesweeper.css'
 
 var listOfSkills = ["Python", "HTML", "CSS", "Java", "Javascript", "C", "C#", "BASH", "Haskell", "Prolog", "SQL", "GDScript", "Algorithms", "Software\nArchitecture", "Operating\nSystems", "Software\nQuality\nAssurance", "Human-Computer\nInteraction", "Database\nManagement\nSystems", "Artificial\nIntelligence", "Computer\nGraphics", "Game\nDevelopment", "Software\nRequirements"]
 
 
 function SingleCapsule({row, col, board}) {
-  useEffect(() => console.log(`SingleCapsule ${row}-${col} function called`), [])
+  useEffect(() => console.log(`SingleCapsule ${row}-${col} function called`), [row, col])
   const ref = useRef()
   const [color, setColor] = useState("#3a7ae0")
   const [revealed, setRevealed] = useState(false)
@@ -33,7 +32,6 @@ function SingleCapsule({row, col, board}) {
 
   const handleClick = () => {
     if (revealed) return;
-    const sumAround = countAdjacentMines()
     setRevealed(true)
     setColor("#d3d3d3")
   }
@@ -69,7 +67,7 @@ function SingleCapsule({row, col, board}) {
 
 
 function BombCapsule({row, col, board}) {
-  useEffect(() => console.log(`BombCapsule ${row}-${col} function called`), [])
+  useEffect(() => console.log(`BombCapsule ${row}-${col} function called`), [row, col])
   const ref = useRef()
   const [color, setColor] = useState("#3a7ae0")
   const [revealed, setRevealed] = useState(false)

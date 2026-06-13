@@ -21,6 +21,12 @@ body {
   background: transparent;
 }
 
+/* Shared external-link style (used by projects + page3). Lives here, in the
+   stylesheet both pages already import, instead of being duplicated per page. */
+.OuterLink{
+    display: block;
+}
+
 /* Tablet styles */
 @media (max-width: 1024px) {
     .mainBody {

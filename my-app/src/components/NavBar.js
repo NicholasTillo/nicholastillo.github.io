@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import './NavBar.css';
 
 
@@ -47,6 +47,7 @@ export default class NavBar extends React.Component {
                 <Link reloadDocument to="/page3" onClick={this.closeMenu}>Some Cool Stuff</Link>
                 <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
+                <Link reloadDocument to="/deckchecker" onClick={this.closeMenu}>Deck Checker</Link>
               </div>
             </details>
           </div>
@@ -75,6 +76,11 @@ export default class NavBar extends React.Component {
             <div className="navExtra">
                 <Link reloadDocument to="/mugi">
                   <button> Mugi </button>
+                </Link>
+            </div>
+            <div className="navExtra">
+                <Link reloadDocument to="/deckchecker">
+                  <button> Deck Checker </button>
                 </Link>
             </div>
           </nav>

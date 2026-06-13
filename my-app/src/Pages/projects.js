@@ -32,7 +32,7 @@ export default class Projects extends React.Component {
                         className="projectImageSlot"
                         onClick={() => this.openLightbox(src)}
                     >
-                        <img src={src} alt={`Project image ${idx + 1}`} />
+                        <img src={src} alt={`Project screenshot ${idx + 1}`} />
                     </button>
                 ))}
             </div>

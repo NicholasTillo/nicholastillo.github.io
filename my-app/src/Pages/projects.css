@@ -40,9 +40,7 @@
     border-radius: 6px;
 }
 
-.OuterLink{
-    display: block;
-}
+/* .OuterLink moved to basepages.css (shared with page3). */
 
 /* Tablet styles */
 @media (max-width: 1024px) {

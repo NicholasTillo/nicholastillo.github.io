@@ -1,0 +1,249 @@
+/* DeckQuadrant — 2-axis "fun to play" x "fun to play against" grid.
+   Themed to the site: accent #6B4A7F, ink #262329, panel #ffffffea. */
+
+.dqWrap {
+  --dq-ink: #262329;
+  --dq-accent: #6B4A7F;
+
+  width: 92%;
+  max-width: 560px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background-color: #ffffffea;
+  border: 3px solid var(--dq-accent);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.dqHeading {
+  text-align: center;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--dq-ink);
+  margin-bottom: 1rem;
+}
+
+/* Plot area: y-axis label | grid | (x-axis label underneath) */
+.dqPlot {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'ylabel grid'
+    '.      xlabel';
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dqAxisLabel {
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(38, 35, 41, 0.8);
+  white-space: nowrap;
+}
+
+.dqAxisLabel--y {
+  grid-area: ylabel;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  justify-self: center;
+}
+
+.dqAxisLabel--x {
+  grid-area: xlabel;
+  text-align: center;
+}
+
+/* The square grid */
+.dqGrid {
+  grid-area: grid;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--dq-ink);
+  border-radius: 4px;
+  overflow: hidden;
+  /* four faint quadrant tints: TL sloth, TR frog, BL worm, BR shark */
+  background-image:
+    linear-gradient(to top right, transparent 49.6%, rgba(38, 35, 41, 0.35) 49.6%, rgba(38, 35, 41, 0.35) 50.4%, transparent 50.4%),
+    linear-gradient(to top left, transparent 49.6%, rgba(38, 35, 41, 0.35) 49.6%, rgba(38, 35, 41, 0.35) 50.4%, transparent 50.4%);
+  background-color: #fbfaf7;
+}
+
+/* Quadrant tint blocks via radial accents in each corner */
+.dqGrid::before,
+.dqGrid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.dqGrid::before {
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(95, 168, 96, 0.16), transparent 60%),   /* frog (TR) green */
+    radial-gradient(120% 120% at 100% 100%, rgba(185, 116, 95, 0.16), transparent 60%); /* shark (BR) warm */
+}
+.dqGrid::after {
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(102, 141, 216, 0.16), transparent 60%),    /* sloth (TL) blue */
+    radial-gradient(120% 120% at 0% 100%, rgba(120, 90, 60, 0.16), transparent 60%);     /* worm (BL) brown */
+}
+
+/* Midpoint crosshair */
+.dqCrosshair {
+  position: absolute;
+  background: rgba(38, 35, 41, 0.4);
+  z-index: 1;
+}
+.dqCrosshair--v {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-0.5px);
+}
+.dqCrosshair--h {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: translateY(-0.5px);
+}
+
+/* Faint quadrant animal labels */
+.dqQuad {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(38, 35, 41, 0.45);
+}
+.dqQuad span[role='img'] {
+  font-size: 1.15rem;
+}
+.dqQuad--tl { top: 6%; left: 5%; }
+.dqQuad--tr { top: 6%; right: 5%; }
+.dqQuad--bl { bottom: 6%; left: 5%; }
+.dqQuad--br { bottom: 6%; right: 5%; }
+.dqQuad--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+/* Plotted marker */
+.dqMarker {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, 50%); /* anchor on the point (bottom% reference) */
+  transition: left 700ms cubic-bezier(0.22, 1, 0.36, 1), bottom 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dqMarkerDot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--dq-accent);
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.dqMarker:not(.is-active) {
+  opacity: 0.35;
+}
+
+/* Readout under the grid */
+.dqReadout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.dqAnimal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--dq-ink);
+}
+
+.dqAnimalEmoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.dqBlurb {
+  font-size: 1.1rem;
+  color: var(--dq-accent);
+  font-weight: 600;
+  max-width: 40ch;
+}
+
+.dqStats {
+  font-size: 0.9rem;
+  color: rgba(38, 35, 41, 0.65);
+}
+
+.dqHint {
+  font-size: 1.1rem;
+  color: rgba(38, 35, 41, 0.7);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .dqMarker {
+    transition: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dqWrap {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+  .dqAnimal {
+    font-size: 1.5rem;
+  }
+  .dqAnimalEmoji {
+    font-size: 1.9rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .dqWrap {
+    width: 100%;
+    padding: 1rem 0.85rem 0.85rem;
+  }
+  .dqHeading {
+    font-size: 1.2rem;
+  }
+  .dqQuad {
+    font-size: 0.7rem;
+  }
+  .dqQuad span[role='img'] {
+    font-size: 1rem;
+  }
+  .dqAxisLabel {
+    font-size: 0.8rem;
+  }
+  .dqAnimal {
+    font-size: 1.3rem;
+  }
+  .dqBlurb {
+    font-size: 1rem;
+  }
+}

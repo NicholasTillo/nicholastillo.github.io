@@ -2,7 +2,7 @@ import React from "react";
 import './basepages.css'
 import './page3.css'
 import FUBnyu from "../Assets/FUBnyu.jpg"
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export default class Page3 extends React.Component {
 
@@ -45,7 +45,7 @@ export default class Page3 extends React.Component {
             <p> Currently on the steam community page for The Binding Of Issac, just a simple retexture for the troll bombs to be bunnies instead! This is my first dips into Issac modding and want to do much more in the future.</p>
 
             <Link id="BunnyImage" smooth to="https://steamcommunity.com/sharedfiles/filedetails/?id=3537671862">
-                      <img src={FUBnyu} />
+                      <img src={FUBnyu} alt="Bunny resprite for The Binding of Isaac" />
                     </Link>
             </div>
 

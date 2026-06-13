@@ -33,7 +33,7 @@ function RotatingWebGLMesh() {
   )
 }
 
-export default class Homepage extends React.Component {
+export default class Mugi extends React.Component {
     constructor(props) {
         super(props);
         this.state = { hovered: null, showSlash: false, showItem: false, paragraphText: "This is Mugi, We like Mugi", attackCount: 0, showFadeScreen: false };

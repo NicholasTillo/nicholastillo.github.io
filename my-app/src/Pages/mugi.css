@@ -62,27 +62,7 @@
 }
 
 
-.homePage {
-    flex: 1;
-    padding-bottom: 6rem;
-}
-
-.homePage .PageTitle {
-    text-align: center;
-}
-
-.homeCanvas {
-    background-color: lightblue;
-    width: 33%;
-    max-width: 320px;
-    margin: auto;
-    display: flex;
-    aspect-ratio: 1 / 1;
-}
-
-@media (max-width: 768px) {
-    .homeCanvas {
-        width: 100%;
-        max-width: 320px;
-    }
-}
+/* `.homePage`, `.homePage .PageTitle`, and `.homeCanvas` used to live here but
+   were unused by this page's markup and leaked globally (the `.homeCanvas` rule
+   bled onto the About page). `.homePage` is fully defined in homepage.css; the
+   About Minesweeper box now owns its styles in about.css. */

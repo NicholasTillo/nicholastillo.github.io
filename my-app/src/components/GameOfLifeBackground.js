@@ -50,7 +50,7 @@ export default function GameOfLifeBackground() {
       const cellH = canvas.height / rows;
       ctx.fillStyle = '#1F2245';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#6A4A79';
+      ctx.fillStyle = '#6B4A7F'; // brand purple (unified with the CSS accent)
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
           if (grid[y][x]) {

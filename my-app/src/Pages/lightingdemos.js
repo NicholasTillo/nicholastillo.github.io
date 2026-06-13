@@ -4,7 +4,6 @@ import './lightingdemos.css'
 import { Canvas , useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useRef } from 'react'
-import { MeshPhongMaterial } from "three";
 
 
 function RotatingStandardMesh() {
