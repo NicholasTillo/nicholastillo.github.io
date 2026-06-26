@@ -13,7 +13,7 @@ function RotatingStandardMesh() {
   })
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[0.55, 28, 28]} />
+      <torusKnotGeometry args={[0.4, 0.14, 128, 16]} />
       <meshStandardMaterial color="#3a7ae0" />
     </mesh>
   )
@@ -26,7 +26,7 @@ function RotatingPhongMesh() {
   })
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[0.55, 28, 28]} />
+      <icosahedronGeometry args={[0.6, 0]} />
       <meshPhongMaterial color="#3a7ae0" />
     </mesh>
   )
@@ -39,7 +39,7 @@ function RotatingRefractionMesh() {
   })
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[0.55, 28, 28]} />
+      <torusGeometry args={[0.42, 0.18, 24, 64]} />
       <meshToonMaterial color="#3a7ae0"/>
     </mesh>
   )

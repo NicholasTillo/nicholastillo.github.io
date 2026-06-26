@@ -1,3 +1,43 @@
+/* Battle panel: sits inside .mainBody so it shares the site width ladder.
+   Black Undertale-style box with white text; goes edge-to-edge in fullscreen. */
+.mugiArea {
+    position: relative;
+    background: #000000;
+    color: #ffffff;
+    border: 3px solid #6B4A7F;
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+}
+
+.mugiArea:fullscreen {
+    border: none;
+    border-radius: 0;
+}
+
+.fullscreenBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Rationale', Georgia, serif;
+    font-size: 1rem;
+    background: #6B4A7F;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
+.fullscreenBtn:hover {
+    background: #563d66;
+}
+
 .ActionBar {
     display: flex;
     justify-content: space-between;
@@ -11,56 +51,62 @@
     width: 120%;
     height: 120%;
 }
-.slash-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.itemMenu {
+    margin-top: 1rem;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+    max-width: 480px;
 }
+
+.emotionBanner {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+.itemGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.itemMenuBtn {
+    font-family: 'Rationale', Georgia, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #6B4A7F;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+}
+
+.itemMenuBtn:hover {
+    background: #563d66;
+}
+
+.itemMenuBtn:active {
+    transform: translateY(1px);
+}
+
+.battleCanvas {
+    margin-top: 1rem;
+    max-width: 100%;
+    background: #000000;
+    border: 2px solid #6B4A7F;
+    image-rendering: pixelated;
+    touch-action: none;
+}
+
 .item-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
     height: 50%;
     object-fit: cover;
     pointer-events: none;
 }
-
-@keyframes fadeBlackToWhite {
-    0% {
-        background-color: #000000;
-    }
-    100% {
-        background-color: #ffffff;
-    }
-}
-
-.fade-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    z-index: 9999;
-    animation: fadeBlackToWhite 4s ease-in-out forwards;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fade-canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 
 /* `.homePage`, `.homePage .PageTitle`, and `.homeCanvas` used to live here but
    were unused by this page's markup and leaked globally (the `.homeCanvas` rule

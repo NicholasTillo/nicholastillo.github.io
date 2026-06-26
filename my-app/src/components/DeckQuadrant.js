@@ -41,11 +41,11 @@ export default function DeckQuadrant({ funToPlay = null, funToPlayAgainst = null
 
         <div className="dqGrid" role="img" aria-label={gridLabel}>
           {/* Faint per-quadrant animal guides */}
-          <span className="dqQuad dqQuad--tl"><span role="img" aria-label="Sloth">🦥</span> Sloth</span>
-          <span className="dqQuad dqQuad--tr"><span role="img" aria-label="Frog">🐸</span> Frog</span>
-          <span className="dqQuad dqQuad--bl"><span role="img" aria-label="Worm">🪱</span> Worm</span>
-          <span className="dqQuad dqQuad--br"><span role="img" aria-label="Shark">🦈</span> Shark</span>
-          <span className="dqQuad dqQuad--center"><span role="img" aria-label="Octopus">🐙</span></span>
+          <span className="dqQuad dqQuad--tl">Sloth</span>
+          <span className="dqQuad dqQuad--tr">Frog</span>
+          <span className="dqQuad dqQuad--bl">Worm</span>
+          <span className="dqQuad dqQuad--br">Shark</span>
+          <span className="dqQuad dqQuad--center">Octopus</span>
 
           {/* Midpoint crosshair */}
           <span className="dqCrosshair dqCrosshair--v" aria-hidden="true" />
@@ -68,7 +68,6 @@ export default function DeckQuadrant({ funToPlay = null, funToPlayAgainst = null
         {hasScore && animal ? (
           <>
             <span className="dqAnimal">
-              <span className="dqAnimalEmoji" role="img" aria-label={animal.name}>{animal.emoji}</span>
               {animal.name}
             </span>
             <span className="dqBlurb">{animal.blurb}</span>

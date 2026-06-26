@@ -39,14 +39,14 @@
 
 .AccNavBar div{
     margin-left: 0;
-    flex: 0 1 auto;
-    
+    /* ponytail: flex:1 so tabs share the full bar width and fill the space at >1080p */
+    flex: 1 1 0;
 }
 
 .AccNavBar button{
     min-width:100%;
     height:100%;
-    font-size: clamp(0.8rem, 1.4vw, 1.25rem);
+    font-size: clamp(0.8625rem, 1.4vw, 1.3125rem);
     background: transparent;
     border: none;
     color: black;
@@ -155,10 +155,10 @@
     flex: 1;
     display: flex;
     height:52px;
-    justify-content: start;
+    justify-content: stretch;
     align-items: center;
     gap: 0.15rem;
-    
+
 }
 .verticalBar{
     background-color: rgb(38, 35, 41);

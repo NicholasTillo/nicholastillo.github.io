@@ -78,7 +78,7 @@ export const cardScores = {
 };
 
 /**
- * Animals by grid region. Tunable copy + emoji. Resolved by animalFor() in
+ * Animals by grid region. Tunable copy. Resolved by animalFor() in
  * deckScore.js.
  *   frog    = high play / high against (top-right)
  *   shark   = high play / low  against (bottom-right)
@@ -87,11 +87,11 @@ export const cardScores = {
  *   octopus = near the centre of both axes
  */
 export const animals = {
-  frog: { key: 'frog', emoji: '🐸', name: 'Frog', blurb: 'A joy on both sides of the table — bouncy, fair, and fun.' },
-  shark: { key: 'shark', emoji: '🦈', name: 'Shark', blurb: 'A blast to pilot; everyone else is chum.' },
-  sloth: { key: 'sloth', emoji: '🦥', name: 'Sloth', blurb: 'A slog to play, but a relaxing matchup to face.' },
-  worm: { key: 'worm', emoji: '🪱', name: 'Worm', blurb: 'Low to the ground and grindy — nobody is really having fun.' },
-  octopus: { key: 'octopus', emoji: '🐙', name: 'Octopus', blurb: 'Clever and balanced — fair fun all around.' },
+  frog: { key: 'frog', name: 'Frog', blurb: 'A joy on both sides of the table — bouncy, fair, and fun.' },
+  shark: { key: 'shark', name: 'Shark', blurb: 'A blast to pilot; everyone else is chum.' },
+  sloth: { key: 'sloth', name: 'Sloth', blurb: 'A slog to play, but a relaxing matchup to face.' },
+  worm: { key: 'worm', name: 'Worm', blurb: 'Low to the ground and grindy — nobody is really having fun.' },
+  octopus: { key: 'octopus', name: 'Octopus', blurb: 'Clever and balanced — fair fun all around.' },
 };
 
 /** Half-width of the central "Octopus" zone, in score points on each axis. */

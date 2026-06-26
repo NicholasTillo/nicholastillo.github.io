@@ -180,11 +180,6 @@
   color: var(--dq-ink);
 }
 
-.dqAnimalEmoji {
-  font-size: 2.2rem;
-  line-height: 1;
-}
-
 .dqBlurb {
   font-size: 1.1rem;
   color: var(--dq-accent);
@@ -216,9 +211,6 @@
   }
   .dqAnimal {
     font-size: 1.5rem;
-  }
-  .dqAnimalEmoji {
-    font-size: 1.9rem;
   }
 }
 

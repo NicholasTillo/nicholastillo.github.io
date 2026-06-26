@@ -47,7 +47,7 @@ export default class NavBar extends React.Component {
                 <Link reloadDocument to="/page3" onClick={this.closeMenu}>Some Cool Stuff</Link>
                 <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
-                <Link reloadDocument to="/deckchecker" onClick={this.closeMenu}>Deck Checker</Link>
+                <Link reloadDocument to="/deckchecker" onClick={this.closeMenu}>MTG Deck Checker</Link>
               </div>
             </details>
           </div>
@@ -80,7 +80,7 @@ export default class NavBar extends React.Component {
             </div>
             <div className="navExtra">
                 <Link reloadDocument to="/deckchecker">
-                  <button> Deck Checker </button>
+                  <button> MTG Deck Checker </button>
                 </Link>
             </div>
           </nav>
