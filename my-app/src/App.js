@@ -11,6 +11,7 @@ import Page3 from './Pages/page3';
 import LightingDemos from './Pages/lightingdemos';
 import Mugi from './Pages/mugi';
 import DeckChecker from './Pages/deckchecker';
+import Gdd from './Pages/gdd';
 
 
 import { Layout } from './Layout';
@@ -31,6 +32,7 @@ function App() {
           <Route path = "/lightingdemos" element = {<LightingDemos/>} />
           <Route path = "/mugi" element = {<Mugi/>} />
           <Route path = "/deckchecker" element = {<DeckChecker/>} />
+          <Route path = "/gdd" element = {<Gdd/>} />
 
         </Route>
         

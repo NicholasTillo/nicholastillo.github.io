@@ -1,0 +1,159 @@
+.gddPage {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.gddPage .PageTitle {
+  margin-top: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.gddIntro {
+  text-align: center;
+}
+
+.gddNote {
+  text-align: center;
+  color: rgba(38, 35, 41, 0.7);
+}
+
+.gddNote--error {
+  color: #8a2b2b;
+  background: #f6e4e4;
+  border: 1px solid #d9a4a4;
+  border-radius: 4px;
+  padding: 0.6em 1em;
+  max-width: 50vw;
+}
+
+/* Two-column: document list + rendered doc. */
+.gddLayout {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  margin-top: 1.5em;
+}
+
+.gddList {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  position: sticky;
+  top: 1em;
+}
+
+.gddListItem {
+  text-align: left;
+  padding: 0.55em 0.8em;
+  background: #ffffffea;
+  border: 2px solid #6B4A7F;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rationale', Georgia, serif;
+  font-size: 1.05em;
+  color: #262329;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.gddListItem:hover {
+  background: rgba(107, 74, 127, 0.12);
+}
+
+.gddListItem.is-active {
+  background: #6B4A7F;
+  color: #ffffff;
+}
+
+/* Rendered markdown panel. */
+.gddDoc {
+  flex: 1 1 auto;
+  min-width: 0;
+  background: #fbfaf7;
+  border: 3px solid #6B4A7F;
+  border-radius: 6px;
+  padding: 1.5em 2em;
+}
+
+/* Markdown content overrides the .mainBody 50vw text cap so docs use the panel. */
+.gddDoc h1,
+.gddDoc h2,
+.gddDoc h3,
+.gddDoc h4,
+.gddDoc p,
+.gddDoc a,
+.gddDoc li {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.gddDoc h1 { font-size: 2em; }
+.gddDoc h2 {
+  border-bottom: 2px solid #6B4A7F;
+  padding-bottom: 0.2em;
+}
+
+.gddDoc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.gddDoc pre {
+  background: #262329;
+  color: #f5f5f5;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.gddDoc code {
+  background: rgba(107, 74, 127, 0.12);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+.gddDoc pre code {
+  background: none;
+  padding: 0;
+}
+
+.gddDoc blockquote {
+  border-left: 4px solid #6B4A7F;
+  margin-left: 0;
+  padding-left: 1em;
+  color: rgba(38, 35, 41, 0.8);
+}
+
+.gddDoc table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+.gddDoc th,
+.gddDoc td {
+  border: 1px solid #6B4A7F;
+  padding: 0.4em 0.7em;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gddDoc { padding: 1.2em 1.4em; }
+  .gddList { flex-basis: 180px; }
+}
+
+/* Phone: stack the list above the doc. */
+@media (max-width: 768px) {
+  .gddLayout { flex-direction: column; }
+  .gddList {
+    flex-basis: auto;
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .gddListItem { flex: 1 1 auto; }
+  .gddNote--error { max-width: 95vw; }
+}
