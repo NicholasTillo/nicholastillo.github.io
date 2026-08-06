@@ -47,7 +47,6 @@ export default class NavBar extends React.Component {
                 <Link reloadDocument to="/page3" onClick={this.closeMenu}>Some Cool Stuff</Link>
                 <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
-                {/* ponytail: hidden until Deck Checker feature is complete — restore this link when done */}
                 <Link reloadDocument to="/gdd" onClick={this.closeMenu}>Game Design Docs</Link>
               </div>
             </details>
@@ -79,7 +78,6 @@ export default class NavBar extends React.Component {
                   <button> Mugi </button>
                 </Link>
             </div>
-            {/* ponytail: hidden until Deck Checker feature is complete — restore this link when done */}
             <div className="navExtra">
                 <Link reloadDocument to="/gdd">
                   <button> Game Design Docs </button>

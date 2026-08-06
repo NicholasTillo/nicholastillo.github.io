@@ -12,7 +12,6 @@ import Issac from '../Assets/Issac.jpg';
 import White from '../Assets/White.jpg';
 import Inscryption from '../Assets/Inscryption.jpg';
 import Knight from '../Assets/Knight.jpg';
-import Minesweeper from '../components/Minesweeper'
 
 
 
@@ -30,18 +29,6 @@ export default class About extends React.Component {
             </p>
 
 
-            <h2> Professional Stuff </h2>
-                <p> Here is all the information that professional people would want. If you want to get it, you're gonna have to work for it though. 
-                    Im a game designer, and you're gonna have to play some games to get it :p.  </p>
-                
-                <h2> Game 1: Skillsweeper! </h2>
-                <div className="homeCanvas">
-                    <Minesweeper gridSize={8} mineCount={10} />
-                </div>
-
-                
-                <h2> Game 2:  </h2>
-            
             <div className="musicSection">
                 <h2> Favourite Songs Right Now </h2>            
                 <Song/>
