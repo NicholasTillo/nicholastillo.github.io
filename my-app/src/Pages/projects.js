@@ -74,9 +74,8 @@ export default class Projects extends React.Component {
 
         return(
             <div className="mainBody">
-            <h1 className="PageTitle"> Collection of Projects </h1>
+            <h2 className="PageTitle"> Collection of Projects </h2>
             
-            <div className="seperator"> </div>
             <div id="projectDescriptions"> 
                 <div id="project1">
                     <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>

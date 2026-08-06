@@ -35,7 +35,7 @@ export default class Page3 extends React.Component {
             <div className="mainBody">
             
             
-            <h1 className="PageTitle"> Miscellaneous Hobbies and Projects</h1>
+            <h2 className="PageTitle"> Miscellaneous Hobbies and Projects</h2>
 
             <div className="gamingShowcase">
            <h2>Gaming Showcase</h2> 
