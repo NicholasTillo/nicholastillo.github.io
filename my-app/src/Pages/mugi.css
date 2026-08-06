@@ -107,8 +107,3 @@
     object-fit: cover;
     pointer-events: none;
 }
-
-/* `.homePage`, `.homePage .PageTitle`, and `.homeCanvas` used to live here but
-   were unused by this page's markup and leaked globally (the `.homeCanvas` rule
-   bled onto the About page). `.homePage` is fully defined in homepage.css; the
-   About Minesweeper box now owns its styles in about.css. */
