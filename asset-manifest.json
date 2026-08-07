@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.95fe2f34.css",
-    "main.js": "/static/js/main.9aa5d5bd.js",
+    "main.css": "/static/css/main.c612b2e6.css",
+    "main.js": "/static/js/main.936f4085.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
@@ -22,16 +22,22 @@
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
     "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
+    "static/media/slaythespire2.jpg": "/static/media/slaythespire2.d924b65305b879d00626.jpg",
     "static/media/Rotom1.jpg": "/static/media/Rotom1.124bfd157399673b1e5b.jpg",
     "static/media/EEBehaviourTree.png": "/static/media/EEBehaviourTree.8e7a05bf4f4700a5ac1e.png",
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
     "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
     "static/media/CounterFactual.png": "/static/media/CounterFactual.707b8639d4cccaec5bbc.png",
+    "static/media/starfy.jpg": "/static/media/starfy.785c1600ca6c8844b95a.jpg",
+    "static/media/kirbye.jpg": "/static/media/kirbye.20e2bb3949cdf7fa2b7f.jpg",
     "static/media/White.jpg": "/static/media/White.dedcce8dd24614af5ddf.jpg",
+    "static/media/leagueoflegends.jpg": "/static/media/leagueoflegends.3db76edc52ec27fe102b.jpg",
     "static/media/Issac.jpg": "/static/media/Issac.b4d5bd7ab66048815942.jpg",
     "static/media/Minecraft.jpg": "/static/media/Minecraft.dd890dde29be3ce43b6c.jpg",
     "static/media/Explorer.jpg": "/static/media/Explorer.10af6221928f82f206dc.jpg",
     "static/media/Knight.jpg": "/static/media/Knight.6ad0c28667d83065ea31.jpg",
+    "static/media/portal2.jpg": "/static/media/portal2.debae7a33c05afbc7f59.jpg",
+    "static/media/insurgence5.jpg": "/static/media/insurgence5.7f1a83addcc655789e3b.jpg",
     "static/media/carrot.gif": "/static/media/carrot.d2fdb509810d2506a28f.gif",
     "static/media/Wilds.jpg": "/static/media/Wilds.25e89e170c89bdc44697.jpg",
     "static/media/Ultrakill.jpg": "/static/media/Ultrakill.7e4b6931611c34437f8d.jpg",
@@ -44,12 +50,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.95fe2f34.css.map": "/static/css/main.95fe2f34.css.map",
-    "main.9aa5d5bd.js.map": "/static/js/main.9aa5d5bd.js.map",
+    "main.c612b2e6.css.map": "/static/css/main.c612b2e6.css.map",
+    "main.936f4085.js.map": "/static/js/main.936f4085.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95fe2f34.css",
-    "static/js/main.9aa5d5bd.js"
+    "static/css/main.c612b2e6.css",
+    "static/js/main.936f4085.js"
   ]
 }
