@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.95fe2f34.css",
-    "main.js": "/static/js/main.74d1da21.js",
+    "main.js": "/static/js/main.be2d710e.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
     "static/media/Spirex2.jpg": "/static/media/Spirex2.920f5db810395b7cf44c.jpg",
     "static/media/GeomancerEscape.png": "/static/media/GeomancerEscape.9aaea986500100b507fd.png",
+    "static/media/Rotom2.jpg": "/static/media/Rotom2.106c425433e5b0c88fd5.jpg",
     "static/media/Prolea1.jpg": "/static/media/Prolea1.e409542a503e029b42c0.jpg",
+    "static/media/Rotom3.jpg": "/static/media/Rotom3.8cff08fe2d0ac9f6b470.jpg",
     "static/media/ExtraterrestrialEntertainment.png": "/static/media/ExtraterrestrialEntertainment.16f6a57e3bafa2b040ce.png",
     "static/media/FinishedComputationalArtworks.png": "/static/media/FinishedComputationalArtworks.752bd913ab70bb201e77.png",
     "static/media/IMG_0462.PNG": "/static/media/IMG_0462.4258c85db01d11d091be.PNG",
@@ -20,6 +22,7 @@
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
     "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
+    "static/media/Rotom1.jpg": "/static/media/Rotom1.124bfd157399673b1e5b.jpg",
     "static/media/EEBehaviourTree.png": "/static/media/EEBehaviourTree.8e7a05bf4f4700a5ac1e.png",
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
     "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
@@ -42,11 +45,11 @@
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
     "main.95fe2f34.css.map": "/static/css/main.95fe2f34.css.map",
-    "main.74d1da21.js.map": "/static/js/main.74d1da21.js.map",
+    "main.be2d710e.js.map": "/static/js/main.be2d710e.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95fe2f34.css",
-    "static/js/main.74d1da21.js"
+    "static/js/main.be2d710e.js"
   ]
 }
