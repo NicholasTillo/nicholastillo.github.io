@@ -26,7 +26,20 @@ function titleFromFilename(name) {
     .trim();
 }
 
-// List the .md design docs in the repo, newest-looking order preserved.
+// A doc is only shown once it's "ready": its opening title must NOT be the
+// unfinished-template title below. Unstarted docs keep this outline heading.
+const TEMPLATE_TITLE = 'serious game design document outline';
+
+// First markdown heading (or first non-empty line), stripped of leading '#'.
+function firstTitle(text) {
+  for (const line of text.split('\n')) {
+    const t = line.replace(/^#+\s*/, '').trim();
+    if (t) return t;
+  }
+  return '';
+}
+
+// List the .md design docs in the repo, hiding any not yet marked "ready".
 export async function listGddDocs({ signal } = {}) {
   const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/?ref=${BRANCH}`;
   const res = await fetch(url, { signal, headers: { Accept: 'application/vnd.github+json' } });
@@ -37,9 +50,20 @@ export async function listGddDocs({ signal } = {}) {
     throw new Error(`Could not load the document list (GitHub returned ${res.status}).`);
   }
   const entries = await res.json();
-  return entries
+  const files = entries
     .filter((e) => e.type === 'file' && /\.md$/i.test(e.name) && !HIDDEN.has(e.name))
-    .map((e) => ({ file: e.name, title: titleFromFilename(e.name) }))
+    .map((e) => ({ file: e.name, title: titleFromFilename(e.name) }));
+
+  // Keep only docs whose opening title isn't the unfinished-template title.
+  const ready = await Promise.all(
+    files.map(async (d) => {
+      const text = await fetchGddDoc(d.file, { signal });
+      return firstTitle(text).toLowerCase() === TEMPLATE_TITLE ? null : d;
+    })
+  );
+
+  return ready
+    .filter(Boolean)
     .sort((a, b) => a.title.localeCompare(b.title));
 }
 

@@ -53,6 +53,13 @@ export default class Page3 extends React.Component {
             <div className="rotomShowcase">
                 <h2> Rotom Tamagatchi Project </h2>
                 <p> I made a rotom inspired Tamagatchi using a Arduino Nano, and a mini screen.</p>
+                <div className="campaignGallery">
+                    {[1,2,3].map((i) => (
+                        <div key={i} className="campaign-slot">
+                            <img src={require(`../Assets/Rotom${i}.jpg`)} alt={`Rotom ${i}`} onClick={() => this.openLightbox(require(`../Assets/Rotom${i}.jpg`))} />
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="seperator"> </div>
 

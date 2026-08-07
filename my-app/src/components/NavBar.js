@@ -44,7 +44,7 @@ export default class NavBar extends React.Component {
               <div className="phoneLinks">
                 <Link reloadDocument to="/about" onClick={this.closeMenu}>About</Link>
                 <Link reloadDocument to="/projects" onClick={this.closeMenu}>Projects</Link>
-                <Link reloadDocument to="/page3" onClick={this.closeMenu}>Some Cool Stuff</Link>
+                <Link reloadDocument to="/page3" onClick={this.closeMenu}>Creative Works</Link>
                 <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
                 <Link reloadDocument to="/gdd" onClick={this.closeMenu}>Game Design Docs</Link>
