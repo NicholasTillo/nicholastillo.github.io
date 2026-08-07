@@ -33,6 +33,36 @@
     height: auto;
     display: block;
 }
+/* Rotom Arduino code box */
+.rotomCodeLabel {
+    margin-top: 1rem;
+}
+
+.rotomCode {
+    width: 75%;
+    max-height: 420px;
+    margin: 0.5rem auto 0;
+    padding: 1rem;
+    overflow: auto;
+    background-color: #ffffffea;
+    border: 3px solid #6B4A7F;
+    border-radius: 6px;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #262329;
+    text-align: left;
+    white-space: pre;
+    tab-size: 2;
+}
+
+@media (max-width: 768px) {
+    .rotomCode {
+        width: 95%;
+        font-size: 0.7rem;
+    }
+}
+
 /* Styles for the campaign gallery */
 
 .campaignGallery {

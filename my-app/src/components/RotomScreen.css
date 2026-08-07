@@ -1,0 +1,48 @@
+.rotomStage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0.5rem auto 0;
+}
+
+.rotomScreen {
+    width: 384px;
+    max-width: 90%;
+    height: auto;
+    image-rendering: pixelated;
+    background: #1F2245;
+    border: 3px solid #6B4A7F;
+    border-radius: 6px;
+    display: block;
+}
+
+.rotomFeedBtn {
+    font-family: 'Rationale', Georgia, serif;
+    font-size: 1.1em;
+    padding: 0.75rem 1.25rem;
+    color: #ffffff;
+    background: #6B4A7F;
+    border: 3px solid #6B4A7F;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    touch-action: none;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.rotomFeedBtn:hover {
+    background: #563d66;
+}
+
+.rotomFeedBtn.isFeeding,
+.rotomFeedBtn:active {
+    background: #563d66;
+    transform: translateY(1px);
+}
+
+.rotomFeedBtn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 74, 127, 0.25);
+}

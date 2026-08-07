@@ -3,6 +3,8 @@ import './basepages.css'
 import './page3.css'
 import FUBnyu from "../Assets/FUBnyu.jpg"
 import { Link } from "react-router-dom";
+import rotomTamagatchiCode from "../data/rotomTamagatchiCode";
+import RotomScreen from "../components/RotomScreen";
 
 export default class Page3 extends React.Component {
 
@@ -53,6 +55,7 @@ export default class Page3 extends React.Component {
             <div className="rotomShowcase">
                 <h2> Rotom Tamagatchi Project </h2>
                 <p> I made a rotom inspired Tamagatchi using a Arduino Nano, and a mini screen.</p>
+                 <a className="OuterLink" href="https://github.com/NicholasTillo/rotomArduinoProjectTamagatchi/tree/main">GitHub Link</a>
                 <div className="campaignGallery">
                     {[1,2,3].map((i) => (
                         <div key={i} className="campaign-slot">
@@ -60,6 +63,10 @@ export default class Page3 extends React.Component {
                         </div>
                     ))}
                 </div>
+                <p className="rotomCodeLabel">The Arduino sketch that runs it:</p>
+                <pre className="rotomCode"><code>{rotomTamagatchiCode}</code></pre>
+                <p className="rotomCodeLabel">And here's what it draws on the little OLED screen:</p>
+                <RotomScreen/>
             </div>
             <div className="seperator"> </div>
 
