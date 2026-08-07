@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c612b2e6.css",
-    "main.js": "/static/js/main.936f4085.js",
+    "main.js": "/static/js/main.043443d8.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
@@ -51,11 +51,11 @@
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
     "main.c612b2e6.css.map": "/static/css/main.c612b2e6.css.map",
-    "main.936f4085.js.map": "/static/js/main.936f4085.js.map",
+    "main.043443d8.js.map": "/static/js/main.043443d8.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c612b2e6.css",
-    "static/js/main.936f4085.js"
+    "static/js/main.043443d8.js"
   ]
 }
