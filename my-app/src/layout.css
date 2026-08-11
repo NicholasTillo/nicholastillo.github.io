@@ -4,15 +4,72 @@
     min-height: 100vh;
 }
 
+.contentRow{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
 main{
     padding-bottom: 0;
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-h1, h2, h3, p, a {
-    font-family: Tahoma, Verdana, Segoe UI, sans-serif;
+.sidebox{
+    width: 10vw;
+    max-width: 183px; /* 10/70 of the 1280px row cap */
+    background-color: #6B4A7F;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000;
+    border: outset 3px gray;
+}
+
+
+.links{
+    margin:15px 2px 0px 2px;
+    border: 2px dashed purple;
+
+}
+
+/* One slot per link, sized for a classic 88x31 web button. */
+.buttonSlot{
+    width: 88px;
+    height: 31px;
+    margin: 4px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.buttonSlot img{
+    width: 88px;
+    height: 31px;
+    display: block;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'VT323';
+    src: url('./Assets/VT323/VT323-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ScienceGothic';
+    src: url('./Assets/Science_Gothic/Science_Gothic.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'ScienceGothic', Tahoma, Verdana, Segoe UI, sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'VT323', Tahoma, Verdana, Segoe UI, sans-serif;
 }
 p, button{
     font-size: 1.2em;
@@ -33,7 +90,7 @@ h1{
 
 .PageTitle{
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .seperator{
@@ -63,6 +120,10 @@ h1{
     .seperator {
         margin: 1.5em auto;
     }
+    /* No room for banners once the main body grows to 90/95vw. */
+    .sidebox {
+        display: none;
+    }
 }
 
 /* Phone styles */
@@ -90,4 +151,6 @@ h1{
         padding: 0;
     }
 }
+
+
 

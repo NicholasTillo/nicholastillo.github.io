@@ -2,10 +2,13 @@
 
 .mainBody{
     background-color: #ffffffea ;
-    width: 70vw;
-    max-width: 100%;
+    width: 50vw; /* 70vw - two 10vw side banners, so the row still fits the 70vw footprint */
+    max-width: 914px; /* 1280 - two 183px banners */
     margin:0 auto;
-    padding-bottom: 1vw;
+    padding-top: 1vw;
+    box-shadow: 1px 1px 1px #000;
+    border: outset 3px gray;
+
 }
 
 .mainBody p,
@@ -14,7 +17,7 @@
 .mainBody h3,
 .mainBody a{
     margin: auto;   
-    max-width: 50vw;
+    max-width: 80%;
 }
 
 body {

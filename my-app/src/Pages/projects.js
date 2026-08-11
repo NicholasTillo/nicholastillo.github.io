@@ -74,7 +74,6 @@ export default class Projects extends React.Component {
 
         return(
             <div className="mainBody">
-            <h2 className="PageTitle"> Collection of Projects </h2>
             
             <div id="projectDescriptions"> 
                 <div id="project1">

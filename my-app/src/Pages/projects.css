@@ -40,6 +40,10 @@
     border-radius: 6px;
 }
 
+
+#projectDescriptions{
+    margin: 5% 0;
+}
 /* .OuterLink moved to basepages.css (shared with page3). */
 
 /* Tablet styles */

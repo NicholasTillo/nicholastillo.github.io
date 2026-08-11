@@ -5,3 +5,19 @@
   z-index: -1;
   pointer-events: none;
 }
+
+/* Static ordered-dither overlay. Purely composited by the browser (no JS,
+   no per-frame cost) — a 2x2 checkerboard of translucent dark cells tiled at
+   2px, multiplied over the field. ponytail: CSS gradient over a PNG asset. */
+.gol-dither {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.35) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.35) 75%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.35) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.35) 75%);
+  background-size: 4px 5px;
+  background-position: 0 0, 1px 1px;
+}

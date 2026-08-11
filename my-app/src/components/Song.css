@@ -11,6 +11,7 @@
 
 .songSlideshow {
     width: 98.5%; /* use percentage of container so it lines up with other content */
+    position: relative; /* anchor the absolutely-positioned kirby */
 }
 
 .songCard {

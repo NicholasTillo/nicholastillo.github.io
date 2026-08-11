@@ -1,12 +1,17 @@
 
+.mainBody{
+    padding-top:0;
+}
 
 .homeIntro {
     --home-intro-border-texture: url("../Assets/Texture.png");
-    width: min(100%, 50vw);
-    margin: 50px auto 4rem;
+    width: 100%;
+    margin: 0px auto 4rem;
     padding: 3rem;
     border: 80px solid transparent;
-    border-image: var(--home-intro-border-texture) 24 round;
+    background-image: var(--home-intro-border-texture);
+    background-repeat: repeat;
+    color: white;
 }
 
 .homeIntro .PageTitle,
@@ -25,7 +30,7 @@
     margin-top: 4rem;
 }
 
-.musicSection {
+.songDiv {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -60,4 +65,17 @@
 .gameCard:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+#welcome-message{
+    max-width: 100%
+}
+
+
+.kirbyImage {
+    position: absolute; 
+    right: 0;
+    top: -100px;
+    width: 150px;
+    height: auto; 
 }

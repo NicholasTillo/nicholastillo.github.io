@@ -8,8 +8,8 @@ export default function GameOfLifeBackground() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const rows = 160;
-    const cols = 240;
+    const rows = 320;
+    const cols = 480;
     let grid = Array.from({ length: rows }, () =>
       Array.from({ length: cols }, () => Math.random() > 0.8 ? 1 : 0)
     );
@@ -67,5 +67,10 @@ export default function GameOfLifeBackground() {
     };
   }, []);
   
-  return <canvas ref={canvasRef} className="game-of-life-bg" />;
+  return (
+    <>
+      <canvas ref={canvasRef} className="game-of-life-bg" />
+      <div className="gol-dither" aria-hidden="true" />
+    </>
+  );
 }

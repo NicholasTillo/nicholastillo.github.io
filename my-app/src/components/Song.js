@@ -54,6 +54,7 @@ export default class Song extends React.Component {
     return (
       <div className="songDiv">
         <div className="songSlideshow">
+          <img className="kirbyImage" src={require("../Assets/kirby-nintendo.gif")} alt="Dancing Kirby" />
           <div className="songCard">
             <div className="albumArt">
               {currentSong.image && <img src={currentSong.image} alt={currentSong.title} />}

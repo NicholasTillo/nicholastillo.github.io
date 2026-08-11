@@ -25,7 +25,7 @@ export default class Homepage extends React.Component {
             <div className="mainBody">
                 <div className="homeIntro">
                     <h1 className="PageTitle">Welcome!</h1>
-                    <p>This is a place where I share my projects and some cool stuff. Feel free to explore and check out the different sections using the navigation bar above.</p>
+                    <p id="welcome-message">This is a place where I share my projects and some cool stuff. Feel free to explore and check out the different sections using the navigation bar above.</p>
                 </div>
 
                 <p className="bioSection">
@@ -35,6 +35,7 @@ export default class Homepage extends React.Component {
 
                 <div className="musicSection">
                     <h2> Favourite Songs Right Now </h2>
+                    
                     <Song/>
                 </div>
 

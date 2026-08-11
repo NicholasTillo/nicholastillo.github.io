@@ -35,13 +35,11 @@ export default class Page3 extends React.Component {
     render(){
         return(
             <div className="mainBody">
-            
-            
-            <h2 className="PageTitle"> Creative Works</h2>
 
             <div className="gamingShowcase">
            <h2>Gaming Showcase</h2> 
 
+            <div className="seperator"> </div>
             <h3> Binding Of Issac </h3>
             <p> Bunny Resprite for The Binding Of Issac </p>
             <p> Currently on the steam community page for The Binding Of Issac, just a simple retexture for the troll bombs to be bunnies instead! This is my first dips into Issac modding and want to do much more in the future.</p>
