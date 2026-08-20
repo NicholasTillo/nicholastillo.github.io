@@ -6,10 +6,23 @@ import Pauper from "../Assets/playpauper2.gif"
 import Gamer from "../Assets/games.gif"
 
 
+const asciiArt = [
+    "(-'.'-)",
+    "<( c(-_-c)'.')>",
+    "Q('.'Q)",
+    "<('.'<)",
+    "c(','c)",
+    "v(-'.'-)^",
+    "(>^_^)>",
+    "(v-'.'-v)",
+    "<(^.^)>",
+];
 
 
 export default class Leftbox extends React.Component {
     render() {
+        const art = asciiArt[Math.floor(Math.random() * asciiArt.length)];
+
         return (
             <div className="sidebox leftbox">
                 <div className="links">
@@ -31,6 +44,9 @@ export default class Leftbox extends React.Component {
                         <a href="mailto:nicholastillo@gmail.com"> <img src={Gmail} alt="Email" /> </a>
                     </div>
                 </div>
+                <div className="links" style={{ textAlign: "center" }}>
+                     <p>{art}</p>
+                </div>
 
                 <div className="links">
                     <p> Stupid Links </p>
@@ -45,13 +61,9 @@ export default class Leftbox extends React.Component {
 
                 <div className="seperator"> </div>
 
-                <div className="links">
-                    <p> About Me </p>
-                </div>
+                
 
-                <div className="links">
-                     <marquee behavior="scroll" direction="left"> Sample ... Sample ... Sample ... Sample </marquee>
-                </div>
+                
                 
             </div>
         );

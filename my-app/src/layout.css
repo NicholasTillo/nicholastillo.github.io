@@ -30,8 +30,9 @@ main{
 
 .links{
     margin:15px 2px 0px 2px;
+    padding: 16px 0;
     border: 2px dashed purple;
-
+    background-color: rgba(226, 217, 217, 0.15);
 }
 
 /* One slot per link, sized for a classic 88x31 web button. */
