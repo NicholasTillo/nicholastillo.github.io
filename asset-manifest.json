@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.c612b2e6.css",
-    "main.js": "/static/js/main.043443d8.js",
+    "main.css": "/static/css/main.93433f7c.css",
+    "main.js": "/static/js/main.43e6694c.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
+    "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
     "static/media/Spirex1.jpg": "/static/media/Spirex1.c017b006854d789ba3bf.jpg",
     "static/media/Spirex2.jpg": "/static/media/Spirex2.920f5db810395b7cf44c.jpg",
     "static/media/GeomancerEscape.png": "/static/media/GeomancerEscape.9aaea986500100b507fd.png",
@@ -17,14 +18,16 @@
     "static/media/Spirex3.jpg": "/static/media/Spirex3.a8142f7fa44a4fe03f3e.jpg",
     "static/media/Prolea2.jpg": "/static/media/Prolea2.3a0e84194ac6d17b9cf9.jpg",
     "static/media/Prolea3.jpg": "/static/media/Prolea3.789a647c25cbb66e01f3.jpg",
-    "static/media/Texture.png": "/static/media/Texture.ef6b8648ff24d6cdd14f.png",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
+    "static/media/kirby-nintendo.gif": "/static/media/kirby-nintendo.bff874980985b048c7b0.gif",
     "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
     "static/media/slaythespire2.jpg": "/static/media/slaythespire2.d924b65305b879d00626.jpg",
     "static/media/Rotom1.jpg": "/static/media/Rotom1.124bfd157399673b1e5b.jpg",
+    "static/media/playpauper2.gif": "/static/media/playpauper2.6f0e3d2d454ccb312081.gif",
     "static/media/EEBehaviourTree.png": "/static/media/EEBehaviourTree.8e7a05bf4f4700a5ac1e.png",
+    "static/media/VT323-Regular.ttf": "/static/media/VT323-Regular.2bc43ad8eb2f60b39f27.ttf",
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
     "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
     "static/media/CounterFactual.png": "/static/media/CounterFactual.707b8639d4cccaec5bbc.png",
@@ -35,6 +38,7 @@
     "static/media/Issac.jpg": "/static/media/Issac.b4d5bd7ab66048815942.jpg",
     "static/media/Minecraft.jpg": "/static/media/Minecraft.dd890dde29be3ce43b6c.jpg",
     "static/media/Explorer.jpg": "/static/media/Explorer.10af6221928f82f206dc.jpg",
+    "static/media/Texture.png": "/static/media/Texture.739fc945d962fc8579e2.png",
     "static/media/Knight.jpg": "/static/media/Knight.6ad0c28667d83065ea31.jpg",
     "static/media/portal2.jpg": "/static/media/portal2.debae7a33c05afbc7f59.jpg",
     "static/media/insurgence5.jpg": "/static/media/insurgence5.7f1a83addcc655789e3b.jpg",
@@ -50,12 +54,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.c612b2e6.css.map": "/static/css/main.c612b2e6.css.map",
-    "main.043443d8.js.map": "/static/js/main.043443d8.js.map",
+    "main.93433f7c.css.map": "/static/css/main.93433f7c.css.map",
+    "main.43e6694c.js.map": "/static/js/main.43e6694c.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c612b2e6.css",
-    "static/js/main.043443d8.js"
+    "static/css/main.93433f7c.css",
+    "static/js/main.43e6694c.js"
   ]
 }
