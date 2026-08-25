@@ -47,6 +47,7 @@ export default class NavBar extends React.Component {
                 <Link reloadDocument to="/lightingdemos" onClick={this.closeMenu}>Lighting Demos</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
                 <Link reloadDocument to="/gdd" onClick={this.closeMenu}>Game Design Docs</Link>
+                <Link reloadDocument to="/dinner" onClick={this.closeMenu}>What's For Dinner</Link>
               </div>
             </details>
           </div>
@@ -75,6 +76,11 @@ export default class NavBar extends React.Component {
             <div className="navExtra">
                 <Link reloadDocument to="/gdd">
                   <button> Game Design Docs </button>
+                </Link>
+            </div>
+            <div className="navExtra">
+                <Link reloadDocument to="/dinner">
+                  <button> What's For Dinner </button>
                 </Link>
             </div>
           </nav>

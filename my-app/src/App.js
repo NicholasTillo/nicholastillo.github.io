@@ -10,6 +10,7 @@ import Page3 from './Pages/page3';
 import LightingDemos from './Pages/lightingdemos';
 import Mugi from './Pages/mugi';
 import Gdd from './Pages/gdd';
+import Dinner from './Pages/dinner';
 
 
 import { Layout } from './Layout';
@@ -29,6 +30,7 @@ function App() {
           <Route path = "/lightingdemos" element = {<LightingDemos/>} />
           <Route path = "/mugi" element = {<Mugi/>} />
           <Route path = "/gdd" element = {<Gdd/>} />
+          <Route path = "/dinner" element = {<Dinner/>} />
 
         </Route>
         

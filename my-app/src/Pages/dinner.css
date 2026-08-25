@@ -1,0 +1,187 @@
+.dinnerPage {
+  padding-bottom: 2vw;
+}
+
+.dinnerIntro {
+  text-align: center;
+  margin: 0 auto 1em;
+}
+
+.dinnerLayout {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5em;
+  padding: 0 1.5em 1.5em;
+}
+
+/* ---- The wheel (left) ---- */
+.wheel {
+  position: relative;
+  flex: 0 0 45%;
+  height: 55vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  border: 3px solid #6B4A7F;
+  border-radius: 6px;
+  background-color: #ffffffea;
+  /* Two purple guide lines marking the center "selected" slot. Default
+     background-attachment keeps them fixed while the meals scroll past. */
+  background-image:
+    linear-gradient(#6B4A7F, #6B4A7F),
+    linear-gradient(#6B4A7F, #6B4A7F);
+  background-size: 100% 2px, 100% 2px;
+  background-position: 0 calc(50% - 1.7em), 0 calc(50% + 1.7em);
+  background-repeat: no-repeat;
+  scrollbar-width: none; /* Firefox */
+}
+.wheel::-webkit-scrollbar { display: none; } /* WebKit */
+
+/* Half-slot spacers so the first and last meals can reach the center. */
+.wheelSpacer {
+  height: calc(27.5vh - 1.7em);
+  flex: none;
+}
+
+.wheelItem {
+  display: block;
+  width: 100%;
+  height: 3.4em;
+  line-height: 3.4em;
+  scroll-snap-align: center;
+  border: none;
+  background: transparent;
+  color: rgba(38, 35, 41, 0.45);
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: color 160ms ease, transform 160ms ease, font-weight 160ms ease;
+}
+
+.wheelItem.is-selected {
+  color: #262329;
+  font-weight: 700;
+  transform: scale(1.18);
+}
+
+.wheelItem:focus-visible {
+  outline: none;
+  color: #6B4A7F;
+}
+
+/* ---- Ingredients (right) ---- */
+.details {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #6B4A7F;
+  border-radius: 6px;
+  background-color: #ffffffea;
+  padding: 1.5em;
+}
+
+.detailsName {
+  margin: 0 0 0.4em;
+}
+
+.detailsIngredients {
+  font-size: 1.3em;
+  color: rgba(38, 35, 41, 0.85);
+  max-width: 100%;
+}
+
+.detailsIngredients .haveIt { color: rgba(38, 35, 41, 0.55); }
+.detailsIngredients .needIt { color: #6B4A7F; font-weight: 700; }
+.detailsIngredients .subIt { color: rgba(38, 35, 41, 0.75); }
+.detailsIngredients .subIt em { color: #6B4A7F; font-style: italic; font-size: 0.85em; }
+.detailsIngredients .needSub { color: rgba(107, 74, 127, 0.7); font-weight: 400; font-size: 0.85em; }
+.detailsIngredients .dot { color: rgba(38, 35, 41, 0.4); }
+
+/* ---- Almost (missing one) ---- */
+.almost {
+  padding: 0 1.5em 1em;
+}
+.almostTitle {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.almostList {
+  max-width: 40em;
+  margin: 0.5em auto 0;
+  padding-left: 1.2em;
+}
+.almostList li { margin: 0.3em 0; }
+.almostSub { color: rgba(107, 74, 127, 0.8); font-size: 0.9em; }
+
+.detailsHint,
+.detailsEmpty {
+  color: rgba(38, 35, 41, 0.7);
+  font-size: 0.95em;
+  margin-top: 0.6em;
+}
+
+/* ---- My Fridge ---- */
+.fridge {
+  padding: 0 1.5em 1.5em;
+}
+
+.fridgeTitle {
+  text-align: center;
+  margin-top: 0;
+}
+
+.fridgeIntro {
+  text-align: center;
+  margin: 0 auto 0.6em;
+}
+
+.makeableToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.makeableToggle input { width: 1.1em; height: 1.1em; }
+
+.fridgeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.5em 1em;
+}
+
+.fridgeItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(107, 74, 127, 0.35);
+  border-radius: 4px;
+  background-color: #ffffffbb;
+  cursor: pointer;
+}
+.fridgeItem input { width: 1.05em; height: 1.05em; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .wheelItem { font-size: 1.2em; }
+  .detailsIngredients { font-size: 1.2em; }
+  .fridge { padding: 0 1em 1em; }
+}
+
+@media (max-width: 768px) {
+  .dinnerLayout {
+    flex-direction: column;
+    padding: 0 1em 1em;
+  }
+  .wheel { flex-basis: auto; height: 45vh; }
+  .wheelSpacer { height: calc(22.5vh - 1.7em); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel { scroll-behavior: auto; }
+  .wheelItem { transition: none; }
+}

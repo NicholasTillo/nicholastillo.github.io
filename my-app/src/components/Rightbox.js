@@ -9,6 +9,7 @@ export default class Rightbox extends React.Component {
         return (
             <div className="sidebox rightbox">
                <div className="links">
+                     {/* eslint-disable-next-line jsx-a11y/no-distracting-elements -- intentional decorative marquee */}
                      <marquee behavior="scroll" direction="left">  Spiral staircase, Rhinoceros beetle, Desolation Row, Fig tart, Rhinoceros beetle, Via Dolorosa, Rhinoceros beetle, Singularity point, Giotto, Angel, Hydrangea, Rhinoceros beetle, Singularity point, Secret emperor </marquee>
                 </div>
 
