@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.93433f7c.css",
-    "main.js": "/static/js/main.43e6694c.js",
+    "main.css": "/static/css/main.4374222c.css",
+    "main.js": "/static/js/main.f3846c78.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
@@ -17,6 +17,7 @@
     "static/media/GitProbePresentation.jpg": "/static/media/GitProbePresentation.c8f9e5934c359fecc26b.jpg",
     "static/media/Spirex3.jpg": "/static/media/Spirex3.a8142f7fa44a4fe03f3e.jpg",
     "static/media/Prolea2.jpg": "/static/media/Prolea2.3a0e84194ac6d17b9cf9.jpg",
+    "static/media/agni.gif": "/static/media/agni.44a4adab9242233cc090.gif",
     "static/media/Prolea3.jpg": "/static/media/Prolea3.789a647c25cbb66e01f3.jpg",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
@@ -54,12 +55,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.93433f7c.css.map": "/static/css/main.93433f7c.css.map",
-    "main.43e6694c.js.map": "/static/js/main.43e6694c.js.map",
+    "main.4374222c.css.map": "/static/css/main.4374222c.css.map",
+    "main.f3846c78.js.map": "/static/js/main.f3846c78.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93433f7c.css",
-    "static/js/main.43e6694c.js"
+    "static/css/main.4374222c.css",
+    "static/js/main.f3846c78.js"
   ]
 }
