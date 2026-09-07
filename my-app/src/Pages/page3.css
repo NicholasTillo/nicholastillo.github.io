@@ -24,14 +24,35 @@
 }
 
 /* .OuterLink moved to basepages.css (shared with projects). */
-#BunnyImage {margin: 10px auto;
-   display: block;
-   width: fit-content}
+.issacGallery {
+   width: 75%;
+   margin: 1rem auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
 
-#BunnyImage img {
+.issacImage {
+   flex: 1 1 0;
+   min-width: 0;
+}
+
+.issacImage img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .issacGallery {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .issacImage { flex-basis: 100%; }
 }
 /* Rotom Arduino code box */
 .rotomCodeLabel {

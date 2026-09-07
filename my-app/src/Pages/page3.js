@@ -2,6 +2,7 @@ import React from "react";
 import './basepages.css'
 import './page3.css'
 import FUBnyu from "../Assets/FUBnyu.jpg"
+import agni from "../Assets/agni.gif"
 import { Link } from "react-router-dom";
 import rotomTamagatchiCode from "../data/rotomTamagatchiCode";
 import RotomScreen from "../components/RotomScreen";
@@ -43,10 +44,16 @@ export default class Page3 extends React.Component {
             <h3> Binding Of Issac </h3>
             <p> Bunny Resprite for The Binding Of Issac </p>
             <p> Currently on the steam community page for The Binding Of Issac, just a simple retexture for the troll bombs to be bunnies instead! This is my first dips into Issac modding and want to do much more in the future.</p>
+            <p> Agni Character Resprite is my second Issac mod, also up on the steam community page.</p>
 
-            <Link id="BunnyImage" smooth to="https://steamcommunity.com/sharedfiles/filedetails/?id=3537671862">
+            <div className="issacGallery">
+                    <Link className="issacImage" smooth to="https://steamcommunity.com/sharedfiles/filedetails/?id=3537671862">
                       <img src={FUBnyu} alt="Bunny resprite for The Binding of Isaac" />
                     </Link>
+                    <Link className="issacImage" smooth to="https://steamcommunity.com/sharedfiles/filedetails/?id=3797295434">
+                      <img src={agni} alt="Agni character resprite for The Binding of Isaac" />
+                    </Link>
+            </div>
             </div>
 
             <div className="seperator"> </div>
