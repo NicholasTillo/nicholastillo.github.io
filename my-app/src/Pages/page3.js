@@ -43,8 +43,8 @@ export default class Page3 extends React.Component {
             <div className="seperator"> </div>
             <h3> Binding Of Issac </h3>
             <p> Bunny Resprite for The Binding Of Issac </p>
-            <p> Currently on the steam community page for The Binding Of Issac, just a simple retexture for the troll bombs to be bunnies instead! This is my first dips into Issac modding and want to do much more in the future.</p>
-            <p> Agni Character Resprite is my second Issac mod, also up on the steam community page.</p>
+            <p> Currently on the steam community page for The Binding Of Issac, I used TBOI's modding tools to create a retexture and reanimation for the troll bombs to be bunnies instead! This is my first dips into Issac modding.</p>
+            <p> Agni Character Resprite is my second Issac mod, that is a full character rehaul for Tainted Maggie taking all of the textures and sprite sheets and updating them to match the character Agni from Fire Punch, also up on the steam community page.</p>
 
             <div className="issacGallery">
                     <Link className="issacImage" smooth to="https://steamcommunity.com/sharedfiles/filedetails/?id=3537671862">
@@ -57,9 +57,48 @@ export default class Page3 extends React.Component {
             </div>
 
             <div className="seperator"> </div>
+
+
+
+             <div className="dndShowcase">
+                <h2>Dungeons And Dragons, Custom Campaigns</h2>
+
+                <div className="campaignSection">
+                    <h3>Prolea</h3>
+                    <p> Prolea is my Faerun inspired fully homebrew DnD campaign, I have played 3 different campaigns in this setting having created over 200 pages of content designed to fit right in with the thematic elements and gameplay balance with traditional DnD 5e gameplay. Its based around the dragon diety Tiamat, and the primal ancient chromatic dragons, sealed away by ancient wizards. A chaotic battle for power ensues as relics of the dragons begin to resurface and promises of power are made. </p>
+                    <div className="campaignGallery">
+                        {[1,2,3].map((i) => (
+                            <div key={i} className="campaign-slot">
+                                <img src={require(`../Assets/Prolea${i}.jpg`)} alt={`Prolea ${i}`} onClick={() => this.openLightbox(require(`../Assets/Prolea${i}.jpg`))} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="campaignSection">
+                    <h3>Spirex Flora</h3>
+                    <p> The second setting I have made was a continent in a competition with other groups for a year long world building class. With a team of 4, we created a full history, timeline, social structure, culture and international relations. We created realistic magical systems, social pressures due to the magical system, and mythology all for this fictional world. 
+                        I single handedly translated this contient and mystical story into a fully playable one-shot for DnD 5e. 
+                        The island of the Spirex Flora is a mystical place fueled by the magical flower the S. Flora. A flower with the strange power to amplify the effects of the methods of refinement. What used to be one united population is fracted into two distinct groups as the power of the flower is revealed. the seafaring and openmindied group known as the Wanban inhabit the exterior of the spiral, and the spiritual and traditionial waabigaanbe inhabit the magically charged center.</p>
+                    <p> Full One-Shot:<a href="/spirex-one-shot.pdf" target="_blank" rel="noopener noreferrer">Link</a></p>
+                    <div className="campaignGallery">
+                        {[1,2,3].map((i) => (
+                            <div key={i} className="campaign-slot">
+                                <img src={require(`../Assets/Spirex${i}.jpg`)} alt={`Spirex${i}`} onClick={() => this.openLightbox(require(`../Assets/Spirex${i}.jpg`))} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="seperator"> </div>
+
+
+
             <div className="rotomShowcase">
                 <h2> Rotom Tamagatchi Project </h2>
-                <p> I made a rotom inspired Tamagatchi using a Arduino Nano, and a mini screen.</p>
+                <p> I made a rotom inspired Tamagatchi using a Arduino Nano, and a mini screen. Coded in C# this uses sprites from Pokemon to create the feeling of Rotom being alive and cared for within the TV. IT taught me how to work with limited resources as the Arduino Nano had a limited space, so sprites were reused and redrawn sparsely. This project was designed to ensure my girlfriend was given a small responsibility to allow for an easy "baby steps" approach to getting out of bed. </p>
                  <a className="OuterLink" href="https://github.com/NicholasTillo/rotomArduinoProjectTamagatchi/tree/main">GitHub Link</a>
                 <div className="campaignGallery">
                     {[1,2,3].map((i) => (
@@ -93,39 +132,13 @@ export default class Page3 extends React.Component {
 
             <div className="figureShowcase">
                 <h2> Painted Minifigures </h2>
-                <p> I also paint some minifigures, I actually got a 3d printer just to have things to paint for cheap. I have an instagram <a style={{padding:0,margin:0}} href="https://www.instagram.com/tillosfigures/">@tillosfigure/</a> to help showcase the figures ive printed, and painted! Here are some favourites: </p>
+                <p> I also paint some minifigures, I actually got a 3d printer just to have things to paint for cheap. I have an instagram <a style={{padding:0,margin:0}} href="https://www.instagram.com/tillosfigures/">@tillosfigure/</a> to help showcase the figures ive printed, and painted! </p>
             </div>
-            <div className="seperator"> </div>
 
             
-            <div className="dndShowcase">
-                <h2>Dungeons And Dragons, Custom Campaigns</h2>
+           
 
-                <div className="campaignSection">
-                    <h3>Prolea</h3>
-                    <p> Prolea is my Faerun inspired fully homebrew DnD campaign, I have played 3 different campaigns in this setting, based around the dragon diety Tiamat, and the primal ancient chromatic dragons, sealed away by ancient wizards. A chaotic battle for power ensues as relics of the dragons begin to resurface and promises of power are made. </p>
-                    <div className="campaignGallery">
-                        {[1,2,3].map((i) => (
-                            <div key={i} className="campaign-slot">
-                                <img src={require(`../Assets/Prolea${i}.jpg`)} alt={`Prolea ${i}`} onClick={() => this.openLightbox(require(`../Assets/Prolea${i}.jpg`))} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
 
-                <div className="campaignSection">
-                    <h3>Spirex Flora</h3>
-                    <p>The island of the Spirex Flora is a mystical place fueled by the magical flower the S. Flora. A flower with the strange power to amplify the effects of the methods of refinement. What used to be one united population is fracted into two distinct groups as the power of the flower is revealed. the seafaring and openmindied group known as the Wanban inhabit the exterior of the spiral, and the spiritual and traditionial waabigaanbe inhabit the magically charged center.</p>
-                    <p> Full One-Shot:<a href="/spirex-one-shot.pdf" target="_blank" rel="noopener noreferrer">Link</a></p>
-                    <div className="campaignGallery">
-                        {[1,2,3].map((i) => (
-                            <div key={i} className="campaign-slot">
-                                <img src={require(`../Assets/Spirex${i}.jpg`)} alt={`Spirex${i}`} onClick={() => this.openLightbox(require(`../Assets/Spirex${i}.jpg`))} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
             <div className="seperator"> </div>
 
             
