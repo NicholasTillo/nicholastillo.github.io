@@ -78,7 +78,7 @@ export default class Projects extends React.Component {
             <div id="projectDescriptions"> 
                 <div id="project1">
                     <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
-                    <p> A MTG Inspirted Course Project. An exploration of the different AI models and their applicability on the Magic The Gathering domain. 
+                    <p> Was the main developer for A MTG Inspirted Course Project. I explored and evaluated different AI models and their applicability on the Magic The Gathering domain to solve the teaching problem of high complexity within game. I created Naive Bayes nets to attempt to understand factors to victory in a MTG game. 
                         We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
 
                     <a className="OuterLink" href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
@@ -91,7 +91,7 @@ export default class Projects extends React.Component {
                 <div className="seperator"> </div>
                 <div id="project2">
                     <h3> Extraterrestrial Entertainment </h3>
-                    <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. </p>
+                    <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. I was the main designer and developer for the behavioral AI for the aliens, and the main gameplay loop. Designing the joke-slot structure that gives players a sense of unknown language while still being able to piece together meaning. Utilized Normans principles of interaction design, creating visible feedback, and clear queues to ensure player retention and reduce confusion. </p>
                     <a className="OuterLink" href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> Github Link </a>
 
                     <a className="OuterLink" href="https://youtu.be/yV3j3jQtLQs"> Video Of Player Movement and Aliens </a>
@@ -108,7 +108,7 @@ export default class Projects extends React.Component {
                 <div className="seperator"> </div>
                 <div id="project3">
                     <h3> CounterFactual Map-Elite algorithm </h3>
-                    <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. This Python-based project features a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. </p>
+                    <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. I created a Python-based project featuring a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. This program has the purpose of illuminating the "Why" behind machine learning decisions, and assisting in showing the "What could have been different" situations that lead to different outcomes. </p>
                     <a className="OuterLink" href="https://github.com/NicholasTillo/CounterFactual"> Repository Link </a>
 
                     {this.renderImageGrid(projectImages.project3)}
@@ -116,7 +116,7 @@ export default class Projects extends React.Component {
                 <div className="seperator"> </div>
                 <div id="project4">
                     <h3> The Geomancer's Escape </h3>
-                    <p> A Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms.</p>
+                    <p> I was apart of a team of 3 creating a Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms. I was the sole developer and designer for the game, creating the "hook" of the interaction between 3D and 2D space. I also created the core gameplay loop, designed the enemies and their unique behaviours, and created interesting puzzles that utilize the unique domain of multiple dimensions. </p>
                     <a className="OuterLink" href="https://github.com/NicholasTillo/TheGeomancersEscape"> Repository Link </a>
                     <a className="OuterLink" href="https://nicholastillo.itch.io/the-geomancers-escape"> Itch Link </a>
 
@@ -141,7 +141,7 @@ export default class Projects extends React.Component {
                     <h3> Conway's Game Of Life Solver </h3>
                     <p> A course project using python to model the zero player game The Game Of Life. 
                         Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
-                        Using python and the SAT solver - kissat to solve the state space that is set up in the file.  </p>
+                        Using python and the SAT solver - kissat to solve the state space that is set up in the file. I designed the architecture for the solver as well as ensured its functionality was efficient enough to solve higher order situations.  </p>
                     <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
                     <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
 
