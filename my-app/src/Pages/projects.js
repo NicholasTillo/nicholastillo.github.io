@@ -41,6 +41,11 @@ export default class Projects extends React.Component {
 
     render(){
         const projectImages = {
+            project0: [
+                require("../Assets/MeaningOfLife3.png"),
+                require("../Assets/MeaningOfLife1.png"),
+                require("../Assets/MeaningOfLife2.png")
+            ],
             project1: [
                 require("../Assets/GitProbe1.png"),
                 require("../Assets/GitProbePresentation.jpg"),
@@ -75,7 +80,18 @@ export default class Projects extends React.Component {
         return(
             <div className="mainBody">
             
-            <div id="projectDescriptions"> 
+            <div id="projectDescriptions">
+                <div id="project0">
+                    <h3> The Game Of The Meaning Of Life </h3>
+                    <p> The fully automated Titan's Wake carries 32,934 human explorers to the edge of the universe, as generations pass in the search for the Meaning Of Life. A sci-fi survival/arcade twist on John Conway's Game Of Life, players take the role of the ship,
+                        managing its populations, their professions, and resources, upgrading the ship with every failed attempt to reach further generations while random events throw their plans into chaos. </p>
+                    <p> I was the sole developer, sole designer, and sole asset creator for this game. Built in Godot, I expanded on Conway's original rules to transform a 0-player simulation into a game with real player agency, designing the population, profession, and resource systems, the upgrade-driven progression loop, and the random events that keep each run unpredictable.
+                        I also created all of the pixel art for the ships, stations, and effects in Aseprite, and released the game playable in the browser on itch.io. </p>
+                    <iframe title="The Game Of The Meaning Of Life" frameBorder="0" src="https://itch.io/embed/5010332?linkback=true&bg_color=9bc7ec&fg_color=222222&link_color=fa5c5c&border_color=404d7f" width="552" height="167" style={{ maxWidth: "100%" }}><a href="https://nicholastillo.itch.io/the-game-of-the-meaning-of-life">The Game Of The Meaning Of Life by NicholasTillo</a></iframe>
+
+                    {this.renderImageGrid(projectImages.project0)}
+                </div>
+                <div className="seperator"> </div>
                 <div id="project1">
                     <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
                     <p> Was the main developer for A MTG Inspirted Course Project. I explored and evaluated different AI models and their applicability on the Magic The Gathering domain to solve the teaching problem of high complexity within game. I created Naive Bayes nets to attempt to understand factors to victory in a MTG game. 
