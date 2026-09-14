@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4374222c.css",
-    "main.js": "/static/js/main.025c9d69.js",
+    "main.js": "/static/js/main.1980ad50.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
@@ -24,6 +24,7 @@
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
     "static/media/kirby-nintendo.gif": "/static/media/kirby-nintendo.bff874980985b048c7b0.gif",
     "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
+    "static/media/MeaningOfLife1.png": "/static/media/MeaningOfLife1.6f6ba57970fb62ac3dfd.png",
     "static/media/slaythespire2.jpg": "/static/media/slaythespire2.d924b65305b879d00626.jpg",
     "static/media/Rotom1.jpg": "/static/media/Rotom1.124bfd157399673b1e5b.jpg",
     "static/media/playpauper2.gif": "/static/media/playpauper2.6f0e3d2d454ccb312081.gif",
@@ -32,6 +33,7 @@
     "static/media/OneBeer.jpg": "/static/media/OneBeer.b489b09b5e81c224c81b.jpg",
     "static/media/Locket.jpg": "/static/media/Locket.50d3fa8583c976812855.jpg",
     "static/media/CounterFactual.png": "/static/media/CounterFactual.707b8639d4cccaec5bbc.png",
+    "static/media/MeaningOfLife3.png": "/static/media/MeaningOfLife3.4b2fc6670efbf2faab30.png",
     "static/media/starfy.jpg": "/static/media/starfy.785c1600ca6c8844b95a.jpg",
     "static/media/kirbye.jpg": "/static/media/kirbye.20e2bb3949cdf7fa2b7f.jpg",
     "static/media/White.jpg": "/static/media/White.dedcce8dd24614af5ddf.jpg",
@@ -56,11 +58,11 @@
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
     "main.4374222c.css.map": "/static/css/main.4374222c.css.map",
-    "main.025c9d69.js.map": "/static/js/main.025c9d69.js.map",
+    "main.1980ad50.js.map": "/static/js/main.1980ad50.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4374222c.css",
-    "static/js/main.025c9d69.js"
+    "static/js/main.1980ad50.js"
   ]
 }
