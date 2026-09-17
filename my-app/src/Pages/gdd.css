@@ -95,6 +95,24 @@
   padding-bottom: 0.2em;
 }
 
+/* h2 + feedback toggle share one underlined row; the panel wraps below. */
+.gddSectionHead {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+  border-bottom: 2px solid #6B4A7F;
+  margin-top: 1em;
+}
+
+.gddSectionHead h2 {
+  flex: 1 1 auto;
+  min-width: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .gddDoc img {
   max-width: 100%;
   height: auto;
