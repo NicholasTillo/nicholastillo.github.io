@@ -80,7 +80,7 @@ export default class Page3 extends React.Component {
                     <p> The second setting I have made was a continent in a competition with other groups for a year long world building class. With a team of 4, we created a full history, timeline, social structure, culture and international relations. We created realistic magical systems, social pressures due to the magical system, and mythology all for this fictional world. 
                         I single handedly translated this contient and mystical story into a fully playable one-shot for DnD 5e. 
                         The island of the Spirex Flora is a mystical place fueled by the magical flower the S. Flora. A flower with the strange power to amplify the effects of the methods of refinement. What used to be one united population is fracted into two distinct groups as the power of the flower is revealed. the seafaring and openmindied group known as the Wanban inhabit the exterior of the spiral, and the spiritual and traditionial waabigaanbe inhabit the magically charged center.</p>
-                    <p> Full One-Shot:<a href="/spirex-one-shot.pdf" target="_blank" rel="noopener noreferrer">Link</a></p>
+                    <p> Full One-Shot:<a href="/spirex-one-shot.pdf" target="_blank" rel="noopener noreferrer">Link</a> | Video:<a href="https://youtu.be/F6wVYkZYkS8" target="_blank" rel="noopener noreferrer">Link</a></p>
                     <div className="campaignGallery">
                         {[1,2,3].map((i) => (
                             <div key={i} className="campaign-slot">
