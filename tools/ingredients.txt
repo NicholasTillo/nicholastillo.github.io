@@ -1,0 +1,91 @@
+# Controlled vocabulary for recipes.ingredients[] — the Instagram import writes
+# ONLY these names into that column. Verbatim text with amounts is never lost;
+# it goes to ingredient_lines[].
+#
+# Why this file exists: ingredientChoices() in
+# my-app/src/data/ingredientSubs.js renders one filter chip per DISTINCT
+# ingredient. Left free-form, 1400 recipes would give you "chicken thigh",
+# "boneless skinless chicken thighs" and "chicken breast" as three chips, and a
+# filter list thousands of items long. Constrained to this file, the chip list
+# stays ~55 items no matter how many recipes land.
+#
+# Deliberately NOT here: salt, pepper, oil, butter, flour, sugar, vinegar,
+# spices, stock. You always have them, so they would only ever be noise in a
+# "what are you out of?" list. The vocabulary is scoped to the things that
+# actually stop dinner happening.
+#
+# Names must match the spelling used in substituteGroups (ingredientSubs.js).
+# Growing this list is expected — fold in the "-- vocab candidate:" lines the
+# parse leaves behind, then keep using it.
+
+# --- Proteins ---
+Chicken
+Ground beef
+Ground turkey
+Ground chicken
+Ground pork
+Beef
+Steak
+Pork
+Bacon
+Sausage
+Ham
+Salmon
+Shrimp
+Cod
+Tuna
+Tofu
+Eggs
+
+# --- Starches ---
+Rice
+Quinoa
+Pasta
+Noodles
+Couscous
+Potatoes
+Sweet potato
+Tortillas
+Taco shells
+Bread
+Dough
+
+# --- Dairy ---
+Cheese
+Mozzarella
+Parmesan
+Feta
+Cream
+Coconut milk
+Yogurt
+Milk
+
+# --- Produce ---
+Onion
+Garlic
+Tomato
+Lettuce
+Spinach
+Broccoli
+Cauliflower
+Carrots
+Peas
+Green beans
+Corn
+Bell pepper
+Mushrooms
+Zucchini
+Cabbage
+Avocado
+Lemon
+Lime
+Ginger
+Mixed veggies
+
+# --- Cans, jars, pantry that actually runs out ---
+Tomato sauce
+Beans
+Chickpeas
+Lentils
+Curry paste
+Soy sauce
