@@ -1,0 +1,28 @@
+# Supabase pauses free-tier projects after 7 days of no activity, which would
+# kill the /dinner page exactly when someone goes to use it. One read every
+# three days is enough to keep it counted as active.
+#
+# Set both values under Settings > Secrets and variables > Actions. The anon
+# key is public by design (it ships in the site bundle); they live here as
+# secrets only to keep the project ref out of the workflow file.
+#
+# Caveat: GitHub disables scheduled workflows after 60 days with no commits to
+# the repo, and emails you about it. Any commit re-enables this.
+name: keep-supabase-awake
+
+on:
+  schedule:
+    - cron: '0 6 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read one row
+        run: |
+          curl -fsS \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/recipes?select=id&limit=1" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -o /dev/null
