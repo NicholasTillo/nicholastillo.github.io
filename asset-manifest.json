@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b800470.css",
-    "main.js": "/static/js/main.8c141f20.js",
+    "main.css": "/static/css/main.c9fd27b1.css",
+    "main.js": "/static/js/main.884a1447.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
@@ -9,16 +9,20 @@
     "static/media/Spirex2.jpg": "/static/media/Spirex2.920f5db810395b7cf44c.jpg",
     "static/media/GeomancerEscape.png": "/static/media/GeomancerEscape.9aaea986500100b507fd.png",
     "static/media/Rotom2.jpg": "/static/media/Rotom2.106c425433e5b0c88fd5.jpg",
+    "static/media/XSoulsAutosouls.png": "/static/media/XSoulsAutosouls.cf013161d5d984c09dd8.png",
+    "static/media/XSoulsMainCharacter.png": "/static/media/XSoulsMainCharacter.321399ac3cb54f91eded.png",
     "static/media/Prolea1.jpg": "/static/media/Prolea1.e409542a503e029b42c0.jpg",
     "static/media/Rotom3.jpg": "/static/media/Rotom3.8cff08fe2d0ac9f6b470.jpg",
     "static/media/ExtraterrestrialEntertainment.png": "/static/media/ExtraterrestrialEntertainment.16f6a57e3bafa2b040ce.png",
     "static/media/FinishedComputationalArtworks.png": "/static/media/FinishedComputationalArtworks.752bd913ab70bb201e77.png",
+    "static/media/XSoulsTitle.gif": "/static/media/XSoulsTitle.80608479e04dd727dcd2.gif",
     "static/media/IMG_0462.PNG": "/static/media/IMG_0462.4258c85db01d11d091be.PNG",
     "static/media/GitProbePresentation.jpg": "/static/media/GitProbePresentation.c8f9e5934c359fecc26b.jpg",
     "static/media/Spirex3.jpg": "/static/media/Spirex3.a8142f7fa44a4fe03f3e.jpg",
     "static/media/Prolea2.jpg": "/static/media/Prolea2.3a0e84194ac6d17b9cf9.jpg",
     "static/media/agni.gif": "/static/media/agni.44a4adab9242233cc090.gif",
     "static/media/Prolea3.jpg": "/static/media/Prolea3.789a647c25cbb66e01f3.jpg",
+    "static/media/XSoulsSoulAlone.png": "/static/media/XSoulsSoulAlone.b3014041d7a198136321.png",
     "static/media/mugi.png": "/static/media/mugi.1b20bf6977b49ba98d63.png",
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
@@ -49,20 +53,22 @@
     "static/media/Wilds.jpg": "/static/media/Wilds.25e89e170c89bdc44697.jpg",
     "static/media/Ultrakill.jpg": "/static/media/Ultrakill.7e4b6931611c34437f8d.jpg",
     "static/media/HKMTG4.jpg": "/static/media/HKMTG4.9ccbbd9d2286a54e20bf.jpg",
+    "static/media/ReasonCodes2.png": "/static/media/ReasonCodes2.c2ffa443c391401dab07.png",
     "static/media/HKMTG3.jpg": "/static/media/HKMTG3.66fb431612ac8eb78998.jpg",
     "static/media/FUBnyu.jpg": "/static/media/FUBnyu.56db2efc2e2e1ec86ddf.jpg",
     "static/media/HKMTG1.jpg": "/static/media/HKMTG1.5518f90bc0c1542f1b94.jpg",
     "static/media/HKMTG2.jpg": "/static/media/HKMTG2.4ab6bbe25d098eea0ec0.jpg",
     "static/media/Inscryption.jpg": "/static/media/Inscryption.e80334c2c843bc5555ab.jpg",
+    "static/media/ReasonCodes1.png": "/static/media/ReasonCodes1.9a378d2c4c12bee784b4.png",
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.1b800470.css.map": "/static/css/main.1b800470.css.map",
-    "main.8c141f20.js.map": "/static/js/main.8c141f20.js.map",
+    "main.c9fd27b1.css.map": "/static/css/main.c9fd27b1.css.map",
+    "main.884a1447.js.map": "/static/js/main.884a1447.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b800470.css",
-    "static/js/main.8c141f20.js"
+    "static/css/main.c9fd27b1.css",
+    "static/js/main.884a1447.js"
   ]
 }
