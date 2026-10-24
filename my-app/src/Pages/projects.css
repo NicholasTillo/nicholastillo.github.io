@@ -71,3 +71,73 @@
         height: 150px;
     }
 }
+
+/* Extra breathing room between projects */
+#projectDescriptions div[id^="project"] {
+    padding: 1.5em 0;
+}
+#projectDescriptions .seperator {
+    margin: 3em auto;
+}
+#projectDescriptions .projectImageGrid {
+    margin: 1.5em 0;
+}
+
+/* Collapsible category tabs (native <details>) */
+.projectCategory {
+    margin: 0 auto 1.5em;
+}
+.projectCategory > summary {
+    list-style: none;
+    cursor: pointer;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5em 0;
+    /* Same look as the .links boxes in the side panels */
+    border: 2px dashed purple;
+    background-color: rgba(226, 217, 217, 0.15);
+    text-align: center;
+}
+.projectCategory > summary::-webkit-details-marker {
+    display: none;
+}
+.projectCategory > summary h2 {
+    display: inline;
+}
+.projectCategory > summary::before {
+    content: "▸ ";
+}
+.projectCategory[open] > summary::before {
+    content: "▾ ";
+}
+
+/* Portrait screenshots (tablet app): keep their 3:4 shape instead of square-cropping */
+.projectImageGrid.portrait .projectImageSlot {
+    aspect-ratio: 3 / 4;
+    width: min(30%, 240px);
+    height: auto;
+}
+.projectImageGrid.portrait .projectImageSlot img {
+    object-fit: contain;
+    max-width: 240px;
+}
+@media (max-width: 768px) {
+    .projectImageGrid.portrait .projectImageSlot {
+        width: 180px;
+        height: auto;
+    }
+}
+
+/* Per-header "#" permalink */
+.mainBody a.headerAnchor {
+    margin: 0 0 0 0.3em;
+    padding: 0;
+    color: #6B4A7F;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 160ms ease;
+}
+h2:hover > .headerAnchor,
+.headerAnchor:focus {
+    opacity: 1;
+}

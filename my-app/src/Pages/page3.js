@@ -96,6 +96,22 @@ export default class Page3 extends React.Component {
 
 
 
+            <div className="HKMTGShowcase">
+                <h2> Hollow Knight MTG Set</h2>
+                <p> Implementing a custom Hollow Knight MTG set for use in cockatrice and draftmancer.   </p>
+                <a className="OuterLink" href="https://github.com/NicholasTillo/HK-MTG-Set">GitHub Link</a>
+                
+                <div className="hkmtgGallery">
+                    {[1,2,3,4].map((i) => (
+                        <div key={i} className="hkmtg-slot">
+                            <img src={require(`../Assets/HKMTG${i}.jpg`)} alt={`HKMTG ${i}`} />
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+            <div className="seperator"> </div>
+
             <div className="rotomShowcase">
                 <h2> Rotom Tamagatchi Project </h2>
                 <p> I made a rotom inspired Tamagatchi using a Arduino Nano, and a mini screen. Coded in C# this uses sprites from Pokemon to create the feeling of Rotom being alive and cared for within the TV. IT taught me how to work with limited resources as the Arduino Nano had a limited space, so sprites were reused and redrawn sparsely. This project was designed to ensure my girlfriend was given a small responsibility to allow for an easy "baby steps" approach to getting out of bed. </p>
@@ -111,22 +127,6 @@ export default class Page3 extends React.Component {
                 <pre className="rotomCode"><code>{rotomTamagatchiCode}</code></pre>
                 <p className="rotomCodeLabel">And here's what it draws on the little OLED screen:</p>
                 <RotomScreen/>
-            </div>
-            <div className="seperator"> </div>
-
-            <div className="HKMTGShowcase">
-                <h2> Hollow Knight MTG Set</h2>
-                <p> Implementing a custom Hollow Knight MTG set for use in cockatrice and draftmancer.   </p>
-                <a className="OuterLink" href="https://github.com/NicholasTillo/HK-MTG-Set">GitHub Link</a>
-                
-                <div className="hkmtgGallery">
-                    {[1,2,3,4].map((i) => (
-                        <div key={i} className="hkmtg-slot">
-                            <img src={require(`../Assets/HKMTG${i}.jpg`)} alt={`HKMTG ${i}`} />
-                        </div>
-                    ))}
-                </div>
-
             </div>
             <div className="seperator"> </div>
 

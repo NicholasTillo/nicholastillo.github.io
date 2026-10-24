@@ -12,6 +12,30 @@ export default class Projects extends React.Component {
         this.state = { activeSrc: null };
     }
 
+    componentDidMount() {
+        window.addEventListener('hashchange', this.scrollToHeader);
+        this.scrollToHeader();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('hashchange', this.scrollToHeader);
+    }
+
+    // HashRouter owns the first '#', so header links look like #/projects#x-souls
+    scrollToHeader = () => {
+        const parts = window.location.hash.split('#');
+        if (parts.length < 3) return;
+        const el = document.getElementById(parts[parts.length - 1]);
+        if (!el) return;
+        const section = el.closest('details');
+        if (section) section.open = true;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    anchor(id) {
+        return <a className="headerAnchor" href={`#/projects#${id}`} aria-label="Link to this section">#</a>;
+    }
+
     openLightbox = (src) => {
         this.setState({ activeSrc: src });
         document.body.style.overflow = 'hidden';
@@ -22,9 +46,9 @@ export default class Projects extends React.Component {
         document.body.style.overflow = '';
     }
 
-    renderImageGrid(images) {
+    renderImageGrid(images, extraClass = "") {
         return (
-            <div className="projectImageGrid">
+            <div className={`projectImageGrid ${extraClass}`}>
                 {images.map((src, idx) => (
                     <button
                         key={idx}
@@ -41,6 +65,16 @@ export default class Projects extends React.Component {
 
     render(){
         const projectImages = {
+            projectReasonCodes: [
+                require("../Assets/ReasonCodes1.png"),
+                require("../Assets/ReasonCodes2.png")
+            ],
+            projectXSouls: [
+                require("../Assets/XSoulsTitle.gif"),
+                require("../Assets/XSoulsMainCharacter.png"),
+                require("../Assets/XSoulsSoulAlone.png"),
+                require("../Assets/XSoulsAutosouls.png")
+            ],
             project0: [
                 require("../Assets/MeaningOfLife3.png"),
                 require("../Assets/MeaningOfLife1.png"),
@@ -81,97 +115,119 @@ export default class Projects extends React.Component {
             <div className="mainBody">
             
             <div id="projectDescriptions">
-                <div id="project0">
-                    <h3> The Game Of The Meaning Of Life </h3>
-                    <p> I was the sole developer, sole designer, and sole asset creator for this game. Built in Godot, I expanded on Conway's original rules to transform a 0-player simulation into a game with real player agency, designing the population, profession, and resource systems, the upgrade-driven progression loop, and the random events that keep each run unpredictable.
-                        I also created all of the pixel art for the ships, stations, and effects in Aseprite, and released the game playable in the browser on itch.io. </p>
+                <details className="projectCategory" open>
+                    <summary><h2 id="professional-projects"> Professional Projects {this.anchor("professional-projects")}</h2></summary>
+                    <div id="projectReasonCodes">
+                        <h3> Reason Codes for Mobile Point Of Sale System </h3>
+                        <p> As a Mobile App Developer at Jonas Software, I designed and built a reason-code system for the mobile-POS system, letting managers define and manage required reasons for voids and other managerial overrides. Before this, overrides weren't tracked, which made auditing difficult. I owned the feature end to end, I pitched early designs to the team for feedback, built a prototype branch for review, and took it through QA to release. Built with Objective-C for iOS and Java for Android, it now gives managers an audit trail for every override.
+                     </p>       
 
-                    {this.renderImageGrid(projectImages.project0)}
+                        {this.renderImageGrid(projectImages.projectReasonCodes, "portrait")}
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project1">
+                        <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
+                        <p> Was the main developer for A MTG Inspirted Course Project. I explored and evaluated different AI models and their applicability on the Magic The Gathering domain to solve the teaching problem of high complexity within game. I created Naive Bayes nets to attempt to understand factors to victory in a MTG game. 
+                            We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
 
-                    <p> The fully automated Titan's Wake carries 32,934 human explorers to the edge of the universe, as generations pass in the search for the Meaning Of Life. A sci-fi survival/arcade twist on John Conway's Game Of Life, players take the role of the ship,
-                        managing its populations, their professions, and resources, upgrading the ship with every failed attempt to reach further generations while random events throw their plans into chaos. </p>
-                    <iframe title="The Game Of The Meaning Of Life" frameBorder="0" src="https://itch.io/embed/5010332?linkback=true&bg_color=9bc7ec&fg_color=222222&link_color=fa5c5c&border_color=404d7f" width="552" height="167" style={{ maxWidth: "100%", display: "block", margin: "0 auto" }}><a href="https://nicholastillo.itch.io/the-game-of-the-meaning-of-life">The Game Of The Meaning Of Life by NicholasTillo</a></iframe>
-                </div>
-                <div className="seperator"> </div>
-                <div id="project1">
-                    <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
-                    <p> Was the main developer for A MTG Inspirted Course Project. I explored and evaluated different AI models and their applicability on the Magic The Gathering domain to solve the teaching problem of high complexity within game. I created Naive Bayes nets to attempt to understand factors to victory in a MTG game. 
-                        We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
-
-                    <a className="OuterLink" href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
+                        <a className="OuterLink" href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
 
 
-                    <a className="OuterLink" href="https://openreview.net/pdf?id=bZeQ7DB0T9"> ICAPS 2024 Paper Link </a>
+                        <a className="OuterLink" href="https://openreview.net/pdf?id=bZeQ7DB0T9"> ICAPS 2024 Paper Link </a>
 
-                    {this.renderImageGrid(projectImages.project1)}
-                </div>
-                <div className="seperator"> </div>
-                <div id="project2">
-                    <h3> Extraterrestrial Entertainment </h3>
-                    <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. I was the main designer and developer for the behavioral AI for the aliens, and the main gameplay loop. Designing the joke-slot structure that gives players a sense of unknown language while still being able to piece together meaning. Utilized Normans principles of interaction design, creating visible feedback, and clear queues to ensure player retention and reduce confusion. </p>
-                    <a className="OuterLink" href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> Github Link </a>
+                        {this.renderImageGrid(projectImages.project1)}
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project3">
+                        <h3> CounterFactual Map-Elite algorithm </h3>
+                        <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. I created a Python-based project featuring a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. This program has the purpose of illuminating the "Why" behind machine learning decisions, and assisting in showing the "What could have been different" situations that lead to different outcomes. </p>
+                        <a className="OuterLink" href="https://github.com/NicholasTillo/CounterFactual"> Repository Link </a>
 
-                    <a className="OuterLink" href="https://youtu.be/yV3j3jQtLQs"> Video Of Player Movement and Aliens </a>
+                        {this.renderImageGrid(projectImages.project3)}
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project5">
+                        <h3> Capstone Project - Computational Artwork for the MuLab </h3>
+                        <p> This project was a set of 3 full sized canvases meant to spread the research of the graduate students within the MuLab and present the key concepts in a novel way. 
+                            The 3 art pieces contain a mix of acrylic paintings, spray coloured mediums and mixed media elements. The concepts covered by the artworks were RP-BDI planning, a multi-agent epistemic planning model aimed to make planning more human. 
+                            Next was a novel neural net approach to the classic cops and robbers graph theory problem. Finally, the last piece was regarding using AI automated planning for safety features on spacecrafts.  
+                        </p>
+                        <a className="OuterLink" href="https://drive.google.com/file/d/110QHDawwi864MMwkK79G3pvBGZB0s9WW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            Final Report For The Project
+                        </a>
 
-                    <a className="OuterLink" href="https://youtu.be/9dVxzEknoJY"> Demo of Gameplay and FSM Logic </a>
+                        {this.renderImageGrid(projectImages.project5)}
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project6">
+                        <h3> Conway's Game Of Life Solver </h3>
+                        <p> A course project using python to model the zero player game The Game Of Life. 
+                            Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
+                            Using python and the SAT solver - kissat to solve the state space that is set up in the file. I designed the architecture for the solver as well as ensured its functionality was efficient enough to solve higher order situations.  </p>
+                        <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
+                        <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
 
-                    <a className="OuterLink" href="https://www.youtube.com/watch?v=O5wmU3lJKOU"> Video Of Pathfinding and Behaviour Tree </a>
+                        {this.renderImageGrid(projectImages.project6)}
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project7">
+                        <h3> Upcoming </h3>
+                        <p> Upcoming</p>
+                        {this.renderImageGrid(projectImages.project7)}
+                    </div>
+                    <div className="seperator"> </div>
+                </details>
+                <details className="projectCategory" open>
+                    <summary><h2 id="game-design"> Game Design {this.anchor("game-design")}</h2></summary>
+                    <div id="projectXSouls">
+                        <h3> X Souls </h3>
+                        <p> A totally regular souls-like experience, and my solo submission to the DreamLayer Jam. Built in Godot 4 and playable in the browser on itch.io, X Souls wraps every possible souls-like game into one:
+                            the protagonist gains the power to jump into six different souls-like games to solve puzzles, from an action RPG (Action Souls), to a deckbuilder (Full Souls Deluxe), an auto battler (Autosouls), a horror game (Soul Alone), a 2D platformer (Super Soul Brothers), and a rhythm game (Rhythm of the Soul). </p>
 
-                    <a className="OuterLink" href={require("../Assets/CISC 486 - Group 6 Presentation.pptx")} target="_blank" rel="noopener noreferrer"> Final Powerpoint Presentation </a>
+                        {this.renderImageGrid(projectImages.projectXSouls)}
 
-                    {this.renderImageGrid(projectImages.project2)}
+                        <iframe title="X Souls" frameBorder="0" src="https://itch.io/embed/5146795?linkback=true&bg_color=9bc7ec&fg_color=222222&link_color=fa5c5c&border_color=404d7f" width="552" height="167" style={{ maxWidth: "100%", display: "block", margin: "0 auto" }}><a href="https://nicholastillo.itch.io/x-souls">X Souls by NicholasTillo</a></iframe>
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project0">
+                        <h3> The Game Of The Meaning Of Life </h3>
+                        <p> I was the sole developer, sole designer, and sole asset creator for this game. Built in Godot, I expanded on Conway's original rules to transform a 0-player simulation into a game with real player agency, designing the population, profession, and resource systems, the upgrade-driven progression loop, and the random events that keep each run unpredictable.
+                            I also created all of the pixel art for the ships, stations, and effects in Aseprite, and released the game playable in the browser on itch.io. </p>
 
-                </div>
-                <div className="seperator"> </div>
-                <div id="project3">
-                    <h3> CounterFactual Map-Elite algorithm </h3>
-                    <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. I created a Python-based project featuring a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. This program has the purpose of illuminating the "Why" behind machine learning decisions, and assisting in showing the "What could have been different" situations that lead to different outcomes. </p>
-                    <a className="OuterLink" href="https://github.com/NicholasTillo/CounterFactual"> Repository Link </a>
+                        {this.renderImageGrid(projectImages.project0)}
 
-                    {this.renderImageGrid(projectImages.project3)}
-                </div>
-                <div className="seperator"> </div>
-                <div id="project4">
-                    <h3> The Geomancer's Escape </h3>
-                    <p> I was apart of a team of 3 creating a Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms. I was the sole developer and designer for the game, creating the "hook" of the interaction between 3D and 2D space. I also created the core gameplay loop, designed the enemies and their unique behaviours, and created interesting puzzles that utilize the unique domain of multiple dimensions. </p>
-                    <a className="OuterLink" href="https://github.com/NicholasTillo/TheGeomancersEscape"> Repository Link </a>
-                    <a className="OuterLink" href="https://nicholastillo.itch.io/the-geomancers-escape"> Itch Link </a>
+                        <p> The fully automated Titan's Wake carries 32,934 human explorers to the edge of the universe, as generations pass in the search for the Meaning Of Life. A sci-fi survival/arcade twist on John Conway's Game Of Life, players take the role of the ship,
+                            managing its populations, their professions, and resources, upgrading the ship with every failed attempt to reach further generations while random events throw their plans into chaos. </p>
+                        <iframe title="The Game Of The Meaning Of Life" frameBorder="0" src="https://itch.io/embed/5010332?linkback=true&bg_color=9bc7ec&fg_color=222222&link_color=fa5c5c&border_color=404d7f" width="552" height="167" style={{ maxWidth: "100%", display: "block", margin: "0 auto" }}><a href="https://nicholastillo.itch.io/the-game-of-the-meaning-of-life">The Game Of The Meaning Of Life by NicholasTillo</a></iframe>
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project2">
+                        <h3> Extraterrestrial Entertainment </h3>
+                        <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. I was the main designer and developer for the behavioral AI for the aliens, and the main gameplay loop. Designing the joke-slot structure that gives players a sense of unknown language while still being able to piece together meaning. Utilized Normans principles of interaction design, creating visible feedback, and clear queues to ensure player retention and reduce confusion. </p>
+                        <a className="OuterLink" href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> Github Link </a>
 
-                    {this.renderImageGrid(projectImages.project4)}
-                </div>
-                <div className="seperator"> </div>
-                <div id="project5">
-                    <h3> Capstone Project - Computational Artwork for the MuLab </h3>
-                    <p> This project was a set of 3 full sized canvases meant to spread the research of the graduate students within the MuLab and present the key concepts in a novel way. 
-                        The 3 art pieces contain a mix of acrylic paintings, spray coloured mediums and mixed media elements. The concepts covered by the artworks were RP-BDI planning, a multi-agent epistemic planning model aimed to make planning more human. 
-                        Next was a novel neural net approach to the classic cops and robbers graph theory problem. Finally, the last piece was regarding using AI automated planning for safety features on spacecrafts.  
-                    </p>
-                    <a className="OuterLink" href="https://drive.google.com/file/d/110QHDawwi864MMwkK79G3pvBGZB0s9WW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        Final Report For The Project
-                    </a>
+                        <a className="OuterLink" href="https://youtu.be/yV3j3jQtLQs"> Video Of Player Movement and Aliens </a>
 
-                    {this.renderImageGrid(projectImages.project5)}
-                </div>
-                <div className="seperator"> </div>
-                
-                <div id="project6">
-                    <h3> Conway's Game Of Life Solver </h3>
-                    <p> A course project using python to model the zero player game The Game Of Life. 
-                        Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
-                        Using python and the SAT solver - kissat to solve the state space that is set up in the file. I designed the architecture for the solver as well as ensured its functionality was efficient enough to solve higher order situations.  </p>
-                    <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
-                    <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
+                        <a className="OuterLink" href="https://youtu.be/9dVxzEknoJY"> Demo of Gameplay and FSM Logic </a>
 
-                    {this.renderImageGrid(projectImages.project6)}
-                </div>
-                <div className="seperator"> </div>
+                        <a className="OuterLink" href="https://www.youtube.com/watch?v=O5wmU3lJKOU"> Video Of Pathfinding and Behaviour Tree </a>
 
-                <div id="project7">
-                    <h3> Upcoming </h3>
-                    <p> Upcoming</p>
-                    {this.renderImageGrid(projectImages.project7)}
-                </div>
-                <div className="seperator"> </div>
+                        <a className="OuterLink" href={require("../Assets/CISC 486 - Group 6 Presentation.pptx")} target="_blank" rel="noopener noreferrer"> Final Powerpoint Presentation </a>
+
+                        {this.renderImageGrid(projectImages.project2)}
+
+                    </div>
+                    <div className="seperator"> </div>
+                    <div id="project4">
+                        <h3> The Geomancer's Escape </h3>
+                        <p> I was apart of a team of 3 creating a Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms. I was the sole developer and designer for the game, creating the "hook" of the interaction between 3D and 2D space. I also created the core gameplay loop, designed the enemies and their unique behaviours, and created interesting puzzles that utilize the unique domain of multiple dimensions. </p>
+                        <a className="OuterLink" href="https://github.com/NicholasTillo/TheGeomancersEscape"> Repository Link </a>
+                        <a className="OuterLink" href="https://nicholastillo.itch.io/the-geomancers-escape"> Itch Link </a>
+
+                        {this.renderImageGrid(projectImages.project4)}
+                    </div>
+                    <div className="seperator"> </div>
+                </details>
 
             </div>
 
