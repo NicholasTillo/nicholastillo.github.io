@@ -6,6 +6,9 @@ import "./projects.css"
 
 
 
+// Fixed label set and order for every project's stat block; Role always leads.
+const STAT_ORDER = ["Role", "Team", "Stack", "Focus", "Context"];
+
 export default class Projects extends React.Component {
     constructor(props){
         super(props);
@@ -34,6 +37,16 @@ export default class Projects extends React.Component {
 
     anchor(id) {
         return <a className="headerAnchor" href={`#/projects#${id}`} aria-label="Link to this section">#</a>;
+    }
+
+    statBlock(stats) {
+        return (
+            <dl className="statBlock">
+                {STAT_ORDER.filter(label => stats[label]).map(label => (
+                    <div key={label}><dt>{label}</dt><dd>{stats[label]}</dd></div>
+                ))}
+            </dl>
+        );
     }
 
     openLightbox = (src) => {
@@ -103,9 +116,6 @@ export default class Projects extends React.Component {
             ],
             project6: [
                 require("../Assets/GameOfLife.png"),
-            ],
-            project7: [
-                
             ]
         };
 
@@ -119,16 +129,18 @@ export default class Projects extends React.Component {
                     <summary><h2 id="professional-projects"> Professional Projects {this.anchor("professional-projects")}</h2></summary>
                     <div id="projectReasonCodes">
                         <h3> Reason Codes for Mobile Point Of Sale System </h3>
-                        <p> As a Mobile App Developer at Jonas Software, I designed and built a reason-code system for the mobile-POS system, letting managers define and manage required reasons for voids and other managerial overrides. Before this, overrides weren't tracked, which made auditing difficult. I owned the feature end to end, I pitched early designs to the team for feedback, built a prototype branch for review, and took it through QA to release. Built with Objective-C for iOS and Java for Android, it now gives managers an audit trail for every override.
+                        {this.statBlock({ Role: "Mobile App Developer", Team: "Jonas Software", Stack: "Objective-C (iOS) · Java (Android)", Focus: "Database Design · API Integration · Audit Trails", Context: "Shipped to Production" })}
+                        <p> As a Mobile App Developer at Jonas Software, I designed and built a reason-code system for the mobile-POS system, letting managers define and manage required reasons for voids and other managerial overrides. Before this, overrides weren't tracked, which made auditing difficult. I owned the feature end to end: I pitched early designs to the team for feedback, built a prototype branch for review, and took it through QA to release. Built with Objective-C for iOS and Java for Android, it now gives managers an audit trail for every override.
                      </p>       
 
                         {this.renderImageGrid(projectImages.projectReasonCodes, "portrait")}
                     </div>
                     <div className="seperator"> </div>
                     <div id="project1">
-                        <h3> Gitaxian Probe  & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
-                        <p> Was the main developer for A MTG Inspirted Course Project. I explored and evaluated different AI models and their applicability on the Magic The Gathering domain to solve the teaching problem of high complexity within game. I created Naive Bayes nets to attempt to understand factors to victory in a MTG game. 
-                            We eventually expanded on this topic, specifically the automated planning section. Presenting this paper in the ICAPS 2024 confrence. </p>
+                        <h3> Gitaxian Probe & Strategic Sorcery - AI Models for Magic: The Gathering </h3>
+                        {this.statBlock({ Role: "Main Developer", Team: "2", Stack: "Python · PDDL · Keras", Focus: "Automated Planning · Bayes Nets · Deep Learning", Context: "ICAPS 2024 Demo" })}
+                        <p> I was the main developer for an MTG-inspired course project. I explored and evaluated different AI models and their applicability in the Magic: The Gathering domain to solve the teaching problem of high complexity within the game. I created Naive Bayes nets to understand the factors behind victory in an MTG game. 
+                            We eventually expanded on this topic, specifically the automated planning section: we modelled 10 cards across 4 game scenarios, and the planner finds winning lines up to 200 steps long. I presented this work as a demo at the ICAPS 2024 conference. </p>
 
                         <a className="OuterLink" href="https://github.com/NicholasTillo/Gitaxian-Probe"> Project Link </a> 
 
@@ -139,8 +151,9 @@ export default class Projects extends React.Component {
                     </div>
                     <div className="seperator"> </div>
                     <div id="project3">
-                        <h3> CounterFactual Map-Elite algorithm </h3>
-                        <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. I created a Python-based project featuring a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface. This program has the purpose of illuminating the "Why" behind machine learning decisions, and assisting in showing the "What could have been different" situations that lead to different outcomes. </p>
+                        <h3> CounterFactual MAP-Elites Algorithm </h3>
+                        {this.statBlock({ Role: "Sole Developer", Team: "Solo", Stack: "Python · Keras", Focus: "Explainable ML · MAP-Elites · 3 Datasets", Context: "Research Proof of Concept" })}
+                        <p> A Quality Diversity counterfactual generation proof of concept using the MAP-Elites algorithm. I created a Python-based project featuring a GUI for generating diverse, actionable counterfactual explanations for machine learning models. Users can preprocess data, configure parameters, and interactively explore counterfactuals through a visual grid-based interface, generating a user-defined X by X grid of counterfactuals in a single run. I tested it on 3 datasets: penguin species, loan applications, and two-year recidivism. This program aims to illuminate the "Why" behind machine learning decisions, and to show the "What could have been different" situations that lead to different outcomes. </p>
                         <a className="OuterLink" href="https://github.com/NicholasTillo/CounterFactual"> Repository Link </a>
 
                         {this.renderImageGrid(projectImages.project3)}
@@ -148,9 +161,10 @@ export default class Projects extends React.Component {
                     <div className="seperator"> </div>
                     <div id="project5">
                         <h3> Capstone Project - Computational Artwork for the MuLab </h3>
-                        <p> This project was a set of 3 full sized canvases meant to spread the research of the graduate students within the MuLab and present the key concepts in a novel way. 
-                            The 3 art pieces contain a mix of acrylic paintings, spray coloured mediums and mixed media elements. The concepts covered by the artworks were RP-BDI planning, a multi-agent epistemic planning model aimed to make planning more human. 
-                            Next was a novel neural net approach to the classic cops and robbers graph theory problem. Finally, the last piece was regarding using AI automated planning for safety features on spacecrafts.  
+                        {this.statBlock({ Role: "Artist", Stack: "Acrylic · Spray Paint · Mixed Media", Focus: "Epistemic Planning · Graph Theory · Spacecraft Safety", Context: "Capstone · MuLab" })}
+                        <p> This project was a set of 3 full-sized canvases meant to spread the research of the graduate students within the MuLab and present the key concepts in a novel way. 
+                            The 3 art pieces contain a mix of acrylic paintings, spray coloured mediums and mixed media elements. The first concept covered was RP-BDI planning, a multi-agent epistemic planning model aimed to make planning more human. 
+                            Next was a novel neural net approach to the classic cops and robbers graph theory problem. Finally, the last piece was regarding using AI automated planning for safety features on spacecraft.  
                         </p>
                         <a className="OuterLink" href="https://drive.google.com/file/d/110QHDawwi864MMwkK79G3pvBGZB0s9WW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             Final Report For The Project
@@ -161,19 +175,14 @@ export default class Projects extends React.Component {
                     <div className="seperator"> </div>
                     <div id="project6">
                         <h3> Conway's Game Of Life Solver </h3>
-                        <p> A course project using python to model the zero player game The Game Of Life. 
-                            Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state, or not. 
-                            Using python and the SAT solver - kissat to solve the state space that is set up in the file. I designed the architecture for the solver as well as ensured its functionality was efficient enough to solve higher order situations.  </p>
+                        {this.statBlock({ Role: "Solver Architect", Stack: "Python · Bauhaus · Kissat SAT", Focus: "Logic Modelling · SAT Solving", Context: "CISC/CMPE 204" })}
+                        <p> A course project using Python to model the zero-player Game Of Life. 
+                            Given a fully initialized starting state, it will attempt to solve whether or not the pattern will result in a stable state. 
+                            It uses Python and the Kissat SAT solver to search the state space set up in the model. I designed the architecture for the solver as well as ensured its functionality was efficient enough to solve higher order situations.  </p>
                         <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver"> Repository Link </a>
                         <a className="OuterLink" href="https://github.com/NicholasTillo/GameOfLifeSolver/blob/main/documents/final/GRP_13%20ModellingProject%20-%20Documentation.pdf"> Documentation Link </a>
 
                         {this.renderImageGrid(projectImages.project6)}
-                    </div>
-                    <div className="seperator"> </div>
-                    <div id="project7">
-                        <h3> Upcoming </h3>
-                        <p> Upcoming</p>
-                        {this.renderImageGrid(projectImages.project7)}
                     </div>
                     <div className="seperator"> </div>
                 </details>
@@ -181,7 +190,8 @@ export default class Projects extends React.Component {
                     <summary><h2 id="game-design"> Game Design {this.anchor("game-design")}</h2></summary>
                     <div id="projectXSouls">
                         <h3> X Souls </h3>
-                        <p> A totally regular souls-like experience, and my solo submission to the DreamLayer Jam. Built in Godot 4 and playable in the browser on itch.io, X Souls wraps every possible souls-like game into one:
+                        {this.statBlock({ Role: "Solo Developer", Team: "Solo", Stack: "Godot 4", Focus: "Genre-Swapping Puzzles", Context: "DreamLayer Jam · 17th of 61 in Creativity" })}
+                        <p> A totally regular souls-like experience, and my solo submission to the DreamLayer Jam, where it placed 17th of 61 entries for Creative Use of DreamLayer and 27th for Visual World & Art Direction. Built in Godot 4 and playable in the browser on itch.io, X Souls wraps every possible souls-like game into one:
                             the protagonist gains the power to jump into six different souls-like games to solve puzzles, from an action RPG (Action Souls), to a deckbuilder (Full Souls Deluxe), an auto battler (Autosouls), a horror game (Soul Alone), a 2D platformer (Super Soul Brothers), and a rhythm game (Rhythm of the Soul). </p>
 
                         {this.renderImageGrid(projectImages.projectXSouls)}
@@ -191,7 +201,8 @@ export default class Projects extends React.Component {
                     <div className="seperator"> </div>
                     <div id="project0">
                         <h3> The Game Of The Meaning Of Life </h3>
-                        <p> I was the sole developer, sole designer, and sole asset creator for this game. Built in Godot, I expanded on Conway's original rules to transform a 0-player simulation into a game with real player agency, designing the population, profession, and resource systems, the upgrade-driven progression loop, and the random events that keep each run unpredictable.
+                        {this.statBlock({ Role: "Solo Developer & Artist", Team: "Solo", Stack: "Godot · Aseprite", Focus: "Systems Design · Pixel Art", Context: "itch.io" })}
+                        <p> I was the sole developer, sole designer, and sole asset creator for this game. Using Godot, I expanded on Conway's original rules to transform a 0-player simulation into a game with real player agency, designing the population, profession, and resource systems, the upgrade-driven progression loop, and the random events that keep each run unpredictable.
                             I also created all of the pixel art for the ships, stations, and effects in Aseprite, and released the game playable in the browser on itch.io. </p>
 
                         {this.renderImageGrid(projectImages.project0)}
@@ -203,8 +214,9 @@ export default class Projects extends React.Component {
                     <div className="seperator"> </div>
                     <div id="project2">
                         <h3> Extraterrestrial Entertainment </h3>
-                        <p> A course project for CISC 486 - Game Development, A game about aliens, langauge, and jokes. I was the main designer and developer for the behavioral AI for the aliens, and the main gameplay loop. Designing the joke-slot structure that gives players a sense of unknown language while still being able to piece together meaning. Utilized Normans principles of interaction design, creating visible feedback, and clear queues to ensure player retention and reduce confusion. </p>
-                        <a className="OuterLink" href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> Github Link </a>
+                        {this.statBlock({ Role: "Gameplay & AI Developer", Team: "3", Stack: "Unity 6 · C#", Focus: "4 State Machines · Joke System · Alien Language", Context: "CISC 486" })}
+                        <p> A course project for CISC 486 - Game Development: a game about aliens, language, and jokes. I was the main designer and developer for the behavioral AI for the aliens, and the main gameplay loop, building all 4 of the game's finite state machines: player movement, the joke manager, alien emotion, and alien movement. I designed the joke-slot structure that gives players a sense of unknown language while still being able to piece together meaning: 16 joke templates with 1 to 3 word slots, filled from a 36-word alien vocabulary across 4 humour genres, for over 100,000 possible jokes. I applied Norman's principles of interaction design, creating visible feedback, and clear cues to ensure player retention and reduce confusion. </p>
+                        <a className="OuterLink" href="https://github.com/kabeeradil03/CISC486GD-extraterrestrial-entertainment"> GitHub Link </a>
 
                         <a className="OuterLink" href="https://youtu.be/yV3j3jQtLQs"> Video Of Player Movement and Aliens </a>
 
@@ -220,7 +232,8 @@ export default class Projects extends React.Component {
                     <div className="seperator"> </div>
                     <div id="project4">
                         <h3> The Geomancer's Escape </h3>
-                        <p> I was apart of a team of 3 creating a Unity game made for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return back to three dimensions, fighting though worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms. I was the sole developer and designer for the game, creating the "hook" of the interaction between 3D and 2D space. I also created the core gameplay loop, designed the enemies and their unique behaviours, and created interesting puzzles that utilize the unique domain of multiple dimensions. </p>
+                        {this.statBlock({ Role: "Sole Developer", Team: "3", Stack: "Unity · C#", Focus: "2D/3D Dimension Mechanics · Enemy AI", Context: "CISC 223 · itch.io" })}
+                        <p> I was the sole developer in a team of 3, creating a Unity game for a course project, CISC 223 - Game Design. A game about a 2D player attempting to return to three dimensions, fighting through worlds, exploring, and dodging enemies that are able to move between the 2D and 3D realms. As the team's only developer, I built the "hook" of the interaction between 3D and 2D space. I also created the core gameplay loop, designed the enemies and their unique behaviours, and created interesting puzzles that utilize the unique domain of multiple dimensions. </p>
                         <a className="OuterLink" href="https://github.com/NicholasTillo/TheGeomancersEscape"> Repository Link </a>
                         <a className="OuterLink" href="https://nicholastillo.itch.io/the-geomancers-escape"> Itch Link </a>
 

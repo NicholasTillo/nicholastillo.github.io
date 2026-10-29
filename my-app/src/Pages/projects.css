@@ -128,6 +128,49 @@
     }
 }
 
+/* Skimmable project header, styled as a tabletop stat block:
+   tapered purple rules top and bottom, small-caps Rationale labels. */
+#projectDescriptions .statBlock {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 1.6em;
+    margin-block: 0.2em 0.8em;
+    padding: 0.55em 5px;
+}
+.statBlock::before,
+.statBlock::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #6B4A7F;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.statBlock::before { top: 0; }
+.statBlock::after { bottom: 0; }
+.statBlock > div {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45em;
+}
+.statBlock dt {
+    font-family: 'Rationale', Georgia, serif;
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    font-size: 1.15em;
+    color: #6B4A7F;
+}
+.statBlock dd {
+    margin: 0;
+    font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+    color: #262329;
+}
+@media (max-width: 768px) {
+    .statBlock { gap: 0.15em 1em; font-size: 0.9em; }
+}
+
 /* Per-header "#" permalink */
 .mainBody a.headerAnchor {
     margin: 0 0 0 0.3em;

@@ -15,6 +15,7 @@
 .mainBody h1,
 .mainBody h2,
 .mainBody h3,
+.mainBody .statBlock,
 .mainBody a{
     margin: auto;   
     max-width: 80%;
@@ -40,6 +41,7 @@ body {
     .mainBody h1,
     .mainBody h2,
     .mainBody h3,
+    .mainBody .statBlock,
     .mainBody a {
         max-width: 90vw;
     }
@@ -56,6 +58,7 @@ body {
     .mainBody h1,
     .mainBody h2,
     .mainBody h3,
+    .mainBody .statBlock,
     .mainBody a {
         max-width: 95vw;
     }
