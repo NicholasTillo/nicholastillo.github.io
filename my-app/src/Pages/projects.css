@@ -23,6 +23,16 @@
     overflow: hidden;
     cursor: pointer;
 }
+/* Hover/focus shadow signals the image opens the lightbox.
+   On the slot, not the img: the slot's overflow:hidden would clip it. */
+.projectImageSlot {
+    border-radius: 10px;
+    transition: box-shadow 160ms ease;
+}
+.projectImageSlot:hover,
+.projectImageSlot:focus-visible {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
 
 .projectLightboxOverlay{
     position: fixed;
@@ -129,7 +139,7 @@
 }
 
 /* Skimmable project header, styled as a tabletop stat block:
-   tapered purple rules top and bottom, small-caps Rationale labels. */
+   tapered purple rules top and bottom, body font so it reads with the text. */
 #projectDescriptions .statBlock {
     position: relative;
     display: flex;
@@ -156,15 +166,11 @@
     gap: 0.45em;
 }
 .statBlock dt {
-    font-family: 'Rationale', Georgia, serif;
-    font-variant: small-caps;
-    letter-spacing: 0.06em;
-    font-size: 1.15em;
+    font-weight: bold;
     color: #6B4A7F;
 }
 .statBlock dd {
     margin: 0;
-    font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
     color: #262329;
 }
 @media (max-width: 768px) {

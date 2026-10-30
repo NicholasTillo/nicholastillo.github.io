@@ -1,6 +1,8 @@
 import React from "react";
 import Github from "../Assets/github.png"
 import Gmail from "../Assets/gmail.gif"
+import LinkedIn from "../Assets/linkedin.gif"
+import Itchio from "../Assets/itchio.png"
 
 import Pauper from "../Assets/playpauper2.gif"
 import Gamer from "../Assets/games.gif"
@@ -28,10 +30,10 @@ export default class Leftbox extends React.Component {
                 <div className="links">
                     <p> Real Links </p>
                     <div className="buttonSlot">
-                        <a href="https://www.linkedin.com/in/nicholastillo/" target="_blank" rel="noopener noreferrer"> <img src="Assets/linkedin-icon.png" alt="LinkedIn" /> </a>
+                        <a href="https://www.linkedin.com/in/nicholastillo/" target="_blank" rel="noopener noreferrer"> <img src={LinkedIn} alt="LinkedIn" /> </a>
                     </div>
                     <div className="buttonSlot">
-                        <a href="https://nicholastillo.itch.io" target="_blank" rel="noopener noreferrer"> <img src="Assets/itchio-icon.png" alt="Itch.io" /> </a>
+                        <a href="https://nicholastillo.itch.io" target="_blank" rel="noopener noreferrer"> <img src={Itchio} alt="Itch.io" /> </a>
                     </div>
                     <div className="buttonSlot">
                         <a href="https://github.com/NicholasTillo" target="_blank" rel="noopener noreferrer"> <img src={Github} alt="GitHub" /> </a>

@@ -72,8 +72,12 @@ body {
 h1, h2, h3 {
     font-family: 'VT323', Tahoma, Verdana, Segoe UI, sans-serif;
 }
-p, button{
+button{
     font-size: 1.2em;
+    line-height: 1.45;
+}
+p{
+    font-size: 1.1em;
     line-height: 1.45;
 }
 a { 
@@ -112,8 +116,11 @@ h1{
     h3 {
         font-size: calc(1.4em + 2px);
     }
-    p, button {
+    button {
         font-size: 1.1em;
+    }
+    p {
+        font-size: 1em;
     }
     a {
         font-size: 0.9em;
@@ -138,8 +145,11 @@ h1{
     h3 {
         font-size: calc(1.2em + 2px);
     }
-    p, button {
+    button {
         font-size: 1em;
+    }
+    p {
+        font-size: 0.95em;
     }
     a {
         font-size: 0.8em;

@@ -102,7 +102,6 @@ export default class Projects extends React.Component {
                 require("../Assets/ExtraterrestrialEntertainment.png")
             ],
             project3: [
-                require("../Assets/CounterFactual.png"),
                 require("../Assets/CounterFactual.png")
             ],
             project4: [

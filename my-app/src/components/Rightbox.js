@@ -1,5 +1,6 @@
 import React from "react";
 import Steam from "../Assets/steam.gif"
+import Movies from "../Assets/movies.gif"
 
 
 
@@ -18,7 +19,7 @@ export default class Rightbox extends React.Component {
                         <a href="https://steamcommunity.com/id/PukMen1928/" target="_blank" rel="noopener noreferrer"> <img src={Steam} alt="Steam" /> </a>
                     </div>
                     <div className="buttonSlot">
-                        <a href=" https://letterboxd.com/Tillo_1928/" target="_blank" rel="noopener noreferrer"> <img src="Assets/letterboxd-icon.png" alt="Movies" /> </a>
+                        <a href=" https://letterboxd.com/Tillo_1928/" target="_blank" rel="noopener noreferrer"> <img src={Movies} alt="Movies" /> </a>
                     </div>
                 </div>
 
