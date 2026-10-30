@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f74f9979.css",
-    "main.js": "/static/js/main.f915615f.js",
+    "main.css": "/static/css/main.2c7d9adb.css",
+    "main.js": "/static/js/main.683a05b7.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
@@ -46,12 +46,14 @@
     "static/media/Minecraft.jpg": "/static/media/Minecraft.dd890dde29be3ce43b6c.jpg",
     "static/media/Explorer.jpg": "/static/media/Explorer.10af6221928f82f206dc.jpg",
     "static/media/Texture.png": "/static/media/Texture.739fc945d962fc8579e2.png",
+    "static/media/movies.gif": "/static/media/movies.8c3554cfa0172ee23db1.gif",
     "static/media/Knight.jpg": "/static/media/Knight.6ad0c28667d83065ea31.jpg",
     "static/media/portal2.jpg": "/static/media/portal2.debae7a33c05afbc7f59.jpg",
     "static/media/insurgence5.jpg": "/static/media/insurgence5.7f1a83addcc655789e3b.jpg",
     "static/media/carrot.gif": "/static/media/carrot.d2fdb509810d2506a28f.gif",
     "static/media/Wilds.jpg": "/static/media/Wilds.25e89e170c89bdc44697.jpg",
     "static/media/Ultrakill.jpg": "/static/media/Ultrakill.7e4b6931611c34437f8d.jpg",
+    "static/media/linkedin.gif": "/static/media/linkedin.d0c7c8554eff38af2374.gif",
     "static/media/HKMTG4.jpg": "/static/media/HKMTG4.9ccbbd9d2286a54e20bf.jpg",
     "static/media/ReasonCodes2.png": "/static/media/ReasonCodes2.c2ffa443c391401dab07.png",
     "static/media/HKMTG3.jpg": "/static/media/HKMTG3.66fb431612ac8eb78998.jpg",
@@ -63,12 +65,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.f74f9979.css.map": "/static/css/main.f74f9979.css.map",
-    "main.f915615f.js.map": "/static/js/main.f915615f.js.map",
+    "main.2c7d9adb.css.map": "/static/css/main.2c7d9adb.css.map",
+    "main.683a05b7.js.map": "/static/js/main.683a05b7.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f74f9979.css",
-    "static/js/main.f915615f.js"
+    "static/css/main.2c7d9adb.css",
+    "static/js/main.683a05b7.js"
   ]
 }
