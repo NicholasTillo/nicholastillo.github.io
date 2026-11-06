@@ -1,0 +1,55 @@
+/* Styles for the Assets page */
+
+.assetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 90%;
+  margin: 1rem auto 2rem;
+}
+
+.assetCard {
+  margin: 0;
+  background-color: #fbfaf7;
+  border: 3px solid #6B4A7F;
+  border-radius: 6px;
+  transition: transform 160ms ease;
+}
+
+.assetCard:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.assetCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.assetCard figcaption {
+  padding: 0 0.5rem 0.5rem;
+  text-align: center;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .assetGrid {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .assetGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .assetCard {
+    transition: none;
+  }
+  .assetCard:hover {
+    transform: none;
+  }
+}

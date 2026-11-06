@@ -7,7 +7,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './Pages/homepage';
 import Projects from './Pages/projects';
 import Page3 from './Pages/page3';
-import LightingDemos from './Pages/lightingdemos';
+import Assets from './Pages/assets';
 import Mugi from './Pages/mugi';
 import Gdd from './Pages/gdd';
 
@@ -26,7 +26,7 @@ function App() {
           <Route path = "/" element = {<Homepage/>} />
           <Route path = "/projects" element = {<Projects/>} />
           <Route path = "/page3" element = {<Page3/>} />
-          <Route path = "/lightingdemos" element = {<LightingDemos/>} />
+          <Route path = "/assets" element = {<Assets/>} />
           <Route path = "/mugi" element = {<Mugi/>} />
           <Route path = "/gdd" element = {<Gdd/>} />
 
