@@ -6,6 +6,7 @@ import agni from "../Assets/agni.gif"
 import { Link } from "react-router-dom";
 import rotomTamagatchiCode from "../data/rotomTamagatchiCode";
 import RotomScreen from "../components/RotomScreen";
+import { ModelGrid, mobs } from "./assets";
 
 export default class Page3 extends React.Component {
 
@@ -37,10 +38,14 @@ export default class Page3 extends React.Component {
         return(
             <div className="mainBody">
 
-            <div className="gamingShowcase">
-           <h2>Gaming Showcase</h2> 
+            <Link reloadDocument className="assetShowcaseLink" to="/assets">
+                <div className="assetShowcaseWindow" aria-hidden="true">
+                    <ModelGrid models={mobs} />
+                </div>
+                <span>Custom Game Asset Showcase</span>
+            </Link>
 
-            <div className="seperator"> </div>
+            <div className="gamingShowcase">
             <h3> Binding Of Issac </h3>
             <p> Bunny Resprite for The Binding Of Issac </p>
             <p> Currently on the steam community page for The Binding Of Issac, I used TBOI's modding tools to create a retexture and reanimation for the troll bombs to be bunnies instead! This is my first dips into Issac modding.</p>

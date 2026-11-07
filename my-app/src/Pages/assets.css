@@ -11,8 +11,7 @@
 .assetCard {
   margin: 0;
   background-color: #fbfaf7;
-  border: 3px solid #6B4A7F;
-  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   transition: transform 160ms ease;
 }
 

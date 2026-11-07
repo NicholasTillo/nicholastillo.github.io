@@ -44,7 +44,6 @@ export default class NavBar extends React.Component {
               <div className="phoneLinks">
                 <Link reloadDocument to="/projects" onClick={this.closeMenu}>Projects</Link>
                 <Link reloadDocument to="/page3" onClick={this.closeMenu}>Creative Works</Link>
-                <Link reloadDocument to="/assets" onClick={this.closeMenu}>Assets</Link>
                 <Link reloadDocument to="/mugi" onClick={this.closeMenu}>Mugi</Link>
                 <Link reloadDocument to="/gdd" onClick={this.closeMenu}>Game Design Docs</Link>
               </div>
@@ -60,11 +59,6 @@ export default class NavBar extends React.Component {
             <div className="navRight">
                 <Link reloadDocument to="/page3">
                   <button> Creative Works </button>
-                </Link>
-            </div>
-            <div className="navExtra">
-                <Link reloadDocument to="/assets">
-                  <button> Assets </button>
                 </Link>
             </div>
             <div className="navExtra">

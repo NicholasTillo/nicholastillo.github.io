@@ -54,6 +54,65 @@
 
     .issacImage { flex-basis: 100%; }
 }
+/* Full-width link to the asset showcase. Needs .mainBody a's specificity to beat its 80% cap. */
+.mainBody a.assetShowcaseLink {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 2.5em 1em;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.assetShowcaseLink span {
+    position: relative;
+}
+
+/* The showcase's real grid, clipped by the link, so it stays in sync with the page */
+.assetShowcaseWindow {
+    position: absolute;
+    inset: 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    text-shadow: none;
+    pointer-events: none;
+}
+
+.assetShowcaseWindow .assetGrid {
+    margin-top: -1.5rem;
+}
+
+/* The crop point moves with the width, so a caption would get sliced in half */
+.assetShowcaseWindow figcaption {
+    display: none;
+}
+
+.assetShowcaseWindow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(38, 35, 41, 0.5);
+    transition: background-color 160ms ease;
+}
+
+.assetShowcaseLink:hover .assetShowcaseWindow::after,
+.assetShowcaseLink:focus-visible .assetShowcaseWindow::after {
+    background-color: rgba(38, 35, 41, 0.3);
+}
+
+@media (max-width: 768px) {
+    .mainBody a.assetShowcaseLink {
+        font-size: 1.3em;
+    }
+}
+
 /* Rotom Arduino code box */
 .rotomCodeLabel {
     margin-top: 1rem;

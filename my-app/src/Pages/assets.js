@@ -13,7 +13,7 @@ import sheepPlushie from '../Assets/fluffycraft/sheep_plushie.png'
 import silentPlushie from '../Assets/fluffycraft/silent_plushie.png'
 import slitherwing from '../Assets/fluffycraft/slitherwing.png'
 
-const mobs = [
+export const mobs = [
   ['Beaver', beaver],
   ['Capybara', capybara],
   ['Grubby', grubby],
@@ -31,7 +31,7 @@ const blocks = [
   ['Glass Rose', glassRose],
 ];
 
-function ModelGrid({ models }) {
+export function ModelGrid({ models }) {
   return (
     <div className="assetGrid">
       {models.map(([name, src]) => (
@@ -47,7 +47,8 @@ function ModelGrid({ models }) {
 export default function Assets() {
   return (
     <div className="mainBody">
-      <h1 className="PageTitle">Assets</h1>
+      <h1 className="PageTitle">Game Assets</h1>
+      <p>Custom made models, assets, animations and anything else I make for my games and mods.</p>
       <p>3D models I built in Blockbench for Fluffycraft, my Minecraft mod.</p>
       <div className="seperator"></div>
       <h2>Mobs</h2>
