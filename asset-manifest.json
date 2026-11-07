@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c7d9adb.css",
-    "main.js": "/static/js/main.683a05b7.js",
+    "main.css": "/static/css/main.f1101ab5.css",
+    "main.js": "/static/js/main.d82f6915.js",
     "static/js/488.bda0b88d.chunk.js": "/static/js/488.bda0b88d.chunk.js",
     "static/media/CISC 486 - Group 6 Presentation.pptx": "/static/media/CISC 486 - Group 6 Presentation.542fde5a2232163f26c4.pptx",
     "static/media/Science_Gothic.ttf": "/static/media/Science_Gothic.52dcd0546bd6d1ce5871.ttf",
@@ -27,10 +27,22 @@
     "static/media/geomancersEscape.png": "/static/media/geomancersEscape.4f1db77234021df4e029.png",
     "static/media/GitProbe1.png": "/static/media/GitProbe1.5ae7f289348c9ffd5e2c.png",
     "static/media/kirby-nintendo.gif": "/static/media/kirby-nintendo.bff874980985b048c7b0.gif",
+    "static/media/sheep_plushie.png": "/static/media/sheep_plushie.43eb82e0541f9c286bc9.png",
+    "static/media/hyrax.png": "/static/media/hyrax.77851bc29eb4e99717c5.png",
     "static/media/IMG_0478.PNG": "/static/media/IMG_0478.018230754fd7ca160caf.PNG",
+    "static/media/glass_rose.png": "/static/media/glass_rose.2f9e03e59e38affb979f.png",
     "static/media/MeaningOfLife1.png": "/static/media/MeaningOfLife1.6f6ba57970fb62ac3dfd.png",
+    "static/media/capybara_plushie.png": "/static/media/capybara_plushie.852f4cab84666a802280.png",
+    "static/media/defect_plushie.png": "/static/media/defect_plushie.e90f6f5303676b47e4b7.png",
+    "static/media/silent_plushie.png": "/static/media/silent_plushie.056218b3a4cb4e847cef.png",
+    "static/media/capybara.png": "/static/media/capybara.4c8639058131a440a0c9.png",
+    "static/media/grubby.png": "/static/media/grubby.5528e7e5435cb702535d.png",
+    "static/media/slitherwing.png": "/static/media/slitherwing.fb1da06521f3d7295bbe.png",
+    "static/media/louse.png": "/static/media/louse.536f2df8897e5c770737.png",
+    "static/media/mamabeak.png": "/static/media/mamabeak.63851b9246012311ea52.png",
     "static/media/slaythespire2.jpg": "/static/media/slaythespire2.d924b65305b879d00626.jpg",
     "static/media/Rotom1.jpg": "/static/media/Rotom1.124bfd157399673b1e5b.jpg",
+    "static/media/beaver.png": "/static/media/beaver.d3cbbcbc3f9f471bc634.png",
     "static/media/playpauper2.gif": "/static/media/playpauper2.6f0e3d2d454ccb312081.gif",
     "static/media/EEBehaviourTree.png": "/static/media/EEBehaviourTree.8e7a05bf4f4700a5ac1e.png",
     "static/media/VT323-Regular.ttf": "/static/media/VT323-Regular.2bc43ad8eb2f60b39f27.ttf",
@@ -65,12 +77,12 @@
     "static/media/Community.jpg": "/static/media/Community.4db1950f03a47af21573.jpg",
     "static/media/GameOfLife.png": "/static/media/GameOfLife.df09fb63348761ad418d.png",
     "index.html": "/index.html",
-    "main.2c7d9adb.css.map": "/static/css/main.2c7d9adb.css.map",
-    "main.683a05b7.js.map": "/static/js/main.683a05b7.js.map",
+    "main.f1101ab5.css.map": "/static/css/main.f1101ab5.css.map",
+    "main.d82f6915.js.map": "/static/js/main.d82f6915.js.map",
     "488.bda0b88d.chunk.js.map": "/static/js/488.bda0b88d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c7d9adb.css",
-    "static/js/main.683a05b7.js"
+    "static/css/main.f1101ab5.css",
+    "static/js/main.d82f6915.js"
   ]
 }
