@@ -1,0 +1,89 @@
+.flipGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2em auto;
+}
+
+.flipCard {
+    width: 210px;
+    height: 260px;
+    perspective: 900px;
+}
+
+.flipInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease;
+}
+
+.flipCard.flipped .flipInner,
+.flipCard:has(:focus-visible) .flipInner {
+    transform: rotateY(180deg);
+}
+
+/* Touch screens would keep :hover stuck on after a tap */
+@media (hover: hover) {
+    .flipCard:hover .flipInner {
+        transform: rotateY(180deg);
+    }
+}
+
+.flipFace {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fbfaf7;
+    border: 3px solid #6B4A7F;
+    border-radius: 6px;
+    backface-visibility: hidden;
+}
+
+.flipFront {
+    cursor: pointer;
+}
+
+.flipFront img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.flipFront span {
+    margin: auto;
+    padding: 0.5rem;
+    color: #262329;
+    font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flipBack {
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    transform: rotateY(180deg);
+}
+
+.flipBack ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #262329;
+    font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flipInner {
+        transition: none;
+    }
+}

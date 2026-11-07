@@ -177,6 +177,78 @@
     .statBlock { gap: 0.15em 1em; font-size: 0.9em; }
 }
 
+/* Featured projects: first image large and uncropped, the rest as thumbnails */
+.projectImageGrid.leadGrid {
+    flex-direction: row;
+    align-items: flex-start;
+}
+.projectImageGrid.leadGrid .projectImageSlot {
+    width: min(22%, 140px);
+    height: auto;
+}
+.projectImageGrid.leadGrid .projectImageSlot img {
+    max-width: 100%;
+}
+.projectImageGrid.leadGrid .projectImageSlot:first-child {
+    width: 100%;
+    aspect-ratio: auto;
+    overflow: visible;
+    box-shadow: none;
+}
+.projectImageGrid.leadGrid .projectImageSlot:first-child img {
+    width: auto;
+    height: auto;
+    max-height: 320px;
+    transition: box-shadow 160ms ease;
+}
+/* On the img: a tall lead is narrower than its slot, so the slot's shadow would float wide of it */
+.projectImageGrid.leadGrid .projectImageSlot:first-child:hover img,
+.projectImageGrid.leadGrid .projectImageSlot:first-child:focus-visible img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Links styled as buttons, matching the Creative Works showcase button */
+.mainBody a.projectButton {
+    display: block;
+    width: fit-content;
+    margin: 1em auto 0;
+    padding: 0.4em 1em;
+    background-color: #6B4A7F;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+.mainBody a.projectButton:hover,
+.mainBody a.projectButton:focus-visible {
+    background-color: #563d66;
+}
+.projectLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+.mainBody .projectLinks a.projectButton {
+    margin: 0;
+}
+
+#projectDescriptions .currentlyWorking {
+    margin-bottom: 1.5em;
+}
+#projectDescriptions .currentlyWorking > div {
+    display: block;
+}
+.currentlyWorking dt,
+.currentlyWorking dd {
+    display: inline;
+}
+.currentlyWorking dt {
+    margin-right: 0.45em;
+}
+
 /* Per-header "#" permalink */
 .mainBody a.headerAnchor {
     margin: 0 0 0 0.3em;
